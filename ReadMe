@@ -1,1 +1,8 @@
-delete this later
+Overview of game and mechanics
+-A 3D local multiplayer racing game, created in Unity, with a sci-fi/pirate art style, featuring different tracks and characters
+-Camera is in a stationairy top down view showing entire track. Cars should move fast and be able to drift around corners by braking while turning
+-Tracks branch into several different paths. Spread around these different paths are coins. Coins are also given for coming first in a lap and especially for coming in first in the final lap. Winner is determined by who has the most coins at the end
+-Spread around the track are Ammo creates. Collecting an ammo crate allows you to fire a projectile, similar to a shell from Mario Kart. Cars hit by a bullet are stunned briefly and drop a few coins
+-There are different cars/racers with unique designs and stats. These different racers have unique victory sprites/quotes and taunt voice lines
+-Cars have a "weight" stat. When to cars collide, they bounce of eachother, with the car with the lower weight stat being knocked further away
+-Cars have a jump button that can be used to avoid bullets and reach different side paths
