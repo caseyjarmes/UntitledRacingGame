@@ -25,7 +25,7 @@ public class TrackCheckpointSystem : MonoBehaviour
         Debug.Log($"Checkpoint Reached: {checkpointlist.IndexOf(cs)}");
         if (checkpointlist.IndexOf(cs) == NextCheckpointIndexvalue)
         {
-            NextCheckpointIndexvalue+=1%checkpointlist.Count;
+            NextCheckpointIndexvalue=(NextCheckpointIndexvalue+1)%checkpointlist.Count;
             
             Debug.Log("Correct");
         }
