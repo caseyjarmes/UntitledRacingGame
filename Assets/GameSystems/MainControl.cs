@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/MainControl.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/GameSystems/MainControl.inputactions'
 
 using System;
 using System.Collections;
@@ -168,6 +168,39 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""631435cb-b104-4b0d-88d2-983594800f3e"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""acdb4ca5-11cc-4ea8-80d7-a3ff48c42605"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""VehicleControl"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""c5e4d42c-b862-4f54-9b65-9f13790485d8"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""VehicleControl"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""2bdd37e6-d213-4b3f-a753-6a1773fce7db"",
                     ""path"": ""<Keyboard>/s"",
@@ -215,6 +248,39 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""name"": ""positive"",
                     ""id"": ""b186fbcb-6332-4793-a403-4f8d25056706"",
                     ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""VehicleControl"",
+                    ""action"": ""TrottleControl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""105ff62c-ee9c-4b28-80ea-cf8f3e8d5c0a"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TrottleControl"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""08f13ac6-bb2e-4366-9fbb-b4928720b6fe"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""VehicleControl"",
+                    ""action"": ""TrottleControl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""71705d2f-590d-43e4-b74e-e8017801c2d2"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""VehicleControl"",

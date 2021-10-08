@@ -8,6 +8,7 @@ public class CarControl : MonoBehaviour
     private MainControl inputs;
     public Rigidbody rb;
     public float speed;
+    public float TorqueSpeed;
     private Vector3 localvelocity;
     private void Awake()
     {
@@ -33,7 +34,7 @@ public class CarControl : MonoBehaviour
     {
         float valueturn = inputs.VehicleControl.Movement.ReadValue<float>();
         //Keep adjustable torque value Very small hundredths or thousands
-        rb.AddRelativeTorque(new Vector3(0, valueturn)*.05f);
+        rb.AddRelativeTorque(new Vector3(0, valueturn)*TorqueSpeed);
         float valueSpeed = inputs.VehicleControl.TrottleControl.ReadValue<float>();
         rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed);
         
