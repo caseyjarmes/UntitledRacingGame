@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710794767370397841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.506, y: -0.497, z: -0.489}
+  m_LocalPosition: {x: -0.256, y: -0.497, z: -0.248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6251913710722630127}
@@ -44,10 +44,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restLength: 1
-  springTravel: 0.1
-  springStiffness: 200
-  damperStiffness: 0
+  springTravel: 0.25
+  springStiffness: 300
+  damperStiffness: 2
   wheelRadius: 0.5
+  ground:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1529682113464460491
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3338970981680042335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.506, y: -0.497, z: 0.496}
+  m_LocalPosition: {x: -0.256, y: -0.497, z: 0.248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6251913710722630127}
@@ -122,10 +125,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restLength: 1
-  springTravel: 0.1
-  springStiffness: 200
-  damperStiffness: 0
+  springTravel: 0.25
+  springStiffness: 300
+  damperStiffness: 2
   wheelRadius: 0.5
+  ground:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &4633326314360052396
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4633326314360052396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.493, y: -0.497, z: 0.496}
+  m_LocalPosition: {x: 0.2465, y: -0.497, z: 0.248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6251913710722630127}
@@ -170,10 +176,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restLength: 1
-  springTravel: 0.1
-  springStiffness: 200
-  damperStiffness: 0
+  springTravel: 0.25
+  springStiffness: 300
+  damperStiffness: 2
   wheelRadius: 0.5
+  ground:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &6251913710674590359
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,8 +197,6 @@ GameObject:
   - component: {fileID: 6251913710674590347}
   - component: {fileID: 6251913710674590349}
   - component: {fileID: 6251913710674590348}
-  - component: {fileID: 1529682114330912867}
-  - component: {fileID: 1529682115215756111}
   m_Layer: 0
   m_Name: Dummy Ship mk2
   m_TagString: Player
@@ -204,7 +211,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6251913710674590359}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 1.4, z: 1.77}
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children:
@@ -321,9 +328,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ee1d6bb9bdb9344b7e676c3e2e614b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 6251913710674590358}
-  speed: 20
-  TorqueSpeed: 8
+  rb: {fileID: 0}
+  speed: 217.6
+  TorqueSpeed: 115.82
+  ship: {fileID: 6251913710674590359}
+  ground:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!65 &6251913710674590348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -337,42 +348,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.74371743, z: 1}
   m_Center: {x: -0, y: 0.1281413, z: 0}
---- !u!114 &1529682114330912867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6251913710674590359}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c732b519f4b26194d9ad5ce907373f4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  multiplier: 250
-  DistanceofGround: 2
-  LevPoints:
-  - {fileID: 4633326314360052396}
-  - {fileID: 710794767370397841}
-  - {fileID: 3338970981680042335}
-  - {fileID: 8318560707353538003}
---- !u!114 &1529682115215756111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6251913710674590359}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a82dff727c5a56a429defd9caf0df236, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restLength: 1
-  springTravel: 0.1
-  springStiffness: 200
-  damperStiffness: 0
-  wheelRadius: 0.5
 --- !u!1 &6251913710722630124
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +473,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8318560707353538003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.493, y: -0.497, z: -0.489}
+  m_LocalPosition: {x: 0.2465, y: -0.497, z: -0.248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6251913710722630127}
@@ -517,7 +492,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restLength: 1
-  springTravel: 0.1
-  springStiffness: 200
-  damperStiffness: 0
+  springTravel: 0.25
+  springStiffness: 300
+  damperStiffness: 2
   wheelRadius: 0.5
+  ground:
+    serializedVersion: 2
+    m_Bits: 64

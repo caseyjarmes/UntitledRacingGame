@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,14 @@ public class CarControl : MonoBehaviour
     private Vector3 localvelocity;
     private float xClampAxisAngle;
     private float zClampAxisAngle;
+    private Vector3 groundNormal;
+    
+    public GameObject ship;
+
+    private bool isOnGround;
+    public LayerMask ground;
+    Quaternion checkpointRotation;
+    
     private void Awake()
     {
         inputs = new MainControl();
@@ -38,9 +47,7 @@ public class CarControl : MonoBehaviour
         xClampAxisAngle = rb.transform.rotation.x;
         zClampAxisAngle = rb.transform.rotation.z;
         //ClampVehicleRotation();
-        float valueturn = inputs.VehicleControl.Movement.ReadValue<float>();
-        //Keep adjustable torque value Very small hundredths or thousands
-        rb.AddRelativeTorque(new Vector3(0, valueturn)*TorqueSpeed);
+
         float valueSpeed = inputs.VehicleControl.TrottleControl.ReadValue<float>();
         rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed);
 
@@ -51,8 +58,31 @@ public class CarControl : MonoBehaviour
         //transform.InverseTransformDirection(localvelocity*.5f);
         //localvelocity.x = 0;
         //rb.velocity = transform.TransformDirection(localvelocity);
-
+        Ray ray = new Ray(rb.position, Vector3.down);
+        RaycastHit hitinfo;
+        isOnGround = Physics.Raycast(ray, out hitinfo,2f, ground);
+        //Keep adjustable torque value Very small hundredths or thousands
+        float valueturn = inputs.VehicleControl.Movement.ReadValue<float>();
+        rb.AddRelativeTorque(new Vector3(0, valueturn)*TorqueSpeed);
+        if (isOnGround) 
+        {
+            groundNormal = hitinfo.normal.normalized;
+        }
+        else
+        {        
+            LimitRotations();
+            groundNormal = Vector3.up;
+            rb.AddForce(-groundNormal * 4, ForceMode.Acceleration);
+        }        
     }
+
+    private void LimitRotations()
+    {
+        Vector3 projection = Vector3.ProjectOnPlane(transform.forward, groundNormal);
+        Quaternion rotations = Quaternion.LookRotation(projection, groundNormal);
+        rb.MoveRotation(Quaternion.Lerp(rb.rotation, rotations, Time.deltaTime * 1f));
+    }
+
     private void ClampVehicleRotation()
     {
         xClampAxisAngle = Mathf.Clamp(xClampAxisAngle, -45, 45);
@@ -62,5 +92,23 @@ public class CarControl : MonoBehaviour
         
         //rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, toclamp, Time.deltaTime,.75);
 
+    }
+    private void FixRotation()
+    {
+        rb.transform.rotation = Quaternion.Lerp(rb.rotation, checkpointRotation, .5f);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag.Contains("Checkpoint"))
+        {
+            checkpointRotation = other.transform.rotation;
+        }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("wall")) {
+            Vector3 upwardForceFromCollision = Vector3.Dot(collision.impulse, transform.up) * transform.up;
+            rb.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
+        }
     }
 }

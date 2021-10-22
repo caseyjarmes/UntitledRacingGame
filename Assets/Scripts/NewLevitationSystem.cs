@@ -24,35 +24,52 @@ public class NewLevitationSystem : MonoBehaviour
     private Vector3 suspensionForce;
 
     public float wheelRadius;
+    Vector3 groundNormal;
 
+
+
+    public LayerMask ground;
+
+    private bool isOnGround;
     void Awake()
     {
         rb = transform.root.GetComponent<Rigidbody>();
 
         minLength = restLength - springTravel;
         maxLength = restLength + springTravel;
+
     }
 
 
     void FixedUpdate()
     {
-
-        if(Physics.Raycast(transform.position,-transform.up, out RaycastHit hit, maxLength + wheelRadius))
+        Ray ray = new Ray(rb.position, -rb.transform.up); 
+        RaycastHit hitInfo;
+        isOnGround = Physics.Raycast(ray, out hitInfo, 2f, ground);
+        if(isOnGround)
         {
-            toDamperLength = springLength;
-            springLength = Mathf.Clamp(springLength, minLength, maxLength);
+            if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, maxLength + wheelRadius, ground))
+            {
+                toDamperLength = springLength;
+                springLength = Mathf.Clamp(springLength, minLength, maxLength);
 
-            springLength = hit.distance - wheelRadius;
-            springVelocity = (toDamperLength - springLength) / Time.fixedDeltaTime;
-            
-            
-            springForce = springStiffness * (restLength - springLength);
-            damperForce = damperStiffness * springVelocity;
+                springLength = hit.distance - wheelRadius;
+                springVelocity = (toDamperLength - springLength) / Time.fixedDeltaTime;
 
-            suspensionForce = (springForce+damperForce) * transform.up;
 
-            rb.AddForceAtPosition(suspensionForce,hit.point);
-            
+                springForce = springStiffness * (restLength - springLength);
+                damperForce = damperStiffness * springVelocity;
+
+                suspensionForce = (springForce + damperForce) * transform.up;
+
+                rb.AddForceAtPosition(suspensionForce, hit.point);
+
+            }
         }
+        isOnGround = false;
+        //Quaternion bodyRotation = transform.rotation * Quaternion.Euler(0f, 0f, 60);
+
+        //rb.rotation = Quaternion.Lerp(rb.rotation, bodyRotation, Time.deltaTime * 10f);
     }
+
 }
