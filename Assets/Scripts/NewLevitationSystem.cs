@@ -66,7 +66,7 @@ public class NewLevitationSystem : MonoBehaviour
 
             }
         }
-        isOnGround = false;
+        //isOnGround = false;
         //Quaternion bodyRotation = transform.rotation * Quaternion.Euler(0f, 0f, 60);
 
         //rb.rotation = Quaternion.Lerp(rb.rotation, bodyRotation, Time.deltaTime * 10f);

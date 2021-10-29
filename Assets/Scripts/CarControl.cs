@@ -14,12 +14,15 @@ public class CarControl : MonoBehaviour
     private float xClampAxisAngle;
     private float zClampAxisAngle;
     private Vector3 groundNormal;
-    
+
     public GameObject ship;
 
     private bool isOnGround;
     public LayerMask ground;
-    Quaternion checkpointRotation;
+
+    public static int CoinsCollected { get; private set; }
+
+    Transform checkpointRotation;
     
     private void Awake()
     {
@@ -95,13 +98,22 @@ public class CarControl : MonoBehaviour
     }
     private void FixRotation()
     {
-        rb.transform.rotation = Quaternion.Lerp(rb.rotation, checkpointRotation, .5f);
+        rb.transform.rotation = Quaternion.Lerp(rb.rotation, checkpointRotation.rotation, .5f);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Contains("Checkpoint"))
         {
-            checkpointRotation = other.transform.rotation;
+            checkpointRotation.rotation = other.transform.rotation;
+        }
+        if(other.gameObject.layer == LayerMask.NameToLayer("respawner"))
+        {
+            rb.position = checkpointRotation.position;
+            rb.rotation = checkpointRotation.rotation;
+        }
+        if (other.tag.Contains("Coin")){
+            CoinsCollected++;
+            other.gameObject.SetActive(false);
         }
     }
     private void OnCollisionStay(Collision collision)

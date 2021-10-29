@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TrackCheckpointSystem : MonoBehaviour
 {
-    List<IndividualCheckpoint> checkpointlist;
-    private int NextCheckpointIndexvalue;
+    public List<IndividualCheckpoint> checkpointlist;
+    public int NextCheckpointIndexvalue;
     private void Awake()
     {
         Transform CheckpointsTransform = transform.Find("CheckpointSystem");
@@ -25,8 +25,8 @@ public class TrackCheckpointSystem : MonoBehaviour
         Debug.Log($"Checkpoint Reached: {checkpointlist.IndexOf(cs)}");
         if (checkpointlist.IndexOf(cs) == NextCheckpointIndexvalue)
         {
-            NextCheckpointIndexvalue=(NextCheckpointIndexvalue+1)%checkpointlist.Count;
-            
+            //NextCheckpointIndexvalue=(NextCheckpointIndexvalue+1)%checkpointlist.Count;
+            NextCheckpointIndexvalue++;
             Debug.Log("Correct");
         }
         else
@@ -35,5 +35,9 @@ public class TrackCheckpointSystem : MonoBehaviour
         }
         
 
+    }
+    public void ResetCheckpointIndex()
+    {
+        NextCheckpointIndexvalue = 0;
     }
 }
