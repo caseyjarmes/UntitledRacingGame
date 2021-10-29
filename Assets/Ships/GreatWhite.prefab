@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 6251913710674590349}
   - component: {fileID: 6251913710674590348}
   - component: {fileID: 4546425412932682586}
+  - component: {fileID: 845669712101135516}
   m_Layer: 0
   m_Name: GreatWhite
   m_TagString: Player
@@ -428,6 +429,20 @@ CapsuleCollider:
   m_Height: 6.72
   m_Direction: 2
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &845669712101135516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6251913710674590359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97849d4b7df0d84596c85fd18714adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackCheckpointSystem: {fileID: 0}
+  TotalLaps: 0
 --- !u!65 &9085264070237910701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -652,11 +667,11 @@ PrefabInstance:
     - target: {fileID: 1907961056119749358, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1b3ba787cd5b7ac4e8f4097c1a306032, type: 2}
+      objectReference: {fileID: 2100000, guid: e247a64294d582c4cb15cf21cd114730, type: 2}
     - target: {fileID: 6703957281922639038, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6f5f846952434cc42a03b4d952efb99e, type: 2}
+      objectReference: {fileID: 2100000, guid: e247a64294d582c4cb15cf21cd114730, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
 --- !u!1 &6309140029979353179 stripped
