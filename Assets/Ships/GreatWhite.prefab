@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 6251913710674590349}
   - component: {fileID: 6251913710674590348}
   - component: {fileID: 4546425412932682586}
+  - component: {fileID: 845669712101135516}
   m_Layer: 0
   m_Name: GreatWhite
   m_TagString: Player
@@ -428,6 +429,20 @@ CapsuleCollider:
   m_Height: 6.72
   m_Direction: 2
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &845669712101135516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6251913710674590359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97849d4b7df0d84596c85fd18714adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackCheckpointSystem: {fileID: 0}
+  TotalLaps: 0
 --- !u!65 &9085264070237910701
 BoxCollider:
   m_ObjectHideFlags: 0
