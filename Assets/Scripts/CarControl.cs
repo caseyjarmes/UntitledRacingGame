@@ -21,13 +21,17 @@ public class CarControl : MonoBehaviour
     public LayerMask ground;
 
     public static int CoinsCollected { get; private set; }
-
+    public GameObject shipModel;
+    private float RollingAngle = 30;
+    
+        
     Transform checkpointRotation;
     
     private void Awake()
     {
         inputs = new MainControl();
         rb = GetComponent<Rigidbody>();
+        shipModel = ship.transform.GetChild(0).gameObject;
         
     }
     private void OnEnable()
@@ -67,6 +71,13 @@ public class CarControl : MonoBehaviour
         //Keep adjustable torque value Very small hundredths or thousands
         float valueturn = inputs.VehicleControl.Movement.ReadValue<float>();
         rb.AddRelativeTorque(new Vector3(0, valueturn)*TorqueSpeed);
+        float rollEluerValue = RollingAngle * -valueturn;
+        Quaternion modelRotation = shipModel.transform.rotation * Quaternion.Euler(0f, 0f, rollEluerValue);
+        shipModel.transform.rotation = Quaternion.Lerp(shipModel.transform.rotation,modelRotation,Time.deltaTime * 2.5f);
+        Vector3 projection = Vector3.ProjectOnPlane(transform.forward, groundNormal);
+        Quaternion rotations = Quaternion.LookRotation(projection, groundNormal);
+        shipModel.transform.rotation = (Quaternion.Lerp(shipModel.transform.rotation, rotations, Time.deltaTime * 5f));
+
         if (isOnGround) 
         {
             groundNormal = hitinfo.normal.normalized;
