@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  speed: 1200
+  speed: 1500
   TorqueSpeed: 600
   ship: {fileID: 6251913710674590359}
   ground:

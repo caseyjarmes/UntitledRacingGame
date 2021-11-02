@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b7224069d2fed6a44a227c3eea574814, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4493984, g: 0.49947423, b: 0.5756966, a: 1}
+  m_IndirectSpecularColor: {r: 0.23346195, g: 0.19147688, b: 0.20361313, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16705,7 +16705,7 @@ GameObject:
   - component: {fileID: 1653697039}
   - component: {fileID: 1653697038}
   m_Layer: 0
-  m_Name: GreenLight
+  m_Name: BlueLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16722,7 +16722,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0, g: 1, b: 0.31307483, a: 1}
+  m_Color: {r: 0, g: 0.29752398, b: 1, a: 1}
   m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
@@ -16988,11 +16988,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 228877822, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.00000000743002
+      value: -8.8572737e-16
       objectReference: {fileID: 0}
     - target: {fileID: 228877822, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 5.5313687e-10
+      value: 6.593904e-17
       objectReference: {fileID: 0}
     - target: {fileID: 228877822, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.y
@@ -17000,7 +17000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 228877822, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.07424077
+      value: 0.07424076
       objectReference: {fileID: 0}
     - target: {fileID: 228877823, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_Follow
@@ -17076,11 +17076,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128523, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.00000000743002
+      value: -8.8572737e-16
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128523, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 5.5313687e-10
+      value: 6.593904e-17
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128523, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.y
@@ -17088,7 +17088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128523, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.07424077
+      value: 0.07424076
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128523, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -17100,19 +17100,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128524, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_ClearFlags
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 981206528908128524, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 981206528908128524, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
+      propertyPath: field of view
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128524, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.23584908
+      value: 0.41509432
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128524, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.1130838
+      value: 0.28950948
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128524, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.08788716
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
@@ -17717,7 +17725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251913710674590349, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: speed
-      value: 1200
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 6251913710674590349, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: TorqueSpeed
@@ -19961,7 +19969,7 @@ GameObject:
   - component: {fileID: 2014097367}
   - component: {fileID: 2014097366}
   m_Layer: 0
-  m_Name: PinkLight
+  m_Name: RedLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19978,7 +19986,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.9208026, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.30884838, a: 1}
   m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
