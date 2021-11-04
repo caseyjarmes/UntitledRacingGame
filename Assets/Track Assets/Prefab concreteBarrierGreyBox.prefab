@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: ff8e7f2764f94a148a6837f716a78771, type: 3}
+  - {fileID: 2100000, guid: 6168c79d25493ce4a92135f8fa0f140e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,7 +142,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 622dda6df1e51bf43bd9d484e33cb7fb, type: 2}
+  - {fileID: 2100000, guid: 6168c79d25493ce4a92135f8fa0f140e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -209,8 +209,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 1.5, z: 2}
-  m_Center: {x: 0, y: 0.7, z: 0}
+  m_Size: {x: 0.4, y: 2.8857908, z: 2}
+  m_Center: {x: 0, y: 1.3928955, z: 0}
 --- !u!1001 &1833820325871364143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -262,10 +262,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2239352384567711867, guid: b446ad6df7f983c42bb1196be08b732b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0af0c87a4ee18af4fb3e14632888aba7, type: 2}
     - target: {fileID: 919132149155446097, guid: b446ad6df7f983c42bb1196be08b732b, type: 3}
       propertyPath: m_Name
       value: concreteBarrier_final
       objectReference: {fileID: 0}
+    - target: {fileID: 2466795907363574088, guid: b446ad6df7f983c42bb1196be08b732b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0af0c87a4ee18af4fb3e14632888aba7, type: 2}
+    - target: {fileID: 2536608820335826625, guid: b446ad6df7f983c42bb1196be08b732b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d4502cd1faeddeb4399a2d02bf3bd8d5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b446ad6df7f983c42bb1196be08b732b, type: 3}
 --- !u!4 &2232009307414155204 stripped
