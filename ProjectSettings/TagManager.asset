@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Checkpoint
   - Coin
+  - Boost
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - ground
   - wall
   - respawner
-  - 
+  - gravel
   - 
   - 
   - 
