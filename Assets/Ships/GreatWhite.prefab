@@ -518,6 +518,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 64948263-54f3-45a7-90d9-538d98f83825
     m_ActionName: VehicleControl/TrottleControl[/XInputControllerWindows/leftTrigger,/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d43deede-9af1-4715-ad6b-5a1b00b323ed
+    m_ActionName: VehicleControl/Shift[/Keyboard/q,/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: VehicleControl
   m_DefaultActionMap: VehicleControl
@@ -539,10 +543,13 @@ MonoBehaviour:
   speed: 1500
   TorqueSpeed: 400
   ship: {fileID: 6251913710674590359}
+  shipModel: {fileID: 0}
   ground:
     serializedVersion: 2
     m_Bits: 64
-  shipModel: {fileID: 0}
+  gravel:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &6251913710674590348
 BoxCollider:
   m_ObjectHideFlags: 0
