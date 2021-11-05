@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7022913883576980962}
   - component: {fileID: 3020385620603787360}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HPTR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675206841987430146}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.0770762, y: -0.4193498, z: 0.63826126}
+  m_LocalPosition: {x: 2, y: -0.4193498, z: -1.5}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -61,7 +61,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7793665256234781220}
   - component: {fileID: 5674209684802598337}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HPN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961907257510028774}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.401077, y: -0.4193498, z: 1.1232617}
+  m_LocalPosition: {x: 6.19, y: -0.4193498, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 568395587721103398}
   - component: {fileID: 3505001550295764636}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HPWR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253548773877169266}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.8029264, y: -0.4193498, z: -1.8767399}
+  m_LocalPosition: {x: 0, y: -0.4193498, z: -4}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1529682113464460488}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: followpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529682113464460491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.83, z: 2.18}
+  m_LocalPosition: {x: 0, y: 0.83, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6251913710674590345}
@@ -193,7 +193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5612739899266476106}
   - component: {fileID: 4757158049197228967}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HPWL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2761148470350576422}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.802926, y: -0.4193498, z: 4.1232643}
+  m_LocalPosition: {x: 0, y: -0.4193498, z: 4}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8466578158316159927}
   - component: {fileID: 91602644008249809}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,7 +419,7 @@ Transform:
   m_GameObject: {fileID: 6251913710674590359}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 1.4, z: 1.77}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2639214479128715539}
   - {fileID: 1529682113464460488}
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  speed: 1500
+  speed: 1200
   TorqueSpeed: 400
   ship: {fileID: 6251913710674590359}
   shipModel: {fileID: 0}
@@ -614,7 +614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7314426834452330408}
   - component: {fileID: 2902178140713234325}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HPBR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,7 +629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7337452829862267499}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.0629287, y: -0.4193498, z: 0.63826174}
+  m_LocalPosition: {x: -4, y: -0.4193498, z: -1.5}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -664,7 +664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7168836198394515589}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LevitationPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7417145438520734012}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.56163085, y: 0.30967492, z: 0.40146273}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.49999988, y: 0.5, z: 0.49999988}
   m_Children:
   - {fileID: 7793665256234781220}
@@ -702,7 +702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7758318101355223797}
   - component: {fileID: 2101588067653793470}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5146572636965045854}
   - component: {fileID: 677951088287992553}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HPBL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8276142016740353068}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.0629272, y: -0.4193498, z: 1.6432627}
+  m_LocalPosition: {x: -4, y: -0.4193498, z: 1.5}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -892,7 +892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 84845388245863518}
   - component: {fileID: 7553355979218918678}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HPTL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -907,7 +907,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9127035239852415592}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.077076, y: -0.4193498, z: 1.643262}
+  m_LocalPosition: {x: 2, y: -0.4193498, z: 1.5}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -984,14 +984,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4412322499338914980, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -855197251958733345, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -818397812698356061, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 901897122485332503, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
       propertyPath: m_Name
       value: sharkship
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1907961056119749358, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bddac46546cba0f45a22f4fb49204a00, type: 2}
+    - target: {fileID: 4832492099466503464, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6703957281922639038, guid: 0a22c7837a5ce9342bd267d93d0d2d4e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

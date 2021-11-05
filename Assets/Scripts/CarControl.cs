@@ -22,7 +22,7 @@ public class CarControl : MonoBehaviour
     public LayerMask gravel;
 
     private bool boostStatus = false;
-    private float duration = 0;
+    private float duration = 60;
 
 
     public static int CoinsCollected { get; private set; }
@@ -58,9 +58,10 @@ public class CarControl : MonoBehaviour
     void FixedUpdate()
     {           
         Ray ray = new Ray(rb.position, Vector3.down);
-        RaycastHit hitinfo;     
+        RaycastHit hitinfo;        
+        isOnGravel = Physics.Raycast(ray, out hitinfo, 2f, gravel);     
         isOnGround = Physics.Raycast(ray, out hitinfo, 2f, ground);
-        isOnGravel = Physics.Raycast(ray, out hitinfo, 2f, gravel);
+        //LimitRotations();
         Debug.Log(ReturnVehicleVelocity());
         Speed();
         TurningAndTilt();
