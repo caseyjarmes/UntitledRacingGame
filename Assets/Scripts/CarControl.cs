@@ -10,18 +10,23 @@ public class CarControl : MonoBehaviour
     public Rigidbody rb;
     public float speed;
     public float TorqueSpeed;
-    private Vector3 localvelocity;
-    private float xClampAxisAngle;
-    private float zClampAxisAngle;
     private Vector3 groundNormal;
 
     public GameObject ship;
+    public GameObject shipModel;
 
     private bool isOnGround;
     public LayerMask ground;
 
+    private bool isOnGravel;
+    public LayerMask gravel;
+
+    private bool boostStatus = false;
+    private float duration = 0;
+
+
     public static int CoinsCollected { get; private set; }
-    public GameObject shipModel;
+
     private float RollingAngle = 30;
     
         
@@ -32,6 +37,7 @@ public class CarControl : MonoBehaviour
         inputs = new MainControl();
         rb = GetComponent<Rigidbody>();
         shipModel = ship.transform.GetChild(0).gameObject;
+        
         
     }
     private void OnEnable()
@@ -50,35 +56,15 @@ public class CarControl : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {        
-        xClampAxisAngle = rb.transform.rotation.x;
-        zClampAxisAngle = rb.transform.rotation.z;
-        //ClampVehicleRotation();
-
-        float valueSpeed = inputs.VehicleControl.TrottleControl.ReadValue<float>();
-        rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed);
-
-        //This system is intended to keep the velocity of the
-        //object only foward facing of the vehicle
-        //If you turn it on drastically increase the speed to normalize it
-
-        //transform.InverseTransformDirection(localvelocity*.5f);
-        //localvelocity.x = 0;
-        //rb.velocity = transform.TransformDirection(localvelocity);
+    {           
         Ray ray = new Ray(rb.position, Vector3.down);
-        RaycastHit hitinfo;
-        isOnGround = Physics.Raycast(ray, out hitinfo,2f, ground);
-        //Keep adjustable torque value Very small hundredths or thousands
-        float valueturn = inputs.VehicleControl.Movement.ReadValue<float>();
-        rb.AddRelativeTorque(new Vector3(0, valueturn)*TorqueSpeed);
-        float rollEluerValue = RollingAngle * -valueturn;
-        Quaternion modelRotation = shipModel.transform.rotation * Quaternion.Euler(0f, 0f, rollEluerValue);
-        shipModel.transform.rotation = Quaternion.Lerp(shipModel.transform.rotation,modelRotation,Time.deltaTime * 2.5f);
-        Vector3 projection = Vector3.ProjectOnPlane(transform.forward, groundNormal);
-        Quaternion rotations = Quaternion.LookRotation(projection, groundNormal);
-        shipModel.transform.rotation = (Quaternion.Lerp(shipModel.transform.rotation, rotations, Time.deltaTime * 5f));
-
-        if (isOnGround) 
+        RaycastHit hitinfo;     
+        isOnGround = Physics.Raycast(ray, out hitinfo, 2f, ground);
+        isOnGravel = Physics.Raycast(ray, out hitinfo, 2f, gravel);
+        Debug.Log(ReturnVehicleVelocity());
+        Speed();
+        TurningAndTilt();
+        if (isOnGround || isOnGravel) 
         {
             groundNormal = hitinfo.normal.normalized;
         }
@@ -89,7 +75,49 @@ public class CarControl : MonoBehaviour
             rb.AddForce(-groundNormal * 4, ForceMode.Acceleration);
         }        
     }
+    private void Speed()
+    {           
+        //This system is intended to keep the velocity of the
+        //object only foward facing of the vehicle
+        //If you turn it on drastically increase the speed to normalize it         
+        float valueSpeed = inputs.VehicleControl.TrottleControl.ReadValue<float>();    
+        if (boostStatus)
+        {
+            //1.25 is the modifier
+            rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed * 3f);
+            if(duration < 60)
+            {
+                duration++;
+            }
+            else
+            {
+                boostStatus = false;
+                duration = 0;
+            }
+            return;
+        }
+        if (isOnGravel)
+        {
+            rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed * .5f);
+            return;
+        }
 
+        rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed);
+
+    }
+    private void TurningAndTilt()
+    {
+        //Keep adjustable torque value Very small hundredths or thousands
+        float valueturn = inputs.VehicleControl.Movement.ReadValue<float>();
+        rb.AddRelativeTorque(new Vector3(0, valueturn) * TorqueSpeed);
+        float rollEluerValue = RollingAngle * -valueturn;
+        Quaternion modelRotation = shipModel.transform.rotation * Quaternion.Euler(0f, 0f, rollEluerValue);
+        shipModel.transform.rotation = Quaternion.Lerp(shipModel.transform.rotation, modelRotation, Time.deltaTime * 2.5f);
+        Vector3 projection = Vector3.ProjectOnPlane(transform.forward, groundNormal);
+        Quaternion rotations = Quaternion.LookRotation(projection, groundNormal);
+        shipModel.transform.rotation = (Quaternion.Lerp(shipModel.transform.rotation, rotations, Time.deltaTime * 5f));
+
+    }
     private void LimitRotations()
     {
         Vector3 projection = Vector3.ProjectOnPlane(transform.forward, groundNormal);
@@ -97,34 +125,22 @@ public class CarControl : MonoBehaviour
         rb.MoveRotation(Quaternion.Lerp(rb.rotation, rotations, Time.deltaTime * 1f));
     }
 
-    private void ClampVehicleRotation()
-    {
-        xClampAxisAngle = Mathf.Clamp(xClampAxisAngle, -45, 45);
-        zClampAxisAngle = Mathf.Clamp(zClampAxisAngle, -30, 30);
-        rb.transform.rotation = Quaternion.Euler(xClampAxisAngle, 0, 0);
-        rb.transform.rotation = Quaternion.Euler(0, 0, zClampAxisAngle);
-        
-        //rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, toclamp, Time.deltaTime,.75);
-
-    }
-    private void FixRotation()
-    {
-        rb.transform.rotation = Quaternion.Lerp(rb.rotation, checkpointRotation.rotation, .5f);
-    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Contains("Checkpoint"))
+        switch (other.tag)
         {
-            checkpointRotation.rotation = other.transform.rotation;
-        }
-        if(other.gameObject.layer == LayerMask.NameToLayer("respawner"))
-        {
-            rb.position = checkpointRotation.position;
-            rb.rotation = checkpointRotation.rotation;
-        }
-        if (other.tag.Contains("Coin")){
-            CoinsCollected++;
-            other.gameObject.SetActive(false);
+            case "Checkpoint":            
+                checkpointRotation.rotation = other.transform.rotation;
+                break;
+            case "Coin":
+                CoinsCollected++;
+                other.gameObject.SetActive(false);
+                break;
+            case "Boost":
+                boostStatus = true;
+                break;
+            default:
+                break;
         }
     }
     private void OnCollisionStay(Collision collision)
@@ -133,5 +149,10 @@ public class CarControl : MonoBehaviour
             Vector3 upwardForceFromCollision = Vector3.Dot(collision.impulse, transform.up) * transform.up;
             rb.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
         }
+    }
+    public float ReturnVehicleVelocity()
+    {
+        //For ui make this value bigger because its rather tiny for the sense of speed
+        return rb.velocity.magnitude;
     }
 }

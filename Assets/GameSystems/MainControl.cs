@@ -65,6 +65,14 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Shift"",
+                    ""type"": ""Button"",
+                    ""id"": ""d43deede-9af1-4715-ad6b-5a1b00b323ed"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -287,6 +295,72 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""action"": ""TrottleControl"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""68eedc58-1ac7-4fd7-8040-f59a06d3b837"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shift"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""e3619f7a-ae19-4b1d-9723-8a20c8bb2357"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""VehicleControl"",
+                    ""action"": ""Shift"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""ebcc7c8f-e1e3-4122-b96f-be81d63088e6"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""VehicleControl"",
+                    ""action"": ""Shift"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""19b20cca-e24a-492a-851b-7e1a61750b00"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""VehicleControl"",
+                    ""action"": ""Shift"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""15cf3c90-4090-4d54-a90f-e58d4bad2540"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""VehicleControl"",
+                    ""action"": ""Shift"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""510b991b-5ee4-4936-a016-9b2452382f48"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""VehicleControl"",
+                    ""action"": ""Shift"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -318,6 +392,7 @@ public class @MainControl : IInputActionCollection, IDisposable
         m_VehicleControl_Movement = m_VehicleControl.FindAction("Movement", throwIfNotFound: true);
         m_VehicleControl_Reverse = m_VehicleControl.FindAction("Reverse", throwIfNotFound: true);
         m_VehicleControl_TrottleControl = m_VehicleControl.FindAction("TrottleControl", throwIfNotFound: true);
+        m_VehicleControl_Shift = m_VehicleControl.FindAction("Shift", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -373,6 +448,7 @@ public class @MainControl : IInputActionCollection, IDisposable
     private readonly InputAction m_VehicleControl_Movement;
     private readonly InputAction m_VehicleControl_Reverse;
     private readonly InputAction m_VehicleControl_TrottleControl;
+    private readonly InputAction m_VehicleControl_Shift;
     public struct VehicleControlActions
     {
         private @MainControl m_Wrapper;
@@ -383,6 +459,7 @@ public class @MainControl : IInputActionCollection, IDisposable
         public InputAction @Movement => m_Wrapper.m_VehicleControl_Movement;
         public InputAction @Reverse => m_Wrapper.m_VehicleControl_Reverse;
         public InputAction @TrottleControl => m_Wrapper.m_VehicleControl_TrottleControl;
+        public InputAction @Shift => m_Wrapper.m_VehicleControl_Shift;
         public InputActionMap Get() { return m_Wrapper.m_VehicleControl; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -410,6 +487,9 @@ public class @MainControl : IInputActionCollection, IDisposable
                 @TrottleControl.started -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnTrottleControl;
                 @TrottleControl.performed -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnTrottleControl;
                 @TrottleControl.canceled -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnTrottleControl;
+                @Shift.started -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnShift;
+                @Shift.performed -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnShift;
+                @Shift.canceled -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnShift;
             }
             m_Wrapper.m_VehicleControlActionsCallbackInterface = instance;
             if (instance != null)
@@ -432,6 +512,9 @@ public class @MainControl : IInputActionCollection, IDisposable
                 @TrottleControl.started += instance.OnTrottleControl;
                 @TrottleControl.performed += instance.OnTrottleControl;
                 @TrottleControl.canceled += instance.OnTrottleControl;
+                @Shift.started += instance.OnShift;
+                @Shift.performed += instance.OnShift;
+                @Shift.canceled += instance.OnShift;
             }
         }
     }
@@ -453,5 +536,6 @@ public class @MainControl : IInputActionCollection, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnReverse(InputAction.CallbackContext context);
         void OnTrottleControl(InputAction.CallbackContext context);
+        void OnShift(InputAction.CallbackContext context);
     }
 }
