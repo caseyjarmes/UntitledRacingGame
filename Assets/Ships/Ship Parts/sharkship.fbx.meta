@@ -3,7 +3,27 @@ guid: 0a22c7837a5ce9342bd267d93d0d2d4e
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jet_Texture
+    second: {fileID: 2100000, guid: bddac46546cba0f45a22f4fb49204a00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ship_Body_Texture
+    second: {fileID: 2100000, guid: 128a4a08bcf042e41a5e365f7dd7f836, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel_Texture
+    second: {fileID: 2100000, guid: 77e02a5e223702146b06ededc931f08f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window_Texture
+    second: {fileID: 2100000, guid: 764461eaebfe37c488e8f9f901da59a0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
