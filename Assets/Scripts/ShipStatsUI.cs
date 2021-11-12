@@ -8,7 +8,7 @@ public class ShipStatsUI : MonoBehaviour
     public Text CoinsCollectedText;
     public Text VelocityStats;
     public CarControl CarControl;
-    private int coins = 0;
+    public int coins = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +20,9 @@ public class ShipStatsUI : MonoBehaviour
     {
         if (CarControl.CoinsCollected != coins)
         {
-            CoinsCollectedText.text = $"Coins Collected: {CarControl.CoinsCollected.ToString()}";
+            CoinsCollectedText.text = $"Crystals Collected: {CarControl.CoinsCollected.ToString()}";
             coins++;
         }
-        VelocityStats.text = $"Speed: {CarControl.ReturnVehicleVelocity()}";
+        VelocityStats.text = $"Speed: {CarControl.ReturnVehicleVelocity()} Mph";
     }
 }
