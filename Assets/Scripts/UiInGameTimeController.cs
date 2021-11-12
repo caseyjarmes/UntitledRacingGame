@@ -10,6 +10,7 @@ public class UiInGameTimeController : MonoBehaviour
     public Text UITextCurrentLapTime;
     public Text UITextPreviousLapTime;
     public Text UITextBestLapTime;
+    
 
     public LapTimeManager LapTimeManager;
 
@@ -43,5 +44,6 @@ public class UiInGameTimeController : MonoBehaviour
             BestLapTime = LapTimeManager.BestLapTime;
             UITextBestLapTime.text = $"Best Lap: {(int)BestLapTime / 60}:{(BestLapTime) % 60:00.000}";
         }
+        
     }
 }

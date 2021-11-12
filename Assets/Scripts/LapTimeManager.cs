@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LapTimeManager : MonoBehaviour
 {
-    public float BestLapTime { get; private set; } = Mathf.Infinity;
+    public float BestLapTime { get; private set; }
     public float LastLapTime { get; private set; }
     public float CurrentLapTime { get; private set; }
     public float TotalLapTime { get; private set; }

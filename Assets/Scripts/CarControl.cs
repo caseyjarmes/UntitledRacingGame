@@ -25,7 +25,7 @@ public class CarControl : MonoBehaviour
     private float duration = 60;
 
 
-    public static int CoinsCollected { get; private set; }
+    public int CoinsCollected { get; private set; }
 
     private float RollingAngle = 30;
     
@@ -154,6 +154,6 @@ public class CarControl : MonoBehaviour
     public float ReturnVehicleVelocity()
     {
         //For ui make this value bigger because its rather tiny for the sense of speed
-        return rb.velocity.magnitude;
+        return (float)Math.Round((decimal)(rb.velocity.magnitude * 10), 0);
     }
 }
