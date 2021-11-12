@@ -1,3 +1,11 @@
+- Credits:
+Design and Concept: Casey Jarmes
+Programming: Adolfo Nava
+Music & SFX: Zoe Maddix
+Enviornmental Art: Veronica Morrissette
+Character Art & Design: Ray Martin
+Prop Art and Modeling: Julius Rodriguez
+
 Overview of game and mechanics
 -A 3D local multiplayer racing game, created in Unity, with a sci-fi/pirate art style, featuring different tracks and characters
 -Camera is in a stationairy top down view showing entire track. Cars should move fast and be able to drift around corners by braking while turning
@@ -6,3 +14,5 @@ Overview of game and mechanics
 -There are different cars/racers with unique designs and stats. These different racers have unique victory sprites/quotes and taunt voice lines
 -Cars have a "weight" stat. When to cars collide, they bounce of eachother, with the car with the lower weight stat being knocked further away
 -Cars have a jump button that can be used to avoid bullets and reach different side paths
+
+
