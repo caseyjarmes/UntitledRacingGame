@@ -8,6 +8,7 @@ public class LapTimeManager : MonoBehaviour
     public float BestLapTime { get; private set; } = Mathf.Infinity;
     public float LastLapTime { get; private set; }
     public float CurrentLapTime { get; private set; }
+    public float TotalLapTime { get; private set; }
     
     private float lapTimerTimeStamp;
     public TrackCheckpointSystem trackCheckpointSystem;
@@ -25,25 +26,35 @@ public class LapTimeManager : MonoBehaviour
     }
     void EndLap()
     {
-        LastLapTime = Time.time - lapTimerTimeStamp;
+        LastLapTime = CurrentLapTime;
         BestLapTime = Mathf.Min(LastLapTime, BestLapTime);
+        TotalLapTime += LastLapTime;
+        CurrentLapTime = 0;
         
     }
     void StartLap()
     {
         CurrentLap++;
-        lapTimerTimeStamp = Time.time;
+        if(LastLapTime == 0)
+        {
+        lapTimerTimeStamp = 0;
+
+        }
+        else
+        {
+            lapTimerTimeStamp = LastLapTime;
+        }
         Debug.Log("New Lap");
     }
     void Update()
     {
         if (CurrentLap == 1)
         {
-            CurrentLapTime = Time.time;
+            CurrentLapTime += Time.deltaTime;
         }
         else 
         {        
-            CurrentLapTime = lapTimerTimeStamp > 0 ? Time.time - lapTimerTimeStamp : 0;
+            CurrentLapTime += lapTimerTimeStamp > 0 ? Time.deltaTime : 0;
         }
         if (trackCheckpointSystem.NextCheckpointIndexvalue==trackCheckpointSystem.checkpointlist.Count)
         {
