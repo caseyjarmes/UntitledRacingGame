@@ -10,14 +10,21 @@ public class UiInGameTimeController : MonoBehaviour
     public Text UITextCurrentLapTime;
     public Text UITextPreviousLapTime;
     public Text UITextBestLapTime;
-    
+    public Text UITextTotalLapTime;
+    public Text UITextfinalLapTime;
+    public Text UITotalCoinsCollected;
 
+    public GameObject CompletedPanel;
     public LapTimeManager LapTimeManager;
+    public ShipStatsUI shipStatsUI;
+
 
     private int CurrentLap =0;
     private float CurrentLapTime;
     private float LastLapTime;
     private float BestLapTime;
+    private float totalLapTime;
+    private int count = 0;
     // Update is called once per frame
     void Update()
     {
@@ -44,6 +51,21 @@ public class UiInGameTimeController : MonoBehaviour
             BestLapTime = LapTimeManager.BestLapTime;
             UITextBestLapTime.text = $"Best Lap: {(int)BestLapTime / 60}:{(BestLapTime) % 60:00.000}";
         }
-        
+        if(LapTimeManager.TotalLapTime!=totalLapTime)
+        {
+            totalLapTime = LapTimeManager.TotalLapTime;
+            UITextTotalLapTime.text = $"Total Race Time: {(int)totalLapTime/60}:{(totalLapTime)%60:00.000}";
+            UITextfinalLapTime.text = $"Total Race Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
+        }
+        if (shipStatsUI.coins!= count)
+        {
+            UITotalCoinsCollected.text = $"Total Coins Collected: {count}";
+                count++;
+        }
+        if (LapTimeManager.completedgame)
+        {
+            UIRacePanel.SetActive(false);
+            CompletedPanel.SetActive(true);
+        }
     }
 }

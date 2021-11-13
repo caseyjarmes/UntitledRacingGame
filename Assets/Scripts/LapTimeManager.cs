@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LapTimeManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class LapTimeManager : MonoBehaviour
     public TrackCheckpointSystem trackCheckpointSystem;
     public int CurrentLap { get; private set; }
     public int TotalLaps;
+    private int interncounter;
+    public bool completedgame;
     
     void Awake()
     {
@@ -66,6 +69,8 @@ public class LapTimeManager : MonoBehaviour
             }
             else
             {
+                completedgame = true;
+                //SceneManager.LoadScene("Main Menu");
                 //End the race here
             }
         }

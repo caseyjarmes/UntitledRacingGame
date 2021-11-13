@@ -20,6 +20,14 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Survey()
+    {
+        Application.OpenURL("https://forms.gle/zqw7EjyC7Vi57zQ56");
+    }
+    public void Return()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
     // Update is called once per frame
     void Update()
     {
