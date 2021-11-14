@@ -34,11 +34,11 @@ public class UiInGameTimeController : MonoBehaviour
         if (LapTimeManager.CurrentLap != CurrentLap)
         {
             CurrentLap = LapTimeManager.CurrentLap;
-            UITextCurrentLap.text = $"LAP: {CurrentLap}";
+            UITextCurrentLap.text = $"LAP: {CurrentLap}/{LapTimeManager.TotalLaps}";
         }
         if (LapTimeManager.CurrentLapTime != CurrentLapTime)
         {
-            CurrentLapTime = LapTimeManager.CurrentLapTime;
+            CurrentLapTime = LapTimeManager.CurrentLapTime;if(LapTimeManager.BestLapTime!=Mathf.Infinity)
             UITextCurrentLapTime.text = $"Current Lap: {(int)CurrentLapTime/60}:{(CurrentLapTime)%60:00.000}";
         }
         if (LapTimeManager.LastLapTime != LastLapTime)
@@ -49,7 +49,8 @@ public class UiInGameTimeController : MonoBehaviour
         if (LapTimeManager.BestLapTime != BestLapTime)
         {
             BestLapTime = LapTimeManager.BestLapTime;
-            UITextBestLapTime.text = $"Best Lap: {(int)BestLapTime / 60}:{(BestLapTime) % 60:00.000}";
+            if (LapTimeManager.BestLapTime != Mathf.Infinity)
+                UITextBestLapTime.text = $"Best Lap: {(int)BestLapTime / 60}:{(BestLapTime) % 60:00.000}";
         }
         if(LapTimeManager.TotalLapTime!=totalLapTime)
         {

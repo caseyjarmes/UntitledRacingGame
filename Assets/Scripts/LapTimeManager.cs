@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LapTimeManager : MonoBehaviour
 {
-    public float BestLapTime { get; private set; }
+    public float BestLapTime { get; private set; } = Mathf.Infinity;
     public float LastLapTime { get; private set; }
     public float CurrentLapTime { get; private set; }
     public float TotalLapTime { get; private set; }
