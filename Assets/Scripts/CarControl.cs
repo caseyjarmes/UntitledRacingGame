@@ -151,7 +151,7 @@ public class CarControl : MonoBehaviour
             case "Coin":
                 CoinsCollected++;
                 other.gameObject.SetActive(false);
-                rb.mass += 1;
+                rb.mass += .20f;
                 break;
             case "Boost":
                 boostStatus = true;
@@ -165,6 +165,7 @@ public class CarControl : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("wall")) {
             Vector3 upwardForceFromCollision = Vector3.Dot(collision.impulse, transform.up) * transform.up;
             rb.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
+            //rb.velocity = rb.velocity/10f;
         }
     }
     public float ReturnVehicleVelocity()
