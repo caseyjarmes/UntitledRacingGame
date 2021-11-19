@@ -5214,6 +5214,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 6d28450c-916e-4e03-9d4c-a15ac0e5c872
     m_ActionName: Menu control/Right Click[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 19cec146-f0d9-4d8d-99a3-543cd5f69ad6
+    m_ActionName: VehicleControl/Drifting[/Keyboard/q,/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: VehicleControl
   m_DefaultActionMap: VehicleControl
@@ -5232,7 +5236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  speed: 1200
+  speed: 2000
   TorqueSpeed: 400
   ship: {fileID: 6251913710674590359}
   shipModel: {fileID: 0}
@@ -5283,6 +5287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackCheckpointSystem: {fileID: 0}
   TotalLaps: 0
+  completedgame: 0
 --- !u!65 &9085264070237910701
 BoxCollider:
   m_ObjectHideFlags: 0
