@@ -8,6 +8,7 @@ public class CarControl : MonoBehaviour
 {
     private MainControl inputs;
     public Rigidbody rb;
+    private float BaseMass;
     public float speed;
     public float TorqueSpeed;
     private Vector3 groundNormal;
@@ -37,7 +38,7 @@ public class CarControl : MonoBehaviour
         inputs = new MainControl();
         rb = GetComponent<Rigidbody>();
         shipModel = ship.transform.GetChild(0).gameObject;
-        
+        BaseMass = rb.mass;
         
     }
     private void OnEnable()
@@ -56,7 +57,8 @@ public class CarControl : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {           
+    {          
+        
         Ray ray = new Ray(rb.position, Vector3.down);
         RaycastHit hitinfo;        
         isOnGravel = Physics.Raycast(ray, out hitinfo, 2f, gravel);     
@@ -82,10 +84,10 @@ public class CarControl : MonoBehaviour
         //object only foward facing of the vehicle
         //If you turn it on drastically increase the speed to normalize it         
         float valueSpeed = inputs.VehicleControl.TrottleControl.ReadValue<float>();    
-        if (boostStatus)
+        if (boostStatus && valueSpeed > 0)
         {
             //1.25 is the modifier
-            rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed * 3f);
+            rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed * 2.5f);
             if(duration < 60)
             {
                 duration++;
@@ -102,18 +104,31 @@ public class CarControl : MonoBehaviour
             rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed * .5f);
             return;
         }
-
-        rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed);
-
+        if (valueSpeed > 0)
+        {
+            rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed);
+        }
+        else if (valueSpeed < 0)
+        {
+            rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * valueSpeed * .25f);
+        }
     }
     private void TurningAndTilt()
     {
         //Keep adjustable torque value Very small hundredths or thousands
         float valueturn = inputs.VehicleControl.Movement.ReadValue<float>();
         rb.AddRelativeTorque(new Vector3(0, valueturn) * TorqueSpeed);
+
+
+        float valuedrift = inputs.VehicleControl.Drifting.ReadValue<float>();
+        rb.AddRelativeTorque(new Vector3(0, valuedrift * TorqueSpeed * 1.25f));
+        
+        //For the Turning of the ship model separately from the rest of the gameobject without also affecting the levitation points
         float rollEluerValue = RollingAngle * -valueturn;
         Quaternion modelRotation = shipModel.transform.rotation * Quaternion.Euler(0f, 0f, rollEluerValue);
         shipModel.transform.rotation = Quaternion.Lerp(shipModel.transform.rotation, modelRotation, Time.deltaTime * 2.5f);
+        
+        //To deal with physics issues caused by the levitation points reverts the parent to normal orientation
         Vector3 projection = Vector3.ProjectOnPlane(transform.forward, groundNormal);
         Quaternion rotations = Quaternion.LookRotation(projection, groundNormal);
         shipModel.transform.rotation = (Quaternion.Lerp(shipModel.transform.rotation, rotations, Time.deltaTime * 5f));
@@ -136,6 +151,7 @@ public class CarControl : MonoBehaviour
             case "Coin":
                 CoinsCollected++;
                 other.gameObject.SetActive(false);
+                rb.mass += 1;
                 break;
             case "Boost":
                 boostStatus = true;

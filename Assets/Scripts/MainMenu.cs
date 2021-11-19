@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class MainMenu : MonoBehaviour
     public void Survey()
     {
         Application.OpenURL("https://forms.gle/zqw7EjyC7Vi57zQ56");
+    }
+    public void Credits()
+    {
+
     }
     public void Return()
     {
