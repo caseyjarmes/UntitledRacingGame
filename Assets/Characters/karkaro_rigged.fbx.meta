@@ -3,7 +3,27 @@ guid: 7b8c29e6488b6b447aa97801c2615381
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Armor_Txt1
+    second: {fileID: 2100000, guid: 0c4b7b573a24b614a95df9abd88b4572, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body_tex1
+    second: {fileID: 2100000, guid: 651b5c5478414e3499d825670c8b55e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tank_Txt1
+    second: {fileID: 2100000, guid: 0f2df33cfe5b8e94e93859a6b474ea35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Water_Txt1
+    second: {fileID: 2100000, guid: d3787d219c17d6843a41ec646e5e3a3e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
