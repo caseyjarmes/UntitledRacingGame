@@ -165,7 +165,7 @@ public class CarControl : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("wall")) {
             Vector3 upwardForceFromCollision = Vector3.Dot(collision.impulse, transform.up) * transform.up;
             rb.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
-            //rb.velocity = rb.velocity/10f;
+            rb.velocity = rb.velocity/2f;
         }
     }
     public float ReturnVehicleVelocity()
