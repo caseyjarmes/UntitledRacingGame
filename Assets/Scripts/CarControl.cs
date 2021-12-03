@@ -149,12 +149,18 @@ public class CarControl : MonoBehaviour
                 checkpointRotation.rotation = other.transform.rotation;
                 break;
             case "Coin":
+                if (CoinsCollected < 15)
+                {
+
+                    rb.mass += .20f;
+                }                    
                 CoinsCollected++;
-                other.gameObject.SetActive(false);
-                rb.mass += .20f;
+                    other.gameObject.SetActive(false);
+                //INSERT COIN SOUND THING
                 break;
             case "Boost":
                 boostStatus = true;
+                //BOOSTING SOUND INSERT HERE
                 break;
             default:
                 break;

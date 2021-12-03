@@ -33,7 +33,9 @@ public class LapTimeManager : MonoBehaviour
         BestLapTime = Mathf.Min(LastLapTime, BestLapTime);
         TotalLapTime += LastLapTime;
         CurrentLapTime = 0;
-        
+        //END LAP SOUND TRIGGER
+
+        //FINISH GAME SOUND
     }
     void StartLap()
     {
