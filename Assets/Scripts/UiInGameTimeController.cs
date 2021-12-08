@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UiInGameTimeController : MonoBehaviour
 {
     public GameObject UIRacePanel;
-    public Text UITextCurrentLap;
-    public Text UITextCurrentLapTime;
-    public Text UITextPreviousLapTime;
-    public Text UITextBestLapTime;
-    public Text UITextTotalLapTime;
-    public Text UITextfinalLapTime;
-    public Text UITotalCoinsCollected;
+    public TextMeshProUGUI UITextCurrentLap;
+    public TextMeshProUGUI UITextCurrentLapTime;
+    public TextMeshProUGUI UITextPreviousLapTime;
+    public TextMeshProUGUI UITextBestLapTime;
+    public TextMeshProUGUI UITextTotalLapTime;
+    public TextMeshProUGUI UITextfinalLapTime;
+    public TextMeshProUGUI UITotalCoinsCollected;
 
     public GameObject CompletedPanel;
     public LapTimeManager LapTimeManager;
@@ -40,7 +41,7 @@ public class UiInGameTimeController : MonoBehaviour
         {
             CurrentLapTime = LapTimeManager.CurrentLapTime;
             //if(LapTimeManager.BestLapTime!=Mathf.Infinity)
-            UITextCurrentLapTime.text = $"Current Lap: {(int)CurrentLapTime/60}:{(CurrentLapTime)%60:00.000}";
+            UITextCurrentLapTime.text = $"Current Lap Time: {(int)CurrentLapTime/60}:{(CurrentLapTime)%60:00.000}";
         }
         if (LapTimeManager.LastLapTime != LastLapTime)
         {
@@ -56,12 +57,12 @@ public class UiInGameTimeController : MonoBehaviour
         if(LapTimeManager.TotalLapTime!=totalLapTime)
         {
             totalLapTime = LapTimeManager.TotalLapTime;
-            UITextTotalLapTime.text = $"Total Race Time: {(int)totalLapTime/60}:{(totalLapTime)%60:00.000}";
-            UITextfinalLapTime.text = $"Total Race Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
+            UITextTotalLapTime.text = $"Total Time: {(int)totalLapTime/60}:{(totalLapTime)%60:00.000}";
+            UITextfinalLapTime.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
         }
         if (shipStatsUI.coins!= count)
         {
-            UITotalCoinsCollected.text = $"Total Coins Collected: {count}";
+            UITotalCoinsCollected.text = $"Crystal Count: {count}";
                 count++;
         }
         if (LapTimeManager.completedgame)
