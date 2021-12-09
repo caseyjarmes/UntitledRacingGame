@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 {
     public Button Selected;
     public TMP_Dropdown trackSelect;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -18,18 +19,36 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
-        if (trackSelect.value == 0)
+        switch (trackSelect.value)
         {
-            SceneManager.LoadScene("Speedway");
+            case 0:
+                SceneManager.LoadScene(1);
+                break;
+            case 1:
+                SceneManager.LoadScene(2);
+                break;
+            case 2:
+                SceneManager.LoadScene(3);
+                break;
+            default:
+                break;
         }
-        else if (trackSelect.value == 1)
-        {
-            SceneManager.LoadScene("Crashsite");
-        }
-        else if (trackSelect.value == 2)
-        {
-            SceneManager.LoadScene("Downtown");
-        }
+
+
+
+
+        //if (trackSelect.value == 0)
+        //{
+        //    SceneManager.LoadScene(1);
+        //}
+        //else if (trackSelect.value == 1)
+        //{
+        //    SceneManager.LoadScene(2);
+        //}
+        //else if (trackSelect.value == 2)
+        //{
+        //    SceneManager.LoadScene(3);
+        //}
     }
     public void ExitGame()
     {
