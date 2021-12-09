@@ -52,7 +52,7 @@ public class CarControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CoinsCollected = 0;
     }
 
     // Update is called once per frame
@@ -75,7 +75,7 @@ public class CarControl : MonoBehaviour
         {        
             LimitRotations();
             groundNormal = Vector3.up;
-            rb.AddForce(-groundNormal * 4, ForceMode.Acceleration);
+            rb.AddRelativeForce(-groundNormal * 35, ForceMode.Acceleration);
         }        
     }
     private void Speed()

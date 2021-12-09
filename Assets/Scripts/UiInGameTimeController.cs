@@ -60,9 +60,9 @@ public class UiInGameTimeController : MonoBehaviour
             UITextTotalLapTime.text = $"Total Time: {(int)totalLapTime/60}:{(totalLapTime)%60:00.000}";
             UITextfinalLapTime.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
         }
-        if (shipStatsUI.coins!= count)
+        if (shipStatsUI.coins != count)
         {
-            UITotalCoinsCollected.text = $"Crystal Count: {count}";
+            UITotalCoinsCollected.text = $"Crystal Count: {shipStatsUI.coins}";
                 count++;
         }
         if (LapTimeManager.completedgame)
