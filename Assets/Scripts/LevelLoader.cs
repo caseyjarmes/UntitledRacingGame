@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using TMPro;
 public class LevelLoader : MonoBehaviour
 {
     private float progress;
     //public GameObject LoadingScreen;
     public Slider slider;
-    public void LoadLevel(int sceneIndex)
+    public int value;
+    public TMP_Dropdown dropdown;
+    public void LoadLevel()
     {
-        StartCoroutine(LoadAsync(sceneIndex));
+        value = dropdown.value+1;
+        StartCoroutine(LoadAsync(value));
     }
     IEnumerator LoadAsync(int sceneIndex)
     {
@@ -30,12 +33,12 @@ public class LevelLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+            
     }
 }
