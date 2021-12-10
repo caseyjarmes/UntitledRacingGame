@@ -13,14 +13,16 @@ public class UiInGameTimeController : MonoBehaviour
     public TextMeshProUGUI UITextBestLapTime;
     public TextMeshProUGUI UITextTotalLapTime;
     public TextMeshProUGUI UITextfinalLapTime;
+    public TextMeshProUGUI UITextfinalLapTime2;
     public TextMeshProUGUI UITotalCoinsCollected;
+    public TextMeshProUGUI UITotalCoinsCollected2;
 
     public GameObject CompletedPanel;
     public LapTimeManager LapTimeManager;
     public ShipStatsUI shipStatsUI;
 
 
-    private int CurrentLap =0;
+    private int CurrentLap = 0;
     private float CurrentLapTime;
     private float LastLapTime;
     private float BestLapTime;
@@ -40,7 +42,7 @@ public class UiInGameTimeController : MonoBehaviour
         if (LapTimeManager.CurrentLapTime != CurrentLapTime)
         {
             CurrentLapTime = LapTimeManager.CurrentLapTime;
-            //if(LapTimeManager.BestLapTime!=Mathf.Infinity)
+            if(LapTimeManager.BestLapTime!=Mathf.Infinity)
             UITextCurrentLapTime.text = $"Current Lap Time: {(int)CurrentLapTime/60}:{(CurrentLapTime)%60:00.000}";
         }
         if (LapTimeManager.LastLapTime != LastLapTime)
@@ -59,11 +61,13 @@ public class UiInGameTimeController : MonoBehaviour
             totalLapTime = LapTimeManager.TotalLapTime;
             UITextTotalLapTime.text = $"Total Time: {(int)totalLapTime/60}:{(totalLapTime)%60:00.000}";
             UITextfinalLapTime.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
-        }
+            UITextfinalLapTime2.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
+}
         if (shipStatsUI.coins != count)
         {
+            UITotalCoinsCollected2.text = $"Crystal Count: {shipStatsUI.coins}";
             UITotalCoinsCollected.text = $"Crystal Count: {shipStatsUI.coins}";
-                count++;
+            count++;
         }
         if (LapTimeManager.completedgame)
         {
