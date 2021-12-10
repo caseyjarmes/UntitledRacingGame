@@ -22,6 +22,8 @@ public class CinemachineManipulator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ShipCam.m_Lens.FieldOfView = startingfov + (CarControl.SpeedInformation * 0.0166f);
+        //0.0166 70 for max speed 
+        if(CarControl.SpeedInformation>40)
+        ShipCam.m_Lens.FieldOfView = startingfov + (CarControl.SpeedInformation * 0.033f);
     }
 }

@@ -1274,10 +1274,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 606725329530768697, guid: 60415b06497228e49942947c5d4875c0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 845669712101135516, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: TotalLaps
       value: 3
