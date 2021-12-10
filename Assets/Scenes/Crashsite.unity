@@ -1274,6 +1274,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 606725329530768697, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 845669712101135516, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: TotalLaps
       value: 3
@@ -2141,6 +2145,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.023195991
       objectReference: {fileID: 0}
+    - target: {fileID: 1909055952281725375, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
+      propertyPath: CarControl
+      value: 
+      objectReference: {fileID: 416729665}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
 --- !u!1001 &718258935

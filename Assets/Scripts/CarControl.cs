@@ -10,6 +10,7 @@ public class CarControl : MonoBehaviour
     public Rigidbody rb;
     private float BaseMass;
     public float speed;
+    public float SpeedInformation { get; private set; }
     public float TorqueSpeed;
     private Vector3 groundNormal;
 
@@ -64,7 +65,9 @@ public class CarControl : MonoBehaviour
         isOnGravel = Physics.Raycast(ray, out hitinfo, 2f, gravel);     
         isOnGround = Physics.Raycast(ray, out hitinfo, 2f, ground);
         //LimitRotations();
-        Debug.Log(ReturnVehicleVelocity());
+
+        Debug.Log(ReturnVehicleVelocity(rb.velocity.magnitude));
+        SpeedInformation = ReturnVehicleVelocity(rb.velocity.magnitude);
         Speed();
         TurningAndTilt();
         if (isOnGround || isOnGravel) 
@@ -174,9 +177,10 @@ public class CarControl : MonoBehaviour
             rb.velocity = rb.velocity/2f;
         }
     }
-    public float ReturnVehicleVelocity()
+    private float ReturnVehicleVelocity(float value)
     {
+        //rb.velocity.magnitude
         //For ui make this value bigger because its rather tiny for the sense of speed
-        return (float)Math.Round((decimal)(rb.velocity.magnitude * 10), 0);
+        return (float)Math.Round((decimal)(value * 10), 0);
     }
 }

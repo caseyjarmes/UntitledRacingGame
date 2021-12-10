@@ -24,6 +24,6 @@ public class ShipStatsUI : MonoBehaviour
             CoinsCollectedText.text = $"Crystals Collected: {CarControl.CoinsCollected.ToString()}";
             coins++;
         }
-        VelocityStats.text = $"Speed: {CarControl.ReturnVehicleVelocity()} Mph";
+        VelocityStats.text = $"Speed: {CarControl.SpeedInformation} Mph";
     }
 }
