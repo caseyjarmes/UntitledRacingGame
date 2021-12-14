@@ -152,7 +152,7 @@ public class CarControl : MonoBehaviour
                 checkpointRotation.rotation = other.transform.rotation;
                 break;
             case "Coin":
-                if (CoinsCollected < 15)
+                if (CoinsCollected < 10)
                 {
 
                     rb.mass += .20f;
