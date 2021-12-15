@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BackTex:
-        m_Texture: {fileID: 2800000, guid: c9e55485504bef74a9452de31d1e0175, type: 3}
+        m_Texture: {fileID: 2800000, guid: e841ff7c33c78f84b9ff8cca7ec32c44, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DownTex:
-        m_Texture: {fileID: 2800000, guid: f36382e378429df4cbca5e90ead72102, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4129bd95e85ff2b46b03b1a6617d1d62, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -48,11 +48,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FrontTex:
-        m_Texture: {fileID: 2800000, guid: f9f489d45b04b1d40b34edc64378eddf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 447d79f49c6feee4688db772de061c66, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LeftTex:
-        m_Texture: {fileID: 2800000, guid: 5a854e995ca420047817fb30dfc471e0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0ea30e1405ee8634abd5614cef75d682, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -72,11 +72,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RightTex:
-        m_Texture: {fileID: 2800000, guid: 341213f7cbd1e6444b8997d8ce746fb4, type: 3}
+        m_Texture: {fileID: 2800000, guid: dbc40e6dbf978e946a2e7fb63fea1ad9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _UpTex:
-        m_Texture: {fileID: 2800000, guid: ae1cf591b9f1644409360515e4a202a4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 57896e3b44a22a841883db3c2b206209, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -93,7 +93,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Rotation: 0
+    - _Rotation: 146
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -102,5 +102,5 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - _Tint: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.5}
   m_BuildTextureStacks: []
