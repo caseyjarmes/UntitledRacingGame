@@ -176,6 +176,14 @@ public class CarControl : MonoBehaviour
             rb.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
             rb.velocity = rb.velocity/2f;
         }
+
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Boost")
+        {
+            duration = 0;
+        }
     }
     private float ReturnVehicleVelocity(float value)
     {

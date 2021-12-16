@@ -7,16 +7,17 @@ using TMPro;
 public class UiInGameTimeController : MonoBehaviour
 {
     public GameObject UIRacePanel;
-    public TextMeshProUGUI UITextCurrentLap;
-    public TextMeshProUGUI UITextCurrentLapTime;
-    public TextMeshProUGUI UITextPreviousLapTime;
-    public TextMeshProUGUI UITextBestLapTime;
-    public TextMeshProUGUI UITextTotalLapTime;
-    public TextMeshProUGUI UITextfinalLapTime;
-    public TextMeshProUGUI UITextfinalLapTime2;
-    public TextMeshProUGUI UITotalCoinsCollected;
-    public TextMeshProUGUI UITotalCoinsCollected2;
-
+    public TextMeshProUGUI UIStartup,
+        UITextCurrentLap,
+        UITextCurrentLapTime,
+        UITextPreviousLapTime,
+        UITextBestLapTime,
+        UITextTotalLapTime,
+        UITextfinalLapTime,
+        UITextfinalLapTime2,
+        UITotalCoinsCollected,
+        UITotalCoinsCollected2;
+    
     public GameObject CompletedPanel;
     public LapTimeManager LapTimeManager;
     public ShipStatsUI shipStatsUI;
@@ -28,51 +29,94 @@ public class UiInGameTimeController : MonoBehaviour
     private float BestLapTime;
     private float totalLapTime;
     private int count = 0;
+    public static bool Started;
+    void Start()
+    {
+        Started = false;
+        StartCoroutine("StartupSequence");
+        BestLapTime = LapTimeManager.BestLapTime;
+    }
+
+    IEnumerator StartupSequence()
+    {
+
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        foreach(GameObject player in players)
+        {
+            var input = player.GetComponent<CarControl>();
+            input.enabled = false;
+        }
+        var count = 4;
+        while (count > 0)
+        {
+            UIStartup.text = $"{count - 1}";
+            //Insert Audio Here
+            if(count == 1)
+            {
+                UIStartup.text = "GO!";
+                foreach (GameObject player in players)
+                {
+                    var input = player.GetComponent<CarControl>();
+                    input.enabled = true;
+                }
+                Started = true;
+            }
+            yield return new WaitForSeconds(1f);
+            --count;
+        }
+
+        yield return null;          
+        if(UIStartup.IsActive())
+        UIStartup.gameObject.SetActive(false);      
+    }
     // Update is called once per frame
     void Update()
     {
-        if (LapTimeManager == null)
-            return;
 
-        if (LapTimeManager.CurrentLap != CurrentLap)
+        if (Started)
         {
-            CurrentLap = LapTimeManager.CurrentLap;
-            UITextCurrentLap.text = $"LAP: {CurrentLap}/{LapTimeManager.TotalLaps}";
-        }
-        if (LapTimeManager.CurrentLapTime != CurrentLapTime)
-        {
-            CurrentLapTime = LapTimeManager.CurrentLapTime;
-            if(LapTimeManager.BestLapTime!=Mathf.Infinity)
-            UITextCurrentLapTime.text = $"Current Lap Time: {(int)CurrentLapTime/60}:{(CurrentLapTime)%60:00.000}";
-        }
-        if (LapTimeManager.LastLapTime != LastLapTime)
-        {
-            LastLapTime = LapTimeManager.LastLapTime;
-            UITextPreviousLapTime.text = $"Previous Lap: {(int)LastLapTime / 60}:{(LastLapTime) % 60:00.000}";
-        }
-        if (LapTimeManager.BestLapTime != BestLapTime)
-        {
-            BestLapTime = LapTimeManager.BestLapTime;
-            if (LapTimeManager.BestLapTime != Mathf.Infinity)
-                UITextBestLapTime.text = $"Best Lap: {(int)BestLapTime / 60}:{(BestLapTime) % 60:00.000}";
-        }
-        if(LapTimeManager.TotalLapTime!=totalLapTime)
-        {
-            totalLapTime = LapTimeManager.TotalLapTime;
-            UITextTotalLapTime.text = $"Total Time: {(int)totalLapTime/60}:{(totalLapTime)%60:00.000}";
-            UITextfinalLapTime.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
-            UITextfinalLapTime2.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
-}
-        if (shipStatsUI.coins != count)
-        {
-            UITotalCoinsCollected2.text = $"Crystal Count: {shipStatsUI.coins}";
-            UITotalCoinsCollected.text = $"Crystal Count: {shipStatsUI.coins}";
-            count++;
-        }
-        if (LapTimeManager.completedgame)
-        {
-            UIRacePanel.SetActive(false);
-            CompletedPanel.SetActive(true);
+            if (LapTimeManager == null)
+                return;
+
+            if (LapTimeManager.CurrentLap != CurrentLap)
+            {
+                CurrentLap = LapTimeManager.CurrentLap;
+                UITextCurrentLap.text = $"LAP: {CurrentLap}/{LapTimeManager.TotalLaps}";
+            }
+            if (LapTimeManager.CurrentLapTime != CurrentLapTime)
+            {
+                CurrentLapTime = LapTimeManager.CurrentLapTime;
+                UITextCurrentLapTime.text = $"Current Lap Time: {(int)CurrentLapTime / 60}:{(CurrentLapTime) % 60:00.000}";
+            }
+            if (LapTimeManager.LastLapTime != LastLapTime)
+            {
+                LastLapTime = LapTimeManager.LastLapTime;
+                UITextPreviousLapTime.text = $"Previous Lap: {(int)LastLapTime / 60}:{(LastLapTime) % 60:00.000}";
+            }
+            if (LapTimeManager.BestLapTime != BestLapTime)
+            {
+                BestLapTime = LapTimeManager.BestLapTime;
+                if (LapTimeManager.BestLapTime < Mathf.Infinity)
+                    UITextBestLapTime.text = $"Best Lap: {(int)BestLapTime / 60}:{(BestLapTime) % 60:00.000}";
+            }
+            if (LapTimeManager.TotalLapTime != totalLapTime)
+            {
+                totalLapTime = LapTimeManager.TotalLapTime;
+                UITextTotalLapTime.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
+                UITextfinalLapTime.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
+                UITextfinalLapTime2.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
+            }
+            if (shipStatsUI.coins != count)
+            {
+                UITotalCoinsCollected2.text = $"Crystal Count: {shipStatsUI.coins}";
+                UITotalCoinsCollected.text = $"Crystal Count: {shipStatsUI.coins}";
+                count++;
+            }
+            if (LapTimeManager.completedgame)
+            {
+                UIRacePanel.SetActive(false);
+                CompletedPanel.SetActive(true);
+            }
         }
     }
 }

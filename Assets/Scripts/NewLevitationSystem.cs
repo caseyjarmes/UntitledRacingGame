@@ -26,7 +26,7 @@ public class NewLevitationSystem : MonoBehaviour
     public float wheelRadius;
     Vector3 groundNormal;
 
-
+    public bool EdgePoint;
 
     public LayerMask ground;
 
@@ -61,8 +61,10 @@ public class NewLevitationSystem : MonoBehaviour
                 damperForce = damperStiffness * springVelocity;
 
                 suspensionForce = (springForce + damperForce) * transform.up;
-
-                rb.AddForceAtPosition(suspensionForce, hit.point);
+                if(!EdgePoint)
+                    rb.AddForceAtPosition(suspensionForce, hit.point);
+                else
+                    rb.AddForceAtPosition(suspensionForce/2, hit.point);
 
             }
         }

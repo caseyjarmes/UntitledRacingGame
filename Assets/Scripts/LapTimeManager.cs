@@ -39,41 +39,46 @@ public class LapTimeManager : MonoBehaviour
     }
     void StartLap()
     {
-        CurrentLap++;
-        if(LastLapTime == 0)
-        {
-        lapTimerTimeStamp = 0;
 
-        }
-        else
-        {
-            lapTimerTimeStamp = LastLapTime;
-        }
-        Debug.Log("New Lap");
-    }
-    void Update()
-    {
-        if (CurrentLap == 1)
-        {
-            CurrentLapTime += Time.deltaTime;
-        }
-        else 
-        {        
-            CurrentLapTime += lapTimerTimeStamp > 0 ? Time.deltaTime : 0;
-        }
-        if (trackCheckpointSystem.NextCheckpointIndexvalue==trackCheckpointSystem.checkpointlist.Count)
-        {
-            EndLap();
-            trackCheckpointSystem.ResetCheckpointIndex();
-            if (CurrentLap != TotalLaps)
+            CurrentLap++;
+            if (LastLapTime == 0)
             {
-                StartLap();
+            lapTimerTimeStamp = 0;
+
             }
             else
             {
-                completedgame = true;
-                //SceneManager.LoadScene("Main Menu");
-                //End the race here
+            lapTimerTimeStamp = LastLapTime;
+            }
+            Debug.Log("New Lap");
+        
+    }
+    void Update()
+    {
+        if (UiInGameTimeController.Started)
+        {
+            if (CurrentLap == 1)
+            {
+                CurrentLapTime += Time.deltaTime;
+            }
+            else
+            {
+                CurrentLapTime += lapTimerTimeStamp > 0 ? Time.deltaTime : 0;
+            }
+            if (trackCheckpointSystem.NextCheckpointIndexvalue == trackCheckpointSystem.checkpointlist.Count)
+            {
+                EndLap();
+                trackCheckpointSystem.ResetCheckpointIndex();
+                if (CurrentLap != TotalLaps)
+                {
+                    StartLap();
+                }
+                else
+                {
+                    completedgame = true;
+                    //SceneManager.LoadScene("Main Menu");
+                    //End the race here
+                }
             }
         }
     }

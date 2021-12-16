@@ -4892,6 +4892,7 @@ MonoBehaviour:
   springStiffness: 300
   damperStiffness: 2
   wheelRadius: 0.5
+  EdgePoint: 0
   ground:
     serializedVersion: 2
     m_Bits: 64
@@ -4960,6 +4961,7 @@ MonoBehaviour:
   springStiffness: 300
   damperStiffness: 2
   wheelRadius: 0.5
+  EdgePoint: 0
   ground:
     serializedVersion: 2
     m_Bits: 64
@@ -5028,6 +5030,7 @@ MonoBehaviour:
   springStiffness: 300
   damperStiffness: 2
   wheelRadius: 0.5
+  EdgePoint: 1
   ground:
     serializedVersion: 2
     m_Bits: 64
@@ -14920,6 +14923,7 @@ MonoBehaviour:
   springStiffness: 300
   damperStiffness: 2
   wheelRadius: 0.5
+  EdgePoint: 1
   ground:
     serializedVersion: 2
     m_Bits: 64
@@ -34778,6 +34782,7 @@ MonoBehaviour:
   springStiffness: 300
   damperStiffness: 2
   wheelRadius: 0.5
+  EdgePoint: 0
   ground:
     serializedVersion: 2
     m_Bits: 64
@@ -39706,6 +39711,7 @@ MonoBehaviour:
   springStiffness: 300
   damperStiffness: 2
   wheelRadius: 0.5
+  EdgePoint: 0
   ground:
     serializedVersion: 2
     m_Bits: 64
@@ -49555,6 +49561,7 @@ MonoBehaviour:
   springStiffness: 300
   damperStiffness: 2
   wheelRadius: 0.5
+  EdgePoint: 0
   ground:
     serializedVersion: 2
     m_Bits: 64

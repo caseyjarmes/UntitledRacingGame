@@ -15,7 +15,7 @@ public class CinemachineManipulator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ShipCam = GameObject.FindGameObjectWithTag("").GetComponent<CinemachineVirtualCamera>();
+        ShipCam = GameObject.FindGameObjectWithTag("Camera").GetComponent<CinemachineVirtualCamera>();
         //startingfov = ShipCam.m_Lens.FieldOfView;
     }
 
