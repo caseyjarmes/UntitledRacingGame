@@ -23,10 +23,11 @@ public class CarControl : MonoBehaviour
     private bool isOnGravel;
     public LayerMask gravel;
 
+    public AudioSource boost;
     private bool boostStatus = false;
     private float duration = 60;
 
-
+    public AudioSource crystal;
     public int CoinsCollected { get; private set; }
 
     private float RollingAngle = 30;
@@ -54,6 +55,7 @@ public class CarControl : MonoBehaviour
     void Start()
     {
         CoinsCollected = 0;
+        
     }
 
     // Update is called once per frame
@@ -159,16 +161,21 @@ public class CarControl : MonoBehaviour
                 }                    
                 CoinsCollected++;
                     other.gameObject.SetActive(false);
+               
+                crystal.Play();
+                VoManager.voMan.PlayVoPickup();
                 //INSERT COIN SOUND THING
                 break;
             case "Boost":
                 boostStatus = true;
                 //BOOSTING SOUND INSERT HERE
+                boost.Play();
                 break;
             default:
                 break;
         }
     }
+    
     private void OnCollisionStay(Collision collision)
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("wall")) {

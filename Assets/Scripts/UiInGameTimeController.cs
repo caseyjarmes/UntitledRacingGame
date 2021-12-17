@@ -20,7 +20,7 @@ public class UiInGameTimeController : MonoBehaviour
     public GameObject CompletedPanel;
     public LapTimeManager LapTimeManager;
     public ShipStatsUI shipStatsUI;
-
+    public AudioSource start;
 
     private int CurrentLap = 0;
     private float CurrentLapTime;
@@ -44,12 +44,13 @@ public class UiInGameTimeController : MonoBehaviour
         {
             var input = player.GetComponent<CarControl>();
             input.enabled = false;
+            start.Play();
         }
         var count = 4;
         while (count > 0)
         {
             UIStartup.text = $"{count - 1}";
-            //Insert Audio Here
+           // start.Play();
             if(count == 1)
             {
                 UIStartup.text = "GO!";

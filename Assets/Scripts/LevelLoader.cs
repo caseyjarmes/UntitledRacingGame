@@ -11,6 +11,7 @@ public class LevelLoader : MonoBehaviour
     public Slider slider;
     public int value;
     public TMP_Dropdown dropdown;
+
     public void LoadLevel()
     {
         value = dropdown.value+1;
