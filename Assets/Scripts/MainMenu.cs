@@ -36,22 +36,6 @@ public class MainMenu : MonoBehaviour
             default:
                 break;
         }
-
-
-
-
-        //if (trackSelect.value == 0)
-        //{
-        //    SceneManager.LoadScene(1);
-        //}
-        //else if (trackSelect.value == 1)
-        //{
-        //    SceneManager.LoadScene(2);
-        //}
-        //else if (trackSelect.value == 2)
-        //{
-        //    SceneManager.LoadScene(3);
-        //}
     }
     public void ExitGame()
     {
@@ -60,7 +44,7 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-
+        Application.OpenURL("https://github.com/caseyjarmes/UntitledRacingGame");
     }
     public void Return()
     {
