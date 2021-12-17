@@ -169,6 +169,7 @@ public class CarControl : MonoBehaviour
             case "Boost":
                 boostStatus = true;
                 //BOOSTING SOUND INSERT HERE
+                if(!boost.isPlaying)
                 boost.Play();
                 break;
             default:

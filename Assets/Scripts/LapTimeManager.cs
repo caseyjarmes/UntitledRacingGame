@@ -12,6 +12,7 @@ public class LapTimeManager : MonoBehaviour
     public float TotalLapTime { get; private set; }
 
     public AudioSource lap;
+    public AudioSource voFinish;
     private float lapTimerTimeStamp;
     public TrackCheckpointSystem trackCheckpointSystem;
     public int CurrentLap { get; private set; }
@@ -35,8 +36,15 @@ public class LapTimeManager : MonoBehaviour
         TotalLapTime += LastLapTime;
         CurrentLapTime = 0;
         //END LAP SOUND TRIGGER
+        if(CurrentLap != TotalLaps)
+        VoManager.voMan.PlayVoLap();
         lap.Play();
         //FINISH GAME SOUND
+        if (CurrentLap == TotalLaps)
+        {
+            //play finish vo 
+            voFinish.Play();
+        }
     }
     void StartLap()
     {
