@@ -181,7 +181,7 @@ PrefabInstance:
     - target: {fileID: -2776862392331671169, guid: 596dd998d4ac0fd439c3d787ab658ebf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 764461eaebfe37c488e8f9f901da59a0, type: 2}
+      objectReference: {fileID: 2100000, guid: e55fbbc525f81a140b4e92de675c08da, type: 2}
     - target: {fileID: 919132149155446097, guid: 596dd998d4ac0fd439c3d787ab658ebf, type: 3}
       propertyPath: m_Name
       value: parrotship
@@ -189,7 +189,7 @@ PrefabInstance:
     - target: {fileID: 2834720560874433344, guid: 596dd998d4ac0fd439c3d787ab658ebf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3315afc12e7564a4dae2d1fd19f39b04, type: 2}
+      objectReference: {fileID: 2100000, guid: e55fbbc525f81a140b4e92de675c08da, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 596dd998d4ac0fd439c3d787ab658ebf, type: 3}
 --- !u!1 &58506687
@@ -866,10 +866,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8460531041354886036, guid: bb9d6651b9de5174f8bdd2eef74a2988, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b54c6a9dacb4698c8b50366722cb, type: 2}
+    - target: {fileID: -5432937280558127961, guid: bb9d6651b9de5174f8bdd2eef74a2988, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b54c6a9dacb4698c8b50366722cb, type: 2}
+    - target: {fileID: -2905319690989413410, guid: bb9d6651b9de5174f8bdd2eef74a2988, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b54c6a9dacb4698c8b50366722cb, type: 2}
+    - target: {fileID: -1116097053491663983, guid: bb9d6651b9de5174f8bdd2eef74a2988, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b54c6a9dacb4698c8b50366722cb, type: 2}
     - target: {fileID: 919132149155446097, guid: bb9d6651b9de5174f8bdd2eef74a2988, type: 3}
       propertyPath: m_Name
       value: boatship
       objectReference: {fileID: 0}
+    - target: {fileID: 6387116194821241151, guid: bb9d6651b9de5174f8bdd2eef74a2988, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b54c6a9dacb4698c8b50366722cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb9d6651b9de5174f8bdd2eef74a2988, type: 3}
 --- !u!1 &317761725
