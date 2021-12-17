@@ -14,7 +14,6 @@ public class UiInGameTimeController : MonoBehaviour
         UITextBestLapTime,
         UITextTotalLapTime,
         UITextfinalLapTime,
-        UITextfinalLapTime2,
         UITotalCoinsCollected,
         UITotalCoinsCollected2;
     
@@ -104,7 +103,6 @@ public class UiInGameTimeController : MonoBehaviour
                 totalLapTime = LapTimeManager.TotalLapTime;
                 UITextTotalLapTime.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
                 UITextfinalLapTime.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
-                UITextfinalLapTime2.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
             }
             if (shipStatsUI.coins != count)
             {
