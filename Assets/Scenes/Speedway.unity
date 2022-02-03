@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.01252348, g: 0.073442794, b: 0.13257551, a: 1}
+  m_IndirectSpecularColor: {r: 0.012299199, g: 0.07303349, b: 0.13371721, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2824,7 +2824,7 @@ PrefabInstance:
       objectReference: {fileID: 207771083}
     - target: {fileID: 845669712101135516, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: TotalLaps
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6251913710674590345, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: m_RootOrder
@@ -2879,9 +2879,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 630588577}
     - target: {fileID: 6251913710674590349, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: speed
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590349, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: crystal
       value: 
       objectReference: {fileID: 276221787}
+    - target: {fileID: 6251913710674590349, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: TorqueSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 6251913710674590349, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: voPickup.Array.size
       value: 4

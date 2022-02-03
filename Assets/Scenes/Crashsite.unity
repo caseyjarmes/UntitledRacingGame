@@ -1962,9 +1962,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 330108439}
     - target: {fileID: 6251913710674590349, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: speed
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590349, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: crystal
       value: 
       objectReference: {fileID: 1604988788}
+    - target: {fileID: 6251913710674590349, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: TorqueSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 6251913710674590358, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: m_CollisionDetection
       value: 0
@@ -2322,7 +2330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080679046852235409, guid: aab177b5da851fa44995d1a7e811bd50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -389.7798
+      value: -396.7
       objectReference: {fileID: 0}
     - target: {fileID: 4080679046852235409, guid: aab177b5da851fa44995d1a7e811bd50, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2544,7 +2552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080679046852235409, guid: aab177b5da851fa44995d1a7e811bd50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -389.7798
+      value: -390.6
       objectReference: {fileID: 0}
     - target: {fileID: 4080679046852235409, guid: aab177b5da851fa44995d1a7e811bd50, type: 3}
       propertyPath: m_LocalPosition.z

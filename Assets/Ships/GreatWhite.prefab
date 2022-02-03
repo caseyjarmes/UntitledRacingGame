@@ -34266,8 +34266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  speed: 2000
-  TorqueSpeed: 400
+  speed: 2500
+  TorqueSpeed: 500
   ship: {fileID: 6251913710674590359}
   shipModel: {fileID: 0}
   ground:
@@ -34318,6 +34318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lap: {fileID: 0}
+  voFinish: {fileID: 0}
   trackCheckpointSystem: {fileID: 0}
   TotalLaps: 0
   completedgame: 0
