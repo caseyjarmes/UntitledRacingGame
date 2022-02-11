@@ -34193,19 +34193,7 @@ MonoBehaviour:
     m_ActionId: 591a07b0-0680-4a92-8f22-e0d76f07fdaa
     m_ActionName: VehicleControl/Accelerate[/XInputControllerWindows/rightTrigger,/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6251913710674590359}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: c6546e25-2f05-47fe-9334-b9a55229a399
     m_ActionName: VehicleControl/Movement[/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
   - m_PersistentCalls:

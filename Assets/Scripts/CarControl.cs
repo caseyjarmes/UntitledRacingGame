@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 
 public class CarControl : MonoBehaviour
 {
+    public int PlayerIndex;
+
+
     private MainControl inputs;
     public Rigidbody rb;
     private float BaseMass;
@@ -31,33 +34,43 @@ public class CarControl : MonoBehaviour
     public int CoinsCollected { get; private set; }
 
     private float RollingAngle = 30;
+
+    private float MovementValue;
     
-        
+
+
     Transform checkpointRotation;
     
     private void Awake()
     {
-        inputs = new MainControl();
+        //inputs = new MainControl();
         rb = GetComponent<Rigidbody>();
         shipModel = ship.transform.GetChild(0).gameObject;
         BaseMass = rb.mass;
         
     }
-    private void OnEnable()
-    {
-        inputs.Enable();
-    }
-    private void OnDisable()
-    {
-        inputs.Disable();
-    }
+    //private void OnEnable()
+    //{
+    //    inputs.Enable();
+    //}
+    //private void OnDisable()
+    //{
+    //    inputs.Disable();
+    //}
     // Start is called before the first frame update
     void Start()
     {
         CoinsCollected = 0;
         
     }
-
+    public int GetPlayerIndex()
+    {
+        return PlayerIndex;
+    }
+    public void SetfloatMovement(float value)
+    {
+        MovementValue = value;
+    }
     // Update is called once per frame
     void FixedUpdate()
     {          
@@ -70,7 +83,7 @@ public class CarControl : MonoBehaviour
 
         Debug.Log(ReturnVehicleVelocity(rb.velocity.magnitude));
         SpeedInformation = ReturnVehicleVelocity(rb.velocity.magnitude);
-        Speed();
+        //Speed();
         TurningAndTilt();
         if (isOnGround || isOnGravel) 
         {
@@ -121,12 +134,12 @@ public class CarControl : MonoBehaviour
     private void TurningAndTilt()
     {
         //Keep adjustable torque value Very small hundredths or thousands
-        float valueturn = inputs.VehicleControl.Movement.ReadValue<float>();
+        float valueturn = MovementValue;
         rb.AddRelativeTorque(new Vector3(0, valueturn) * TorqueSpeed);
 
 
-        float valuedrift = inputs.VehicleControl.Drifting.ReadValue<float>();
-        rb.AddRelativeTorque(new Vector3(0, valuedrift * TorqueSpeed * 1.25f));
+        //float valuedrift = inputs.VehicleControl.Drifting.ReadValue<float>();
+        //rb.AddRelativeTorque(new Vector3(0, valuedrift * TorqueSpeed * 1.25f));
         
         //For the Turning of the ship model separately from the rest of the gameobject without also affecting the levitation points
         float rollEluerValue = RollingAngle * -valueturn;
