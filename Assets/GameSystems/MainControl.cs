@@ -90,7 +90,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": ""Hold"",
                     ""processors"": ""StickDeadzone(min=0.2)"",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""MoveRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -101,7 +101,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": ""Hold"",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""MoveRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -112,7 +112,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""MoveLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -123,7 +123,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""MoveLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -134,7 +134,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Accelerate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -145,7 +145,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Accelerate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -200,7 +200,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -211,7 +211,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -222,7 +222,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Reverse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -233,7 +233,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Reverse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -255,7 +255,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""TrottleControl"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -266,7 +266,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""TrottleControl"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -288,7 +288,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""TrottleControl"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -299,7 +299,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""TrottleControl"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -321,7 +321,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Shift"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -332,7 +332,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Shift"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -343,7 +343,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Shift"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
@@ -354,7 +354,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Shift"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -365,7 +365,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Shift"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -387,7 +387,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Drifting"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -398,7 +398,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Drifting"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -409,7 +409,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Drifting"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
@@ -420,7 +420,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Drifting"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -431,7 +431,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Drifting"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -509,7 +509,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -520,7 +520,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -531,7 +531,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/dpad/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -542,7 +542,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/dpad/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -564,7 +564,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -575,7 +575,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -586,7 +586,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -597,7 +597,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -619,7 +619,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -630,7 +630,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -641,7 +641,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -652,7 +652,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -674,7 +674,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -685,7 +685,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -696,7 +696,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -707,7 +707,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -718,7 +718,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -729,7 +729,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -740,7 +740,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -751,7 +751,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Confirm"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -762,7 +762,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Confirm"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -773,7 +773,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Point"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -784,7 +784,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""VehicleControl"",
+                    ""groups"": """",
                     ""action"": ""Right Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -792,29 +792,7 @@ public class @MainControl : IInputActionCollection, IDisposable
             ]
         }
     ],
-    ""controlSchemes"": [
-        {
-            ""name"": ""VehicleControl"",
-            ""bindingGroup"": ""VehicleControl"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Keyboard>"",
-                    ""isOptional"": true,
-                    ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<Gamepad>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<Mouse>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
-        }
-    ]
+    ""controlSchemes"": []
 }");
         // VehicleControl
         m_VehicleControl = asset.FindActionMap("VehicleControl", throwIfNotFound: true);
@@ -1041,15 +1019,6 @@ public class @MainControl : IInputActionCollection, IDisposable
         }
     }
     public MenucontrolActions @Menucontrol => new MenucontrolActions(this);
-    private int m_VehicleControlSchemeIndex = -1;
-    public InputControlScheme VehicleControlScheme
-    {
-        get
-        {
-            if (m_VehicleControlSchemeIndex == -1) m_VehicleControlSchemeIndex = asset.FindControlSchemeIndex("VehicleControl");
-            return asset.controlSchemes[m_VehicleControlSchemeIndex];
-        }
-    }
     public interface IVehicleControlActions
     {
         void OnMoveRight(InputAction.CallbackContext context);

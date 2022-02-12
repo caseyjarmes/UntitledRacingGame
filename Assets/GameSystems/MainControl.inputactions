@@ -77,7 +77,7 @@
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "Hold",
                     "processors": "StickDeadzone(min=0.2)",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "MoveRight",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -88,7 +88,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "Hold",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "MoveRight",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -99,7 +99,7 @@
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "MoveLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -110,7 +110,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "MoveLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -121,7 +121,7 @@
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Accelerate",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -132,7 +132,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Accelerate",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -187,7 +187,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -198,7 +198,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -209,7 +209,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Reverse",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -220,7 +220,7 @@
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Reverse",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -242,7 +242,7 @@
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "TrottleControl",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -253,7 +253,7 @@
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "TrottleControl",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -275,7 +275,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "TrottleControl",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -286,7 +286,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "TrottleControl",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -308,7 +308,7 @@
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Shift",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -319,7 +319,7 @@
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Shift",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -330,7 +330,7 @@
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Shift",
                     "isComposite": true,
                     "isPartOfComposite": false
@@ -341,7 +341,7 @@
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Shift",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -352,7 +352,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Shift",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -374,7 +374,7 @@
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Drifting",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -385,7 +385,7 @@
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Drifting",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -396,7 +396,7 @@
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Drifting",
                     "isComposite": true,
                     "isPartOfComposite": false
@@ -407,7 +407,7 @@
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Drifting",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -418,7 +418,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Drifting",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -496,7 +496,7 @@
                     "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -507,7 +507,7 @@
                     "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -518,7 +518,7 @@
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -529,7 +529,7 @@
                     "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -551,7 +551,7 @@
                     "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -562,7 +562,7 @@
                     "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -573,7 +573,7 @@
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -584,7 +584,7 @@
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -606,7 +606,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -617,7 +617,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -628,7 +628,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -639,7 +639,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -661,7 +661,7 @@
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -672,7 +672,7 @@
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -683,7 +683,7 @@
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -694,7 +694,7 @@
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -705,7 +705,7 @@
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -716,7 +716,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -727,7 +727,7 @@
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -738,7 +738,7 @@
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -749,7 +749,7 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -760,7 +760,7 @@
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Point",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -771,7 +771,7 @@
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "VehicleControl",
+                    "groups": "",
                     "action": "Right Click",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -779,27 +779,5 @@
             ]
         }
     ],
-    "controlSchemes": [
-        {
-            "name": "VehicleControl",
-            "bindingGroup": "VehicleControl",
-            "devices": [
-                {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": true,
-                    "isOR": false
-                },
-                {
-                    "devicePath": "<Gamepad>",
-                    "isOptional": false,
-                    "isOR": false
-                },
-                {
-                    "devicePath": "<Mouse>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        }
-    ]
+    "controlSchemes": []
 }
