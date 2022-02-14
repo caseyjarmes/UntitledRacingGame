@@ -19,42 +19,10 @@ public class @MainControl : IInputActionCollection, IDisposable
             ""id"": ""3c4ca357-3ac9-4c79-8c6a-f7a0de012dfb"",
             ""actions"": [
                 {
-                    ""name"": ""MoveRight"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""18b44c22-ad3d-4faa-be50-84bb190a3905"",
-                    ""expectedControlType"": """",
-                    ""processors"": ""AxisDeadzone(min=0.5)"",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""MoveLeft"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""e84b161e-d16d-44c9-9c5c-13ceafd54a99"",
-                    ""expectedControlType"": """",
-                    ""processors"": ""AxisDeadzone(min=12.99)"",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Accelerate"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""591a07b0-0680-4a92-8f22-e0d76f07fdaa"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Movement"",
                     ""type"": ""Value"",
                     ""id"": ""c6546e25-2f05-47fe-9334-b9a55229a399"",
                     ""expectedControlType"": ""Analog"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Reverse"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""98882324-29d0-4da0-a75f-57dc8264f726"",
-                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 },
@@ -67,89 +35,23 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Shift"",
-                    ""type"": ""Button"",
-                    ""id"": ""d43deede-9af1-4715-ad6b-5a1b00b323ed"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Drifting"",
                     ""type"": ""Button"",
                     ""id"": ""19cec146-f0d9-4d8d-99a3-543cd5f69ad6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Weapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""c7b057cf-bc28-473f-af6d-010b2a646188"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""32d201c0-c62f-40ca-87e8-18f31a211156"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": ""Hold"",
-                    ""processors"": ""StickDeadzone(min=0.2)"",
-                    ""groups"": """",
-                    ""action"": ""MoveRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9e0667f1-bd27-40c0-93d1-d8a6c381ff8d"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": ""Hold"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""afcbdd44-c6e0-4478-a19e-4fb71fafbf1c"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8b1b2788-64d7-42c9-abd6-2480fccc9693"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8a32da61-297c-48a6-ae20-846b2d9022d2"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Accelerate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""94174df8-5d3e-4d9d-a1e4-0af7ca4b5e8c"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Accelerate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": ""1D Axis"",
                     ""id"": ""351a2b69-28e4-4d69-b298-c68987fea0e8"",
@@ -185,7 +87,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""1D Axis"",
-                    ""id"": ""631435cb-b104-4b0d-88d2-983594800f3e"",
+                    ""id"": ""53b88e62-dfeb-4ab9-ba51-64a8efc7d713"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -196,7 +98,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""negative"",
-                    ""id"": ""acdb4ca5-11cc-4ea8-80d7-a3ff48c42605"",
+                    ""id"": ""769d1906-2530-48ec-8352-0575a841f2a3"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -207,7 +109,7 @@ public class @MainControl : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""positive"",
-                    ""id"": ""c5e4d42c-b862-4f54-9b65-9f13790485d8"",
+                    ""id"": ""e6577b83-d257-4bcf-a05d-f0643aebeacb"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -215,28 +117,6 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2bdd37e6-d213-4b3f-a753-6a1773fce7db"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Reverse"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""770f7bf3-a4bb-4b06-8d03-c7ca9c22c20f"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Reverse"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""1D Axis"",
@@ -306,72 +186,6 @@ public class @MainControl : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""1D Axis"",
-                    ""id"": ""68eedc58-1ac7-4fd7-8040-f59a06d3b837"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Shift"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""e3619f7a-ae19-4b1d-9723-8a20c8bb2357"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Shift"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""ebcc7c8f-e1e3-4122-b96f-be81d63088e6"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Shift"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""19b20cca-e24a-492a-851b-7e1a61750b00"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Shift"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""15cf3c90-4090-4d54-a90f-e58d4bad2540"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Shift"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""510b991b-5ee4-4936-a016-9b2452382f48"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Shift"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""1D Axis"",
                     ""id"": ""775421d0-90f8-4c1c-ab52-5a925c077eea"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
@@ -435,6 +249,28 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""action"": ""Drifting"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df68a4e8-9d47-439e-8d52-8cff12fba975"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Weapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""460c1048-94f1-4a90-a48d-0fef8265c704"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Weapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -792,18 +628,42 @@ public class @MainControl : IInputActionCollection, IDisposable
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""KB&Mouse"",
+            ""bindingGroup"": ""KB&Mouse"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Gamepad"",
+            ""bindingGroup"": ""Gamepad"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // VehicleControl
         m_VehicleControl = asset.FindActionMap("VehicleControl", throwIfNotFound: true);
-        m_VehicleControl_MoveRight = m_VehicleControl.FindAction("MoveRight", throwIfNotFound: true);
-        m_VehicleControl_MoveLeft = m_VehicleControl.FindAction("MoveLeft", throwIfNotFound: true);
-        m_VehicleControl_Accelerate = m_VehicleControl.FindAction("Accelerate", throwIfNotFound: true);
         m_VehicleControl_Movement = m_VehicleControl.FindAction("Movement", throwIfNotFound: true);
-        m_VehicleControl_Reverse = m_VehicleControl.FindAction("Reverse", throwIfNotFound: true);
         m_VehicleControl_TrottleControl = m_VehicleControl.FindAction("TrottleControl", throwIfNotFound: true);
-        m_VehicleControl_Shift = m_VehicleControl.FindAction("Shift", throwIfNotFound: true);
         m_VehicleControl_Drifting = m_VehicleControl.FindAction("Drifting", throwIfNotFound: true);
+        m_VehicleControl_Weapon = m_VehicleControl.FindAction("Weapon", throwIfNotFound: true);
         // Menu control
         m_Menucontrol = asset.FindActionMap("Menu control", throwIfNotFound: true);
         m_Menucontrol_Confirm = m_Menucontrol.FindAction("Confirm", throwIfNotFound: true);
@@ -861,26 +721,18 @@ public class @MainControl : IInputActionCollection, IDisposable
     // VehicleControl
     private readonly InputActionMap m_VehicleControl;
     private IVehicleControlActions m_VehicleControlActionsCallbackInterface;
-    private readonly InputAction m_VehicleControl_MoveRight;
-    private readonly InputAction m_VehicleControl_MoveLeft;
-    private readonly InputAction m_VehicleControl_Accelerate;
     private readonly InputAction m_VehicleControl_Movement;
-    private readonly InputAction m_VehicleControl_Reverse;
     private readonly InputAction m_VehicleControl_TrottleControl;
-    private readonly InputAction m_VehicleControl_Shift;
     private readonly InputAction m_VehicleControl_Drifting;
+    private readonly InputAction m_VehicleControl_Weapon;
     public struct VehicleControlActions
     {
         private @MainControl m_Wrapper;
         public VehicleControlActions(@MainControl wrapper) { m_Wrapper = wrapper; }
-        public InputAction @MoveRight => m_Wrapper.m_VehicleControl_MoveRight;
-        public InputAction @MoveLeft => m_Wrapper.m_VehicleControl_MoveLeft;
-        public InputAction @Accelerate => m_Wrapper.m_VehicleControl_Accelerate;
         public InputAction @Movement => m_Wrapper.m_VehicleControl_Movement;
-        public InputAction @Reverse => m_Wrapper.m_VehicleControl_Reverse;
         public InputAction @TrottleControl => m_Wrapper.m_VehicleControl_TrottleControl;
-        public InputAction @Shift => m_Wrapper.m_VehicleControl_Shift;
         public InputAction @Drifting => m_Wrapper.m_VehicleControl_Drifting;
+        public InputAction @Weapon => m_Wrapper.m_VehicleControl_Weapon;
         public InputActionMap Get() { return m_Wrapper.m_VehicleControl; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -890,58 +742,34 @@ public class @MainControl : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_VehicleControlActionsCallbackInterface != null)
             {
-                @MoveRight.started -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnMoveRight;
-                @MoveRight.performed -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnMoveRight;
-                @MoveRight.canceled -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnMoveRight;
-                @MoveLeft.started -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnMoveLeft;
-                @MoveLeft.performed -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnMoveLeft;
-                @MoveLeft.canceled -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnMoveLeft;
-                @Accelerate.started -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnAccelerate;
-                @Accelerate.performed -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnAccelerate;
-                @Accelerate.canceled -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnAccelerate;
                 @Movement.started -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnMovement;
                 @Movement.performed -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnMovement;
                 @Movement.canceled -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnMovement;
-                @Reverse.started -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnReverse;
-                @Reverse.performed -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnReverse;
-                @Reverse.canceled -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnReverse;
                 @TrottleControl.started -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnTrottleControl;
                 @TrottleControl.performed -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnTrottleControl;
                 @TrottleControl.canceled -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnTrottleControl;
-                @Shift.started -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnShift;
-                @Shift.performed -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnShift;
-                @Shift.canceled -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnShift;
                 @Drifting.started -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnDrifting;
                 @Drifting.performed -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnDrifting;
                 @Drifting.canceled -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnDrifting;
+                @Weapon.started -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnWeapon;
+                @Weapon.performed -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnWeapon;
+                @Weapon.canceled -= m_Wrapper.m_VehicleControlActionsCallbackInterface.OnWeapon;
             }
             m_Wrapper.m_VehicleControlActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @MoveRight.started += instance.OnMoveRight;
-                @MoveRight.performed += instance.OnMoveRight;
-                @MoveRight.canceled += instance.OnMoveRight;
-                @MoveLeft.started += instance.OnMoveLeft;
-                @MoveLeft.performed += instance.OnMoveLeft;
-                @MoveLeft.canceled += instance.OnMoveLeft;
-                @Accelerate.started += instance.OnAccelerate;
-                @Accelerate.performed += instance.OnAccelerate;
-                @Accelerate.canceled += instance.OnAccelerate;
                 @Movement.started += instance.OnMovement;
                 @Movement.performed += instance.OnMovement;
                 @Movement.canceled += instance.OnMovement;
-                @Reverse.started += instance.OnReverse;
-                @Reverse.performed += instance.OnReverse;
-                @Reverse.canceled += instance.OnReverse;
                 @TrottleControl.started += instance.OnTrottleControl;
                 @TrottleControl.performed += instance.OnTrottleControl;
                 @TrottleControl.canceled += instance.OnTrottleControl;
-                @Shift.started += instance.OnShift;
-                @Shift.performed += instance.OnShift;
-                @Shift.canceled += instance.OnShift;
                 @Drifting.started += instance.OnDrifting;
                 @Drifting.performed += instance.OnDrifting;
                 @Drifting.canceled += instance.OnDrifting;
+                @Weapon.started += instance.OnWeapon;
+                @Weapon.performed += instance.OnWeapon;
+                @Weapon.canceled += instance.OnWeapon;
             }
         }
     }
@@ -1019,16 +847,30 @@ public class @MainControl : IInputActionCollection, IDisposable
         }
     }
     public MenucontrolActions @Menucontrol => new MenucontrolActions(this);
+    private int m_KBMouseSchemeIndex = -1;
+    public InputControlScheme KBMouseScheme
+    {
+        get
+        {
+            if (m_KBMouseSchemeIndex == -1) m_KBMouseSchemeIndex = asset.FindControlSchemeIndex("KB&Mouse");
+            return asset.controlSchemes[m_KBMouseSchemeIndex];
+        }
+    }
+    private int m_GamepadSchemeIndex = -1;
+    public InputControlScheme GamepadScheme
+    {
+        get
+        {
+            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
+            return asset.controlSchemes[m_GamepadSchemeIndex];
+        }
+    }
     public interface IVehicleControlActions
     {
-        void OnMoveRight(InputAction.CallbackContext context);
-        void OnMoveLeft(InputAction.CallbackContext context);
-        void OnAccelerate(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
-        void OnReverse(InputAction.CallbackContext context);
         void OnTrottleControl(InputAction.CallbackContext context);
-        void OnShift(InputAction.CallbackContext context);
         void OnDrifting(InputAction.CallbackContext context);
+        void OnWeapon(InputAction.CallbackContext context);
     }
     public interface IMenucontrolActions
     {

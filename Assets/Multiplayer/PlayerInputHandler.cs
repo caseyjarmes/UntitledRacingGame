@@ -18,21 +18,36 @@ public class PlayerInputHandler : MonoBehaviour
         var index = playerInput.playerIndex;
         car = cars.FirstOrDefault(m => m.GetPlayerIndex() == index);
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void Movement(CallbackContext context)
     {
         if (car != null)
             car.SetfloatMovement(context.ReadValue<float>());
+    }
+    public void Trottle(CallbackContext context)
+    {
+        if (car != null)
+            car.SetTrottleInput(context.ReadValue<float>());
+    }
+    public void Drift(CallbackContext context)
+    {
+        if (car != null)
+            car.SetDriftMovement(context.ReadValue<float>());
+    }
+    public void Weapon(CallbackContext context)
+    {
+        if (car != null)
+            car.SetWeaponUseInput();
     }
 }

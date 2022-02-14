@@ -36,8 +36,11 @@ public class CarControl : MonoBehaviour
     private float RollingAngle = 30;
 
     private float MovementValue;
-    
+    private float DriftValue;
+    private float TrottleValue;
+    private bool WasWeaponUsed;
 
+    public bool HasWeapon;
 
     Transform checkpointRotation;
     
@@ -71,6 +74,18 @@ public class CarControl : MonoBehaviour
     {
         MovementValue = value;
     }
+    public void SetDriftMovement(float value)
+    {
+        DriftValue = value;
+    }
+    public void SetTrottleInput(float value)
+    {
+        TrottleValue = value;
+    }
+    public void SetWeaponUseInput()
+    {
+        WasWeaponUsed = true;
+    }
     // Update is called once per frame
     void FixedUpdate()
     {          
@@ -83,8 +98,9 @@ public class CarControl : MonoBehaviour
 
         Debug.Log(ReturnVehicleVelocity(rb.velocity.magnitude));
         SpeedInformation = ReturnVehicleVelocity(rb.velocity.magnitude);
-        //Speed();
+        Speed();
         TurningAndTilt();
+        //Weapon();
         if (isOnGround || isOnGravel) 
         {
             groundNormal = hitinfo.normal.normalized;
@@ -97,11 +113,12 @@ public class CarControl : MonoBehaviour
         }        
     }
     private void Speed()
-    {           
+    {
         //This system is intended to keep the velocity of the
         //object only foward facing of the vehicle
-        //If you turn it on drastically increase the speed to normalize it         
-        float valueSpeed = inputs.VehicleControl.TrottleControl.ReadValue<float>();    
+        //If you turn it on drastically increase the speed to normalize it
+        //= inputs.VehicleControl.TrottleControl.ReadValue<float>(); 
+        float valueSpeed = TrottleValue;    
         if (boostStatus && valueSpeed > 0)
         {
             //1.25 is the modifier
@@ -137,9 +154,9 @@ public class CarControl : MonoBehaviour
         float valueturn = MovementValue;
         rb.AddRelativeTorque(new Vector3(0, valueturn) * TorqueSpeed);
 
-
-        //float valuedrift = inputs.VehicleControl.Drifting.ReadValue<float>();
-        //rb.AddRelativeTorque(new Vector3(0, valuedrift * TorqueSpeed * 1.25f));
+        //inputs.VehicleControl.Drifting.ReadValue<float>();
+        float driftvalue = DriftValue;
+        rb.AddRelativeTorque(new Vector3(0, driftvalue * TorqueSpeed * 1.25f));
         
         //For the Turning of the ship model separately from the rest of the gameobject without also affecting the levitation points
         float rollEluerValue = RollingAngle * -valueturn;
@@ -151,6 +168,18 @@ public class CarControl : MonoBehaviour
         Quaternion rotations = Quaternion.LookRotation(projection, groundNormal);
         shipModel.transform.rotation = (Quaternion.Lerp(shipModel.transform.rotation, rotations, Time.deltaTime * 5f));
 
+    }
+    private void Weapon()
+    {
+        bool weaponbutton = WasWeaponUsed;
+        //Check if player pressed the button to shoot weapon
+        if (weaponbutton && HasWeapon)
+        {
+            //insert weapon spawn instantiate
+            weaponbutton = false;
+        }
+            else
+                    return;
     }
     private void LimitRotations()
     {

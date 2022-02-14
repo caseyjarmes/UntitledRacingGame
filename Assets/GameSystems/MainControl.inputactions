@@ -6,42 +6,10 @@
             "id": "3c4ca357-3ac9-4c79-8c6a-f7a0de012dfb",
             "actions": [
                 {
-                    "name": "MoveRight",
-                    "type": "PassThrough",
-                    "id": "18b44c22-ad3d-4faa-be50-84bb190a3905",
-                    "expectedControlType": "",
-                    "processors": "AxisDeadzone(min=0.5)",
-                    "interactions": ""
-                },
-                {
-                    "name": "MoveLeft",
-                    "type": "PassThrough",
-                    "id": "e84b161e-d16d-44c9-9c5c-13ceafd54a99",
-                    "expectedControlType": "",
-                    "processors": "AxisDeadzone(min=12.99)",
-                    "interactions": ""
-                },
-                {
-                    "name": "Accelerate",
-                    "type": "PassThrough",
-                    "id": "591a07b0-0680-4a92-8f22-e0d76f07fdaa",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Movement",
                     "type": "Value",
                     "id": "c6546e25-2f05-47fe-9334-b9a55229a399",
                     "expectedControlType": "Analog",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Reverse",
-                    "type": "PassThrough",
-                    "id": "98882324-29d0-4da0-a75f-57dc8264f726",
-                    "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
                 },
@@ -54,89 +22,23 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Shift",
-                    "type": "Button",
-                    "id": "d43deede-9af1-4715-ad6b-5a1b00b323ed",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Drifting",
                     "type": "Button",
                     "id": "19cec146-f0d9-4d8d-99a3-543cd5f69ad6",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Weapon",
+                    "type": "Button",
+                    "id": "c7b057cf-bc28-473f-af6d-010b2a646188",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "32d201c0-c62f-40ca-87e8-18f31a211156",
-                    "path": "<Gamepad>/leftStick/right",
-                    "interactions": "Hold",
-                    "processors": "StickDeadzone(min=0.2)",
-                    "groups": "",
-                    "action": "MoveRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9e0667f1-bd27-40c0-93d1-d8a6c381ff8d",
-                    "path": "<Keyboard>/d",
-                    "interactions": "Hold",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "afcbdd44-c6e0-4478-a19e-4fb71fafbf1c",
-                    "path": "<Gamepad>/leftStick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8b1b2788-64d7-42c9-abd6-2480fccc9693",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8a32da61-297c-48a6-ae20-846b2d9022d2",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Accelerate",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "94174df8-5d3e-4d9d-a1e4-0af7ca4b5e8c",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Accelerate",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "1D Axis",
                     "id": "351a2b69-28e4-4d69-b298-c68987fea0e8",
@@ -172,7 +74,7 @@
                 },
                 {
                     "name": "1D Axis",
-                    "id": "631435cb-b104-4b0d-88d2-983594800f3e",
+                    "id": "53b88e62-dfeb-4ab9-ba51-64a8efc7d713",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
@@ -183,7 +85,7 @@
                 },
                 {
                     "name": "negative",
-                    "id": "acdb4ca5-11cc-4ea8-80d7-a3ff48c42605",
+                    "id": "769d1906-2530-48ec-8352-0575a841f2a3",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -194,7 +96,7 @@
                 },
                 {
                     "name": "positive",
-                    "id": "c5e4d42c-b862-4f54-9b65-9f13790485d8",
+                    "id": "e6577b83-d257-4bcf-a05d-f0643aebeacb",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -202,28 +104,6 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "2bdd37e6-d213-4b3f-a753-6a1773fce7db",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Reverse",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "770f7bf3-a4bb-4b06-8d03-c7ca9c22c20f",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Reverse",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 },
                 {
                     "name": "1D Axis",
@@ -293,72 +173,6 @@
                 },
                 {
                     "name": "1D Axis",
-                    "id": "68eedc58-1ac7-4fd7-8040-f59a06d3b837",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shift",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "e3619f7a-ae19-4b1d-9723-8a20c8bb2357",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shift",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "ebcc7c8f-e1e3-4122-b96f-be81d63088e6",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shift",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "19b20cca-e24a-492a-851b-7e1a61750b00",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shift",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "15cf3c90-4090-4d54-a90f-e58d4bad2540",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shift",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "510b991b-5ee4-4936-a016-9b2452382f48",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shift",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "1D Axis",
                     "id": "775421d0-90f8-4c1c-ab52-5a925c077eea",
                     "path": "1DAxis",
                     "interactions": "",
@@ -422,6 +236,28 @@
                     "action": "Drifting",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "df68a4e8-9d47-439e-8d52-8cff12fba975",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Weapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "460c1048-94f1-4a90-a48d-0fef8265c704",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Weapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -779,5 +615,33 @@
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "KB&Mouse",
+            "bindingGroup": "KB&Mouse",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }
