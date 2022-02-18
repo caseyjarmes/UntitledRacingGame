@@ -60,7 +60,6 @@ public class CarControl : MonoBehaviour
     //{
     //    inputs.Disable();
     //}
-    // Start is called before the first frame update
     void Start()
     {
         CoinsCollected = 0;
@@ -86,7 +85,7 @@ public class CarControl : MonoBehaviour
     {
         WasWeaponUsed = true;
     }
-    // Update is called once per frame
+
     void FixedUpdate()
     {          
         
@@ -219,15 +218,15 @@ public class CarControl : MonoBehaviour
         }
     }
     
-    private void OnCollisionStay(Collision collision)
-    {
-        if(collision.gameObject.layer == LayerMask.NameToLayer("wall")) {
-            Vector3 upwardForceFromCollision = Vector3.Dot(collision.impulse, transform.up) * transform.up;
-            rb.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
-            rb.velocity = rb.velocity/2f;
-        }
+    //private void OnCollisionStay(Collision collision)
+    //{
+    //    if(collision.gameObject.layer == LayerMask.NameToLayer("wall")) {
+    //        Vector3 upwardForceFromCollision = Vector3.Dot(collision.impulse, transform.up) * transform.up;
+    //        rb.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
+    //        rb.velocity = rb.velocity*.999999f;
+    //    }
 
-    }
+    //}
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Boost")
