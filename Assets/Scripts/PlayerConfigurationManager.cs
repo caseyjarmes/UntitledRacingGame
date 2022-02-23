@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-//Player config manager prefab is in game system folder
 public class PlayerConfigurationManager : MonoBehaviour
 {
     private List<PlayerConfiguration> playerConfigs;
@@ -18,7 +17,7 @@ public class PlayerConfigurationManager : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.Log("[Singleton] Trying to instantiate a seccond instance of a singleton class.");
+            Debug.Log("[Singleton] Trying to instantiate a second instance of a singleton class.");
         }
         else
         {
@@ -28,7 +27,8 @@ public class PlayerConfigurationManager : MonoBehaviour
         }
 
     }
-
+    
+    //calls when player joins
     public void HandlePlayerJoin(PlayerInput pi)
     {
         Debug.Log("player joined " + pi.playerIndex);
@@ -51,11 +51,14 @@ public class PlayerConfigurationManager : MonoBehaviour
         playerConfigs[index].playerMaterial = color;
     }
 
+    //called by player setup menu controller
     public void ReadyPlayer(int index)
     {
         playerConfigs[index].isReady = true;
-        if (playerConfigs.Count == MaxPlayers && playerConfigs.All(p => p.isReady == true))
+        if (playerConfigs.All(p => p.isReady == true))
         {
+            //change to map choose scene or game start scene
+            Debug.Log("Changing Scene");
             SceneManager.LoadScene("SampleScene");
         }
     }

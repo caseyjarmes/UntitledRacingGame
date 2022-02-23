@@ -58,65 +58,33 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -7632188683597135220}
-        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
-        m_MethodName: Movement
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: c6546e25-2f05-47fe-9334-b9a55229a399
-    m_ActionName: VehicleControl/Movement[/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/Keyboard/a,/Keyboard/d]
+    m_ActionName: VehicleControl/Movement[/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -7632188683597135220}
-        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
-        m_MethodName: Trottle
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 64948263-54f3-45a7-90d9-538d98f83825
-    m_ActionName: VehicleControl/TrottleControl[/XInputControllerWindows/leftTrigger,/XInputControllerWindows/rightTrigger,/Keyboard/s,/Keyboard/w]
+    m_ActionName: VehicleControl/TrottleControl[/Keyboard/s,/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -7632188683597135220}
-        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
-        m_MethodName: Drift
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 19cec146-f0d9-4d8d-99a3-543cd5f69ad6
-    m_ActionName: VehicleControl/Drifting[/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightShoulder,/Keyboard/q,/Keyboard/e]
+    m_ActionName: VehicleControl/Drifting[/Keyboard/q,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c7b057cf-bc28-473f-af6d-010b2a646188
+    m_ActionName: VehicleControl/Weapon[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 363f55df-77b1-4f91-99ce-f1cf08089efb
-    m_ActionName: Menu control/Confirm[/XInputControllerWindows/buttonSouth,/Keyboard/space]
+    m_ActionName: Menu control/Confirm[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 97a906d9-51d8-4070-8ae8-d7a62586daf1
-    m_ActionName: Menu control/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast]
+    m_ActionName: Menu control/Cancel[/Keyboard/escape]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 89b6e05d-2ecc-4812-8662-07d7ad47380d
-    m_ActionName: Menu control/Navigation[/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+    m_ActionName: Menu control/Navigation[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 7f766d5a-864e-4e63-a426-f9e4adb5fcd1
@@ -129,22 +97,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 6d28450c-916e-4e03-9d4c-a15ac0e5c872
     m_ActionName: Menu control/Right Click[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -7632188683597135220}
-        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
-        m_MethodName: Weapon
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: c7b057cf-bc28-473f-af6d-010b2a646188
-    m_ActionName: VehicleControl/Weapon[/XInputControllerWindows/buttonSouth,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: VehicleControl

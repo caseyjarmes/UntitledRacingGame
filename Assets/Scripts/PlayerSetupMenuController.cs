@@ -60,9 +60,11 @@ public class PlayerSetupMenuController : MonoBehaviour
 
     }
 
+    //called by the unity event in the editor
     public void ReadyPlayer()
     {
-        if (!inputEnabled) { return; }
+        Debug.Log("player hit ready button");
+        //if (!inputEnabled) { return; }
 
         PlayerConfigurationManager.Instance.ReadyPlayer(playerIndex);
         readyButton.gameObject.SetActive(false);

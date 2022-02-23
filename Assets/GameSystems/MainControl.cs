@@ -325,6 +325,14 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""7ba28ffd-4d69-4a17-95f5-77f0498d7e74"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -624,6 +632,17 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""action"": ""Right Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""84915c6a-5b38-4689-a168-7d43f2322ec0"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -672,6 +691,7 @@ public class @MainControl : IInputActionCollection, IDisposable
         m_Menucontrol_Point = m_Menucontrol.FindAction("Point", throwIfNotFound: true);
         m_Menucontrol_Click = m_Menucontrol.FindAction("Click", throwIfNotFound: true);
         m_Menucontrol_RightClick = m_Menucontrol.FindAction("Right Click", throwIfNotFound: true);
+        m_Menucontrol_Select = m_Menucontrol.FindAction("Select", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -784,6 +804,7 @@ public class @MainControl : IInputActionCollection, IDisposable
     private readonly InputAction m_Menucontrol_Point;
     private readonly InputAction m_Menucontrol_Click;
     private readonly InputAction m_Menucontrol_RightClick;
+    private readonly InputAction m_Menucontrol_Select;
     public struct MenucontrolActions
     {
         private @MainControl m_Wrapper;
@@ -794,6 +815,7 @@ public class @MainControl : IInputActionCollection, IDisposable
         public InputAction @Point => m_Wrapper.m_Menucontrol_Point;
         public InputAction @Click => m_Wrapper.m_Menucontrol_Click;
         public InputAction @RightClick => m_Wrapper.m_Menucontrol_RightClick;
+        public InputAction @Select => m_Wrapper.m_Menucontrol_Select;
         public InputActionMap Get() { return m_Wrapper.m_Menucontrol; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -821,6 +843,9 @@ public class @MainControl : IInputActionCollection, IDisposable
                 @RightClick.started -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnRightClick;
                 @RightClick.performed -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnRightClick;
                 @RightClick.canceled -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnRightClick;
+                @Select.started -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnSelect;
+                @Select.performed -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnSelect;
+                @Select.canceled -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnSelect;
             }
             m_Wrapper.m_MenucontrolActionsCallbackInterface = instance;
             if (instance != null)
@@ -843,6 +868,9 @@ public class @MainControl : IInputActionCollection, IDisposable
                 @RightClick.started += instance.OnRightClick;
                 @RightClick.performed += instance.OnRightClick;
                 @RightClick.canceled += instance.OnRightClick;
+                @Select.started += instance.OnSelect;
+                @Select.performed += instance.OnSelect;
+                @Select.canceled += instance.OnSelect;
             }
         }
     }
@@ -880,5 +908,6 @@ public class @MainControl : IInputActionCollection, IDisposable
         void OnPoint(InputAction.CallbackContext context);
         void OnClick(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
+        void OnSelect(InputAction.CallbackContext context);
     }
 }
