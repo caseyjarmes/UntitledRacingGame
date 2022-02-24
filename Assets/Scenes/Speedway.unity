@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.01252348, g: 0.073442794, b: 0.13257551, a: 1}
+  m_IndirectSpecularColor: {r: 0.012299199, g: 0.07303349, b: 0.13371721, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12138,8 +12138,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 5517e112bc4eede41ae5e7c215c6da44, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -28861,7 +28861,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978260815}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: dbdcc16396c49c349bf38c9304570861, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -38188,7 +38188,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275011428}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: dbdcc16396c49c349bf38c9304570861, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -45047,7 +45047,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486215756}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: dbdcc16396c49c349bf38c9304570861, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -62966,7 +62966,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024598628}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: dbdcc16396c49c349bf38c9304570861, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
