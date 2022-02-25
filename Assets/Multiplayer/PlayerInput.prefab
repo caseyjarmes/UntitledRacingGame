@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7632188683597135220}
   m_Layer: 0
   m_Name: PlayerInput
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,9 +97,13 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 6d28450c-916e-4e03-9d4c-a15ac0e5c872
     m_ActionName: Menu control/Right Click[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7ba28ffd-4d69-4a17-95f5-77f0498d7e74
+    m_ActionName: Menu control/Select[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: VehicleControl
+  m_DefaultActionMap: e194bce8-86bd-433f-a677-2bced52083bb
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &-7632188683597135220

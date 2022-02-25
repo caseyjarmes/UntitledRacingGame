@@ -35,10 +35,14 @@ public class CarControl : MonoBehaviour
 
     private float RollingAngle = 30;
 
-    private float MovementValue;
-    private float DriftValue;
-    private float TrottleValue;
-    private bool WasWeaponUsed;
+    private float movementValue;
+    public float MovementValue { get => movementValue; set => movementValue =value; }
+    private float driftValue;
+    public float DriftValue { get => driftValue; set => driftValue = value; }
+    private float trottleValue;
+    public float TrottleValue { get => trottleValue; set => trottleValue = value; }
+    private bool wasWeaponUsed;
+    public bool WasWeaponUsed { get => wasWeaponUsed; set => wasWeaponUsed = value; }
 
     public bool HasWeapon;
 
@@ -47,7 +51,7 @@ public class CarControl : MonoBehaviour
     private void Awake()
     {
         //inputs = new MainControl();
-        rb = GetComponent<Rigidbody>();
+
         shipModel = ship.transform.GetChild(0).gameObject;
         BaseMass = rb.mass;
         
@@ -61,7 +65,9 @@ public class CarControl : MonoBehaviour
     //    inputs.Disable();
     //}
     void Start()
-    {
+    {        
+        rb = GetComponentInChildren<Rigidbody>();
+        BaseMass = rb.mass;
         CoinsCollected = 0;
         
     }
@@ -69,18 +75,18 @@ public class CarControl : MonoBehaviour
     {
         return PlayerIndex;
     }
-    public void SetfloatMovement(float value)
-    {
-        MovementValue = value;
-    }
-    public void SetDriftMovement(float value)
-    {
-        DriftValue = value;
-    }
-    public void SetTrottleInput(float value)
-    {
-        TrottleValue = value;
-    }
+    //public void SetfloatMovement(float value)
+    //{
+    //    movementValue = value;
+    //}
+    //public void SetDriftMovement(float value)
+    //{
+    //    DriftValue = value;
+    //}
+    //public void SetTrottleInput(float value)
+    //{
+    //    TrottleValue = value;
+    //}
     public void SetWeaponUseInput()
     {
         WasWeaponUsed = true;

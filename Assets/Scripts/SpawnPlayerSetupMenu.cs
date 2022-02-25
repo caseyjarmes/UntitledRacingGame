@@ -22,4 +22,8 @@ public class SpawnPlayerSetupMenu : MonoBehaviour
         }
 
     }
+    public void ChangeScheme()
+    {
+        //input.
+    }
 }

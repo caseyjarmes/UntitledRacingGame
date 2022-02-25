@@ -65,7 +65,7 @@ public class PlayerSetupMenuController : MonoBehaviour
     {
         Debug.Log("player hit ready button");
         //if (!inputEnabled) { return; }
-
+        
         PlayerConfigurationManager.Instance.ReadyPlayer(playerIndex);
         readyButton.gameObject.SetActive(false);
     }

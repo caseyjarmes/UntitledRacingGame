@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 {
     public Button Selected;
     public TMP_Dropdown trackSelect;
+    public TMP_Dropdown ModeSelect;
     
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class MainMenu : MonoBehaviour
         switch (trackSelect.value)
         {
             case 0:
+                //GameManager.State = 
                 SceneManager.LoadScene(1);
                 break;
             case 1:

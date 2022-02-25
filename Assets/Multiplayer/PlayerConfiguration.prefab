@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4283948428480448249}
   - component: {fileID: 4861523057862699419}
   - component: {fileID: 3440089384158851670}
+  - component: {fileID: 4531809112701280938}
   m_Layer: 0
   m_Name: PlayerConfiguration
   m_TagString: Untagged
@@ -45,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 320833c8a70efca46b69101f58edb04e, type: 3}
-  m_NotificationBehavior: 3
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -58,16 +59,124 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1be6fbc4-71b2-4704-8b9a-35f279254646
-    m_ActionName: Movement/Moving[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+      m_Calls:
+      - m_Target: {fileID: 4531809112701280938}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: Movement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c6546e25-2f05-47fe-9334-b9a55229a399
+    m_ActionName: VehicleControl/Movement[/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4531809112701280938}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: Trottle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 64948263-54f3-45a7-90d9-538d98f83825
+    m_ActionName: VehicleControl/TrottleControl[/XInputControllerWindows/leftTrigger,/XInputControllerWindows/rightTrigger,/Keyboard/s,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4531809112701280938}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: Drift
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 19cec146-f0d9-4d8d-99a3-543cd5f69ad6
+    m_ActionName: VehicleControl/Drifting[/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightShoulder,/Keyboard/q,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4531809112701280938}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: Weapon
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c7b057cf-bc28-473f-af6d-010b2a646188
+    m_ActionName: VehicleControl/Weapon[/XInputControllerWindows/buttonSouth,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4531809112701280938}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: MenuConfirm
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 363f55df-77b1-4f91-99ce-f1cf08089efb
+    m_ActionName: Menu control/Confirm[/XInputControllerWindows/buttonSouth,/Keyboard/space]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 8c1a4666-d149-4816-be11-c44be9c8e999
-    m_ActionName: UI/Select[/Mouse/leftButton]
-  m_NeverAutoSwitchControlSchemes: 0
+    m_ActionId: 97a906d9-51d8-4070-8ae8-d7a62586daf1
+    m_ActionName: Menu control/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4531809112701280938}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: MenuMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 89b6e05d-2ecc-4812-8662-07d7ad47380d
+    m_ActionName: Menu control/Navigation[/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7f766d5a-864e-4e63-a426-f9e4adb5fcd1
+    m_ActionName: Menu control/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ba28288c-9a75-4cdf-b69a-ad691524b6f2
+    m_ActionName: Menu control/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6d28450c-916e-4e03-9d4c-a15ac0e5c872
+    m_ActionName: Menu control/Right Click[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7ba28ffd-4d69-4a17-95f5-77f0498d7e74
+    m_ActionName: Menu control/Select[/Mouse/leftButton]
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: VehicleControl
+  m_DefaultActionMap: Menu control
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &3440089384158851670
@@ -84,3 +193,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSetupMenuPrefab: {fileID: 601279845507689522, guid: 5d4b97397e1ed0549acb0ec26a1bb506, type: 3}
   input: {fileID: 4861523057862699419}
+--- !u!114 &4531809112701280938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748544674736142762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f110eec015e294084d45c79a3f7250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

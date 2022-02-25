@@ -41791,6 +41791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Selected: {fileID: 0}
   trackSelect: {fileID: 0}
+  ModeSelect: {fileID: 0}
 --- !u!1001 &1390610371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49175,6 +49176,22 @@ PrefabInstance:
     - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionId
+      value: 7ba28ffd-4d69-4a17-95f5-77f0498d7e74
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
+      value: Menu control/Select[/Mouse/leftButton]
       objectReference: {fileID: 0}
     - target: {fileID: 6251913710674590349, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: boost

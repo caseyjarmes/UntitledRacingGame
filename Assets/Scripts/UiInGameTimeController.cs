@@ -38,7 +38,7 @@ public class UiInGameTimeController : MonoBehaviour
 
     IEnumerator StartupSequence()
     {
-
+        //var inputhandler = GameObject.FindGameObjectsWithTag("");
         var players = GameObject.FindGameObjectsWithTag("Player");
         foreach(GameObject player in players)
         {
@@ -49,6 +49,7 @@ public class UiInGameTimeController : MonoBehaviour
         var count = 4;
         while (count > 0)
         {
+            players = GameObject.FindGameObjectsWithTag("Player");
             UIStartup.text = $"{count - 1}";
            // start.Play();
             if(count == 1)

@@ -33,8 +33,8 @@ public class NewLevitationSystem : MonoBehaviour
     private bool isOnGround;
     void Awake()
     {
-        rb = transform.root.GetComponent<Rigidbody>();
-
+        //rb = transform.root.GetComponent<Rigidbody>();
+        rb = transform.root.GetComponentInChildren<Rigidbody>();
         minLength = restLength - springTravel;
         maxLength = restLength + springTravel;
 

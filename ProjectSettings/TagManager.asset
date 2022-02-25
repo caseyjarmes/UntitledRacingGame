@@ -8,6 +8,8 @@ TagManager:
   - Coin
   - Boost
   - Camera
+  - SinglePlayer
+  - Multiplayer
   layers:
   - Default
   - TransparentFX
