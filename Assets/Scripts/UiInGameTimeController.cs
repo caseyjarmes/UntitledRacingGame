@@ -104,7 +104,13 @@ public class UiInGameTimeController : MonoBehaviour
             {
                 totalLapTime = LapTimeManager.TotalLapTime;
                 UITextTotalLapTime.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
+                if(LapTimeManager.completedgame)
                 UITextfinalLapTime.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
+                else
+                {
+                    totalLapTime = Mathf.Infinity;
+                    UITextfinalLapTime.text = $"Total Time: {(int)totalLapTime / 60}:{(totalLapTime) % 60:00.000}";
+                }
             }
             if (shipStatsUI.coins != count)
             {
