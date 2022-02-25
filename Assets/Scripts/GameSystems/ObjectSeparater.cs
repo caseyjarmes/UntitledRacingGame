@@ -9,6 +9,7 @@ public class ObjectSeparater : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        GameManager.State = GameState.Multiplayer;
         switch (GameManager.State)
         {
             case GameState.Menu:
@@ -31,6 +32,7 @@ public class ObjectSeparater : MonoBehaviour
                 Multiplayer.transform.GetChild(0).gameObject.SetActive(true);
                 Multiplayer.transform.GetChild(1).gameObject.SetActive(true);
                 Multiplayer.transform.GetChild(2).gameObject.SetActive(true);
+                Multiplayer.transform.GetChild(3).gameObject.SetActive(true);
                 Multiplayer.transform.DetachChildren();
                 Destroy(Multiplayer);
                 break;

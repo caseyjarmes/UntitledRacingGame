@@ -25,20 +25,20 @@ public class PlayerInputHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //switch (GameManager.State)
-        //{
-        //    case GameState.Menu:
-        //        playerInput.SwitchCurrentActionMap("Menu control");
-        //        break;
-        //    case GameState.SinglePlayerTimeTrial:
-        //        playerInput.SwitchCurrentActionMap("VehicleControl");
-        //        break;
-        //    case GameState.Multiplayer:
-        //        playerInput.SwitchCurrentActionMap("VehicleControl");
-        //        break;
-        //    default:
-        //        break;
-        //}
+        switch (GameManager.State)
+        {
+            case GameState.Menu:
+                playerInput.SwitchCurrentActionMap("Menu control");
+                break;
+            case GameState.SinglePlayerTimeTrial:
+                playerInput.SwitchCurrentActionMap("VehicleControl");
+                break;
+            case GameState.Multiplayer:
+                playerInput.SwitchCurrentActionMap("VehicleControl");
+                break;
+            default:
+                break;
+        }
     }
 
     // Update is called once per frame

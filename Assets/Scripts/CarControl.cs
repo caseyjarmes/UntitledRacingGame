@@ -53,7 +53,7 @@ public class CarControl : MonoBehaviour
         //inputs = new MainControl();
 
         shipModel = ship.transform.GetChild(0).gameObject;
-        BaseMass = rb.mass;
+        //BaseMass = rb.mass;
         
     }
     //private void OnEnable()
