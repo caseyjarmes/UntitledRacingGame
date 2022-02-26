@@ -76,7 +76,10 @@ public class UiInGameTimeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (LapTimeManager.Completedgame)
+        {
+            UIRacePanel.SetActive(false);
+        }
         if (Started)
         {
             if (LapTimeManager == null)

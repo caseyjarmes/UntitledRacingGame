@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public static GameState State = GameState.SinglePlayerTimeTrial;
-    
+
+    public PlayerInputHandler[] players;
 
     private void Awake()
     {
@@ -30,6 +31,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //if (LapTimeManager.Completedgame)
+        //{
+        //    State = GameState.SinglePlayerTimeTrial;
+        //    SceneManager.LoadScene(0);
+
+        //}
+
     }
 }

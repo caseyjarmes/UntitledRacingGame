@@ -19,7 +19,7 @@ public class LapTimeManager : MonoBehaviour
     public int TotalLaps;
     private int interncounter;
     public bool completedgame;
-    
+    public static bool Completedgame;
     void Awake()
     {
         trackCheckpointSystem = GameObject.Find("Track").GetComponent<TrackCheckpointSystem>();
@@ -85,7 +85,8 @@ public class LapTimeManager : MonoBehaviour
                 else
                 {
                     completedgame = true;
-                    //transform.gameObject.SetActive(false);
+                    Completedgame = true;
+                    transform.gameObject.SetActive(false);
                     //SceneManager.LoadScene("Main Menu");
                     //End the race here
                 }
