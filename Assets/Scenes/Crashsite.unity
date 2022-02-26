@@ -1748,7 +1748,7 @@ GameObject:
   - component: {fileID: 83790969}
   - component: {fileID: 83790971}
   - component: {fileID: 83790970}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13382,6 +13382,7 @@ MonoBehaviour:
   LapTimeManager: {fileID: 416729666}
   shipStatsUI: {fileID: 981900476}
   start: {fileID: 686556811}
+  Started: 0
 --- !u!1001 &897770592
 PrefabInstance:
   m_ObjectHideFlags: 0
