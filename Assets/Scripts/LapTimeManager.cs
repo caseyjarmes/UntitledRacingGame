@@ -64,7 +64,7 @@ public class LapTimeManager : MonoBehaviour
     }
     void Update()
     {
-        if (UiInGameTimeController.Started)
+        if (UiInGameTimeController.StartedData)
         {
             if (CurrentLap == 1)
             {

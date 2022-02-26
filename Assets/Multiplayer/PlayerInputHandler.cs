@@ -19,7 +19,7 @@ public class PlayerInputHandler : MonoBehaviour
         var index = playerInput.playerIndex;
         if(playerInput.playerIndex>-1)
         car = cars.FirstOrDefault(m => m.GetPlayerIndex() == index);
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     // Start is called before the first frame update

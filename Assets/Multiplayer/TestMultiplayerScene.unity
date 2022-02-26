@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -351,7 +351,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375797890}
-  m_LocalRotation: {x: 0.03399101, y: 0.70628935, z: -0.03399101, w: 0.7062893}
+  m_LocalRotation: {x: 0.033991016, y: 0.70628935, z: -0.03399102, w: 0.7062893}
   m_LocalPosition: {x: 4.333688, y: 2.7090588, z: 2.5956879}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -405,7 +405,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.6666667, y: 1}
+    m_SensorSize: {x: 3.5555556, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -564,7 +564,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504615139}
-  m_LocalRotation: {x: 0.033990987, y: 0.70628935, z: -0.033990987, w: 0.7062893}
+  m_LocalRotation: {x: 0.033991016, y: 0.70628935, z: -0.03399102, w: 0.7062893}
   m_LocalPosition: {x: 4.8284225, y: 2.199059, z: -3.1334877}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -723,6 +723,18 @@ PrefabInstance:
     - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionId
+      value: 7ba28ffd-4d69-4a17-95f5-77f0498d7e74
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
+      value: Menu control/Select[/Mouse/leftButton]
       objectReference: {fileID: 0}
     - target: {fileID: 6251913710674590349, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: PlayerIndex
@@ -919,6 +931,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionId
+      value: 7ba28ffd-4d69-4a17-95f5-77f0498d7e74
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251913710674590347, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
+      value: Menu control/Select[/Mouse/leftButton]
+      objectReference: {fileID: 0}
     - target: {fileID: 6251913710674590359, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: m_Name
       value: GreatWhite
@@ -1065,7 +1089,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.6666667, y: 1}
+    m_SensorSize: {x: 3.5555556, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

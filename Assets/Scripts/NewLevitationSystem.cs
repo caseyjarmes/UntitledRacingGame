@@ -31,7 +31,7 @@ public class NewLevitationSystem : MonoBehaviour
     public LayerMask ground;
 
     private bool isOnGround;
-    void Awake()
+    void Start()
     {
         //rb = transform.root.GetComponent<Rigidbody>();
         rb = transform.root.GetComponentInChildren<Rigidbody>();
