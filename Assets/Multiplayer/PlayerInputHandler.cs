@@ -12,19 +12,20 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerInput playerInput;
     private CarControl car;
 
-    void Awake()
-    {
+    //void Start()
+    //{
+
+    //    //DontDestroyOnLoad(this.gameObject);
+    //}
+
+    // Start is called before the first frame update
+    void Start()
+    {        
         playerInput = GetComponent<PlayerInput>();
         var cars = FindObjectsOfType<CarControl>();
         var index = playerInput.playerIndex;
         if(playerInput.playerIndex>-1)
         car = cars.FirstOrDefault(m => m.GetPlayerIndex() == index);
-        DontDestroyOnLoad(this.gameObject);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
         switch (GameManager.State)
         {
             case GameState.Menu:
@@ -71,7 +72,8 @@ public class PlayerInputHandler : MonoBehaviour
     }
     public void MenuConfirm(CallbackContext context)
     {
-
+        playerInput.SwitchCurrentActionMap("Menu control");
+        //playerInput.a
     }
 
 }

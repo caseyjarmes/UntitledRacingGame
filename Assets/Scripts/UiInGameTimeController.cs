@@ -28,7 +28,8 @@ public class UiInGameTimeController : MonoBehaviour
     private float BestLapTime;
     private float totalLapTime;
     private int count = 0;
-    public static bool Started;
+    public bool Started;
+    public static bool StartedData = false;
     void Start()
     {
         Started = false;
@@ -61,7 +62,9 @@ public class UiInGameTimeController : MonoBehaviour
                     input.enabled = true;
                 }
                 Started = true;
-            }
+
+            }                
+            StartedData = Started;
             yield return new WaitForSeconds(1f);
             --count;
         }
@@ -73,7 +76,10 @@ public class UiInGameTimeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (LapTimeManager.Completedgame)
+        {
+            UIRacePanel.SetActive(false);
+        }
         if (Started)
         {
             if (LapTimeManager == null)
