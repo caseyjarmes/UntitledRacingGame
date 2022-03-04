@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4fbf92cf634b10148b946a2378bfec52, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964128, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.07609301, g: 0.04709333, b: 0.19248441, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -458,11 +458,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 228877822, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.00000001730861
+      value: -0.00000001730861
       objectReference: {fileID: 0}
     - target: {fileID: 228877822, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 8.2147783e-10
+      value: -8.2147783e-10
       objectReference: {fileID: 0}
     - target: {fileID: 228877822, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.y
@@ -570,11 +570,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128523, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.00000001730861
+      value: -0.00000001730861
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128523, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 8.2147783e-10
+      value: -8.2147783e-10
       objectReference: {fileID: 0}
     - target: {fileID: 981206528908128523, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
       propertyPath: m_LocalRotation.y
@@ -606,12 +606,45 @@ PrefabInstance:
       objectReference: {fileID: 366202953}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33be8ec98ae182946ae73df61059e218, type: 3}
+--- !u!1 &1949426870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7883604984642836351, guid: c1f735cb48f3fc64ea61823bc666637c, type: 3}
+  m_PrefabInstance: {fileID: 1280601945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1949426871
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949426870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7803778804846005805, guid: c1f735cb48f3fc64ea61823bc666637c, type: 3}
 --- !u!1 &2127887381 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2077484425859736142, guid: c1f735cb48f3fc64ea61823bc666637c, type: 3}
   m_PrefabInstance: {fileID: 1280601945}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &2127887382
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127887381}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7064217890854240749, guid: c1f735cb48f3fc64ea61823bc666637c, type: 3}
+--- !u!64 &2127887383
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
