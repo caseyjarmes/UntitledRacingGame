@@ -333,6 +333,14 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""b4257fd5-cb84-478a-ac3d-53d5b2bd7ef4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -643,6 +651,28 @@ public class @MainControl : IInputActionCollection, IDisposable
                     ""action"": ""Select"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6ea54d39-ed1c-42a6-b84a-99965f7f9c08"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d403bb19-0855-4d42-8a8c-aa111ca4468b"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -692,6 +722,7 @@ public class @MainControl : IInputActionCollection, IDisposable
         m_Menucontrol_Click = m_Menucontrol.FindAction("Click", throwIfNotFound: true);
         m_Menucontrol_RightClick = m_Menucontrol.FindAction("Right Click", throwIfNotFound: true);
         m_Menucontrol_Select = m_Menucontrol.FindAction("Select", throwIfNotFound: true);
+        m_Menucontrol_Pause = m_Menucontrol.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -805,6 +836,7 @@ public class @MainControl : IInputActionCollection, IDisposable
     private readonly InputAction m_Menucontrol_Click;
     private readonly InputAction m_Menucontrol_RightClick;
     private readonly InputAction m_Menucontrol_Select;
+    private readonly InputAction m_Menucontrol_Pause;
     public struct MenucontrolActions
     {
         private @MainControl m_Wrapper;
@@ -816,6 +848,7 @@ public class @MainControl : IInputActionCollection, IDisposable
         public InputAction @Click => m_Wrapper.m_Menucontrol_Click;
         public InputAction @RightClick => m_Wrapper.m_Menucontrol_RightClick;
         public InputAction @Select => m_Wrapper.m_Menucontrol_Select;
+        public InputAction @Pause => m_Wrapper.m_Menucontrol_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Menucontrol; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -846,6 +879,9 @@ public class @MainControl : IInputActionCollection, IDisposable
                 @Select.started -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnSelect;
                 @Select.performed -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnSelect;
                 @Select.canceled -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnSelect;
+                @Pause.started -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_MenucontrolActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_MenucontrolActionsCallbackInterface = instance;
             if (instance != null)
@@ -871,6 +907,9 @@ public class @MainControl : IInputActionCollection, IDisposable
                 @Select.started += instance.OnSelect;
                 @Select.performed += instance.OnSelect;
                 @Select.canceled += instance.OnSelect;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -909,5 +948,6 @@ public class @MainControl : IInputActionCollection, IDisposable
         void OnClick(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }
