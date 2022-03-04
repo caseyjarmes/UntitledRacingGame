@@ -35,6 +35,10 @@ public class NewLevitationSystem : MonoBehaviour
     {
         //rb = transform.root.GetComponent<Rigidbody>();
         rb = transform.root.GetComponentInChildren<Rigidbody>();
+        if(rb == null)
+        {
+            rb = transform.root.GetComponent<Rigidbody>();
+        }
         minLength = restLength - springTravel;
         maxLength = restLength + springTravel;
 
