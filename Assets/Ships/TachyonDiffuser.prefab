@@ -4852,7 +4852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675206841987430146}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 3.43, y: -0.4193498, z: -1.79}
+  m_LocalPosition: {x: 3.43, y: -0.5, z: -1.79}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -9727,7 +9727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961907257510028774}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 6.19, y: -0.4193498, z: 0}
+  m_LocalPosition: {x: 6.19, y: -0.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -9782,7 +9782,7 @@ GameObject:
   - component: {fileID: 568395587721103398}
   - component: {fileID: 3505001550295764636}
   m_Layer: 2
-  m_Name: HPWNR
+  m_Name: HPWBR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9796,7 +9796,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253548773877169266}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.4193498, z: -4}
+  m_LocalPosition: {x: 0, y: -0.5, z: -5}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -19507,7 +19507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2761148470350576422}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.4193498, z: 4}
+  m_LocalPosition: {x: 0, y: -0.5, z: 5}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -38913,7 +38913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6251913710674590359}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 1.4, z: 1.77}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8352061466290230385}
@@ -39070,6 +39070,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 7ba28ffd-4d69-4a17-95f5-77f0498d7e74
     m_ActionName: Menu control/Select[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4257fd5-cb84-478a-ac3d-53d5b2bd7ef4
+    m_ActionName: Menu control/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: VehicleControl
@@ -39111,10 +39115,10 @@ BoxCollider:
   m_GameObject: {fileID: 6251913710674590359}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6321301, y: 0.870543, z: 4.510865}
-  m_Center: {x: 0, y: 0.8103683, z: -0.44662163}
+  m_Size: {x: 3.6349382, y: 0.870543, z: 2.6632965}
+  m_Center: {x: -3.245305e-16, y: 0.8103683, z: 0.47716308}
 --- !u!136 &4546425412932682586
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -63304,7 +63308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8276142016740353068}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.1, y: -0.4193498, z: 0}
+  m_LocalPosition: {x: -2.1, y: -0.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -73133,7 +73137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9127035239852415592}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 3.43, y: -0.4193498, z: 1.79}
+  m_LocalPosition: {x: 3.43, y: -0.5, z: 1.79}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
