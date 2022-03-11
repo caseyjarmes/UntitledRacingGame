@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3020385620603787360
 MonoBehaviour:
@@ -77,7 +77,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961907257510028774}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 6.19, y: -0.4193498, z: 0}
+  m_LocalPosition: {x: 5.37, y: -0.4193498, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
@@ -101,58 +101,6 @@ MonoBehaviour:
   damperStiffness: 2
   wheelRadius: 0.5
   EdgePoint: 0
-  ground:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!1 &1253548773877169266
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 568395587721103398}
-  - component: {fileID: 3505001550295764636}
-  m_Layer: 2
-  m_Name: HPWR
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &568395587721103398
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253548773877169266}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.4193498, z: -4}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
-  m_Father: {fileID: 7168836198394515589}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3505001550295764636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253548773877169266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a82dff727c5a56a429defd9caf0df236, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restLength: 1
-  springTravel: 0.25
-  springStiffness: 300
-  damperStiffness: 2
-  wheelRadius: 0.5
-  EdgePoint: 1
   ground:
     serializedVersion: 2
     m_Bits: 64
@@ -186,58 +134,6 @@ Transform:
   m_Father: {fileID: 6251913710674590345}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2761148470350576422
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5612739899266476106}
-  - component: {fileID: 4757158049197228967}
-  m_Layer: 2
-  m_Name: HPWL
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5612739899266476106
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2761148470350576422}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.4193498, z: 4}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
-  m_Father: {fileID: 7168836198394515589}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4757158049197228967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2761148470350576422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a82dff727c5a56a429defd9caf0df236, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restLength: 1
-  springTravel: 0.25
-  springStiffness: 300
-  damperStiffness: 2
-  wheelRadius: 0.5
-  EdgePoint: 1
-  ground:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!1 &6251913710674590359
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +443,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2902178140713234325
 MonoBehaviour:
@@ -598,8 +494,6 @@ Transform:
   m_LocalScale: {x: 0.49999988, y: 0.5, z: 0.49999988}
   m_Children:
   - {fileID: 7793665256234781220}
-  - {fileID: 568395587721103398}
-  - {fileID: 5612739899266476106}
   - {fileID: 84845388245863518}
   - {fileID: 7022913883576980962}
   - {fileID: 5146572636965045854}
@@ -636,7 +530,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &677951088287992553
 MonoBehaviour:
@@ -688,7 +582,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7168836198394515589}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7553355979218918678
 MonoBehaviour:
