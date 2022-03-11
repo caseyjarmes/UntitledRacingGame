@@ -14,7 +14,7 @@ public class LoadCharacter : MonoBehaviour
     private void Start()
     {
         CharacterSelecter = GetComponent<CharacterSelecter>();
-        Player1SelectedShipNumber = CharacterSelecter.Player1.value;
+        //Player1SelectedShipNumber = CharacterSelecter.Player1.value;
         //Player2SelectedShipNumber = SelectedCharacter2;
         GameObject spawningShip = ShipList[Player1SelectedShipNumber];
         Instantiate(spawningShip, Player1SpawnLocation.position, Player2SpawnLocation.rotation);

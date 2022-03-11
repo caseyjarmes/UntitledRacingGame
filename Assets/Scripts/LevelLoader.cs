@@ -10,11 +10,16 @@ public class LevelLoader : MonoBehaviour
     //public GameObject LoadingScreen;
     public Slider slider;
     public int value;
-    public TMP_Dropdown dropdown;
+    public TMP_Dropdown track_dropdown;
+    public TMP_Dropdown ship_dropdown;
 
     public void LoadLevel()
     {
-        value = dropdown.value+1;
+        //set ship
+        ShipChoice.ShipIndex = ship_dropdown.value;
+
+        //set track
+        value = track_dropdown.value+1;
         StartCoroutine(LoadAsync(value));
     }
     IEnumerator LoadAsync(int sceneIndex)
