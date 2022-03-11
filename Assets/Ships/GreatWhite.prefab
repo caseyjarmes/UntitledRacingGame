@@ -34269,6 +34269,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c7b057cf-bc28-473f-af6d-010b2a646188
     m_ActionName: VehicleControl/Weapon[/XInputControllerWindows/buttonSouth,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7ba28ffd-4d69-4a17-95f5-77f0498d7e74
+    m_ActionName: Menu control/Select[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4257fd5-cb84-478a-ac3d-53d5b2bd7ef4
+    m_ActionName: Menu control/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: VehicleControl
