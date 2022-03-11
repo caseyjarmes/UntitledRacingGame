@@ -13259,7 +13259,7 @@ MonoBehaviour:
   UITotalCoinsCollected: {fileID: 1515649700}
   UITotalCoinsCollected2: {fileID: 1566737000}
   CompletedPanel: {fileID: 1809490994}
-  LapTimeManager: {fileID: 0}
+  LapTimeManager: {fileID: 2095772692}
   shipStatsUI: {fileID: 981900476}
   start: {fileID: 686556811}
   Started: 0
@@ -22587,7 +22587,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5939720332830433200, guid: 85e2b44c194671f4eaa1a9e26d3b1206, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5939720332830433200, guid: 85e2b44c194671f4eaa1a9e26d3b1206, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29986,6 +29986,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 13db1d4df6986d047a29eb9a35fb321e, type: 3}
   m_PrefabInstance: {fileID: 1675357885}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2095772691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2095772693}
+  - component: {fileID: 2095772692}
+  m_Layer: 0
+  m_Name: LapTimeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2095772692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095772691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97849d4b7df0d84596c85fd18714adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lap: {fileID: 634143078}
+  voFinish: {fileID: 823306774}
+  trackCheckpointSystem: {fileID: 0}
+  TotalLaps: 4
+  completedgame: 0
+--- !u!4 &2095772693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095772691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 783.8563, y: 353.01352, z: 906.2538}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2101236312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30434,7 +30482,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5518106092751699460, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5518106092751699460, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30480,6 +30528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
+      propertyPath: UIHandler
+      value: 
+      objectReference: {fileID: 981900474}
     - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
       propertyPath: CameraHandler
       value: 

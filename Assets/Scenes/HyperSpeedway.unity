@@ -15649,7 +15649,7 @@ MonoBehaviour:
   UITotalCoinsCollected: {fileID: 2090769839}
   UITotalCoinsCollected2: {fileID: 2137753253}
   CompletedPanel: {fileID: 978265768}
-  LapTimeManager: {fileID: 0}
+  LapTimeManager: {fileID: 1374744318}
   shipStatsUI: {fileID: 1261030480}
   start: {fileID: 1854457390}
   Started: 0
@@ -36862,6 +36862,14 @@ PrefabInstance:
       value: ShipSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
+      propertyPath: UIHandler
+      value: 
+      objectReference: {fileID: 1261030478}
+    - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
+      propertyPath: speed_mult
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
       propertyPath: CameraHandler
       value: 
       objectReference: {fileID: 1939447549}
@@ -41504,6 +41512,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7303116509305054165, guid: dfec8d9b723b08e4ab4463a1b8f9cd7d, type: 3}
   m_PrefabInstance: {fileID: 1371070838}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1374744317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374744319}
+  - component: {fileID: 1374744318}
+  m_Layer: 0
+  m_Name: LapTimeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1374744318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374744317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97849d4b7df0d84596c85fd18714adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lap: {fileID: 1431254837}
+  voFinish: {fileID: 1463976328}
+  trackCheckpointSystem: {fileID: 0}
+  TotalLaps: 6
+  completedgame: 0
+--- !u!4 &1374744319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374744317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 783.8563, y: 353.01352, z: 906.2538}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1377380474
 PrefabInstance:
   m_ObjectHideFlags: 0

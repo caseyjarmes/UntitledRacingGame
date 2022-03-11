@@ -49,17 +49,17 @@ public class LapTimeManager : MonoBehaviour
     void StartLap()
     {
 
-            CurrentLap++;
-            if (LastLapTime == 0)
-            {
+        CurrentLap++;
+        if (LastLapTime == 0)
+        {
             lapTimerTimeStamp = 0;
 
-            }
-            else
-            {
+        }
+        else
+        {
             lapTimerTimeStamp = LastLapTime;
-            }
-            Debug.Log("New Lap");
+        }
+        Debug.Log("New Lap");
         
     }
     void Update()
