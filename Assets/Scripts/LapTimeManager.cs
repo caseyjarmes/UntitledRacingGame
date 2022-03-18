@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+//The main handler of the lap timer procedure
 public class LapTimeManager : MonoBehaviour
 {
     public float BestLapTime { get; private set; } = Mathf.Infinity;

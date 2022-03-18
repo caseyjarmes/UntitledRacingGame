@@ -7,6 +7,8 @@ public class CreateShip : MonoBehaviour
     public List<GameObject> ships = new List<GameObject>();
     public GameObject CameraHandler;
     public GameObject UIHandler;
+    //This is for setting the individual level for their specific lap count set in the unity editor freely
+    public int TotalLapCount = 3;
 
     //mostly only used for hyperspeedway
     public float speed_mult = 1f;
@@ -25,6 +27,7 @@ public class CreateShip : MonoBehaviour
         ship_reference = (GameObject)Instantiate(ships[chosen_ship], new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.Euler(0, transform.eulerAngles.y, 0));
 
         ship_reference.GetComponent<CarControl>().speed *= speed_mult;
+        ship_reference.GetComponent<LapTimeManager>().TotalLaps = TotalLapCount;
 
         SetUpCamera(ship_reference);
         SetUpUI(ship_reference);
@@ -44,4 +47,5 @@ public class CreateShip : MonoBehaviour
     {
         UIHandler.GetComponent<ShipStatsUI>().CarControl = ship_reference.GetComponent<CarControl>();
     }
+
 }

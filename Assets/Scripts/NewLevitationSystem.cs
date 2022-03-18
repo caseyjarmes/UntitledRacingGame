@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//This script will handle the hovering system that all ships will deal with going forward. 
+//Each point will be reactive to surface elavation changes and reacts closely to springs when it ends up being compressed.
 public class NewLevitationSystem : MonoBehaviour
 {
     private Rigidbody rb;
