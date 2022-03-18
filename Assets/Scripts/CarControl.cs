@@ -46,7 +46,7 @@ public class CarControl : MonoBehaviour
 
     public bool HasWeapon;
 
-    Transform checkpointRotation;
+    //Transform checkpointRotation;
     
     private void Awake()
     {
@@ -198,7 +198,7 @@ public class CarControl : MonoBehaviour
         switch (other.tag)
         {
             case "Checkpoint":            
-                checkpointRotation.rotation = other.transform.rotation;
+                //checkpointRotation.rotation = other.transform.rotation;
                 break;
             case "Coin":
                 if (CoinsCollected < 10)

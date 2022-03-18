@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 4546425412932682586}
   - component: {fileID: 845669712101135516}
   - component: {fileID: 4865526163230538890}
+  - component: {fileID: -8564135144029025645}
   m_Layer: 0
   m_Name: SuburbanVoyager
   m_TagString: Player
@@ -399,7 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lap: {fileID: 0}
   voFinish: {fileID: 0}
-  trackCheckpointSystem: {fileID: 0}
+  CPManager: {fileID: 0}
   TotalLaps: 0
   completedgame: 0
 --- !u!114 &4865526163230538890
@@ -414,6 +415,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f110eec015e294084d45c79a3f7250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8564135144029025645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6251913710674590359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 331aa847f42c02b40968d8eda9d00d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lap: 0
+  checkPoint: -1
+  checkPointCount: 0
 --- !u!1 &7337452829862267499
 GameObject:
   m_ObjectHideFlags: 0

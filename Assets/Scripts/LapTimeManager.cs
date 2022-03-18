@@ -14,7 +14,8 @@ public class LapTimeManager : MonoBehaviour
     public AudioSource lap;
     public AudioSource voFinish;
     private float lapTimerTimeStamp;
-    public TrackCheckpointSystem trackCheckpointSystem;
+    //public TrackCheckpointSystem trackCheckpointSystem;
+    public CheckpointManager CPManager;
     public int CurrentLap { get; private set; }
     public int TotalLaps;
     private int interncounter;
@@ -22,7 +23,8 @@ public class LapTimeManager : MonoBehaviour
     public static bool Completedgame;
     void Awake()
     {
-        trackCheckpointSystem = GameObject.Find("Track").GetComponent<TrackCheckpointSystem>();
+        //trackCheckpointSystem = GameObject.Find("Track").GetComponent<TrackCheckpointSystem>();
+        CPManager = GetComponent<CheckpointManager>();
         
     }
     void Start()
@@ -50,6 +52,7 @@ public class LapTimeManager : MonoBehaviour
     {
 
         CurrentLap++;
+        CPManager.lap = CurrentLap;
         if (LastLapTime == 0)
         {
             lapTimerTimeStamp = 0;
@@ -74,10 +77,11 @@ public class LapTimeManager : MonoBehaviour
             {
                 CurrentLapTime += lapTimerTimeStamp > 0 ? Time.deltaTime : 0;
             }
-            if (trackCheckpointSystem.NextCheckpointIndexvalue == trackCheckpointSystem.checkpointlist.Count)
+            if (CPManager.checkPoint == CPManager.checkPointCount)
             {
                 EndLap();
-                trackCheckpointSystem.ResetCheckpointIndex();
+                CPManager.checkPoint = -1;
+                //trackCheckpointSystem.ResetCheckpointIndex();
                 if (CurrentLap != TotalLaps)
                 {
                     StartLap();
