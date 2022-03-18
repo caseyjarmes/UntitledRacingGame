@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public enum GameState { Menu, SinglePlayerTimeTrial,Multiplayer}
+public enum GameState { Menu = 0, SinglePlayerTimeTrial,Multiplayer}
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
@@ -21,11 +21,6 @@ public class GameManager : MonoBehaviour
                 instance = this;
                 DontDestroyOnLoad(gameObject);
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-
     }
 
     // Update is called once per frame

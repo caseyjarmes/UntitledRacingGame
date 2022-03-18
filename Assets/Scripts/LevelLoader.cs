@@ -12,6 +12,7 @@ public class LevelLoader : MonoBehaviour
     public int value;
     public TMP_Dropdown track_dropdown;
     public TMP_Dropdown ship_dropdown;
+    public TMP_Dropdown mode_dropdown;
 
     public void LoadLevel()
     {
@@ -21,6 +22,9 @@ public class LevelLoader : MonoBehaviour
         //set track
         value = track_dropdown.value+1;
         StartCoroutine(LoadAsync(value));
+
+        //set mode
+        //GameManager.State = (GameState)mode_dropdown.value;
     }
     IEnumerator LoadAsync(int sceneIndex)
     {

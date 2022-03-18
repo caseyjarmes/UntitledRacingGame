@@ -249,11 +249,9 @@ public class CarControl : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
+        //Forces the player out of the ground to avoid getting stuck
         if (collision.gameObject.layer == LayerMask.NameToLayer("ground"))
         {
-            //add force
-            //rb.AddForce()
-
             //change transform
             gameObject.transform.Translate(0, 0.5f, 0);
         }

@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
 {
     public Button Selected;
     public TMP_Dropdown trackSelect;
-    public TMP_Dropdown ModeSelect;
+    public TMP_Dropdown modeSelect;
     
 
     // Start is called before the first frame update
@@ -18,8 +18,10 @@ public class MainMenu : MonoBehaviour
         Selected.Select();
 
     }
+    //Unused, this functionality is now in LevelLoader.cs
     public void PlayGame()
     {
+        /*
         switch (trackSelect.value)
         {
             case 0:
@@ -38,7 +40,9 @@ public class MainMenu : MonoBehaviour
             default:
                 break;
         }
+        */
     }
+    
     public void ExitGame()
     {
         Application.Quit();
@@ -51,10 +55,5 @@ public class MainMenu : MonoBehaviour
     public void Return()
     {
         SceneManager.LoadScene("Main Menu");
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
