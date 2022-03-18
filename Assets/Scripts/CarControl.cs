@@ -246,4 +246,17 @@ public class CarControl : MonoBehaviour
         //For ui make this value bigger because its rather tiny for the sense of speed
         return (float)Math.Round((decimal)(value * 10), 0);
     }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("ground"))
+        {
+            //add force
+            //rb.AddForce()
+
+            //change transform
+            gameObject.transform.Translate(0, 0.5f, 0);
+        }
+    }
+    
 }
