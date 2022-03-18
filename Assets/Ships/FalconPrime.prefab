@@ -34439,8 +34439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerIndex: 0
   rb: {fileID: 0}
-  speed: 2500
-  TorqueSpeed: 500
+  speed: 2600
+  TorqueSpeed: 400
   ship: {fileID: 6251913710674590359}
   shipModel: {fileID: 0}
   ground:

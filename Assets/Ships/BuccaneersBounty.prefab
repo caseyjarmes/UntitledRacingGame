@@ -67703,7 +67703,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6251913710674590359}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 22
   m_Drag: 1.5
   m_AngularDrag: 3.21
   m_UseGravity: 1
@@ -67865,7 +67865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerIndex: 0
   rb: {fileID: 0}
-  speed: 2500
+  speed: 2700
   TorqueSpeed: 500
   ship: {fileID: 6251913710674590359}
   shipModel: {fileID: 0}
