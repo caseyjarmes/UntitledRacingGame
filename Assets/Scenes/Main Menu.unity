@@ -9343,6 +9343,10 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: HYPERSPEEDWAY
       m_Image: {fileID: 0}
+    - m_Text: COSMIC
+      m_Image: {fileID: 0}
+    - m_Text: QUARRY
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
