@@ -9,7 +9,7 @@ public class ObjectSeparater : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        GameManager.State = GameState.Multiplayer;
+        //GameManager.State = GameState.Multiplayer;
         switch (GameManager.State)
         {
             case GameState.Menu:

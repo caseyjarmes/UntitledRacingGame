@@ -2682,7 +2682,7 @@ MonoBehaviour:
   value: 0
   track_dropdown: {fileID: 1993963877}
   ship_dropdown: {fileID: 1803258547}
-  mode_dropdown: {fileID: 0}
+  mode_dropdown: {fileID: 526672444}
 --- !u!4 &716904817
 Transform:
   m_ObjectHideFlags: 0
