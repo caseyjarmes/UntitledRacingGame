@@ -3225,6 +3225,10 @@ PrefabInstance:
       propertyPath: TotalLapCount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
+      propertyPath: ShipUIController
+      value: 
+      objectReference: {fileID: 1390627502}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
 --- !u!4 &95020119 stripped
