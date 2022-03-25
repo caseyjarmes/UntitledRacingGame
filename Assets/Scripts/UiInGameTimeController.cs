@@ -15,7 +15,8 @@ public class UiInGameTimeController : MonoBehaviour
         UITextTotalLapTime,
         UITextfinalLapTime,
         UITotalCoinsCollected,
-        UITotalCoinsCollected2;
+        UITotalCoinsCollected2,
+        PositionStat;
     
     public GameObject CompletedPanel;
     public LapTimeManager LapTimeManager;
@@ -35,10 +36,15 @@ public class UiInGameTimeController : MonoBehaviour
         Started = false;
         StartCoroutine("StartupSequence");
         BestLapTime = LapTimeManager.BestLapTime;
+        //if(Leaderboard.lb.Count < 2)
+        //{
+        //    PositionStat.gameObject.SetActive(false);
+        //}
     }
-
+    //Will edit this around without putting this method call in this script REMIND ME
     IEnumerator StartupSequence()
     {
+        
         //var inputhandler = GameObject.FindGameObjectsWithTag("");
         var players = GameObject.FindGameObjectsWithTag("Player");
         foreach(GameObject player in players)

@@ -54,6 +54,7 @@ public class MainMenu : MonoBehaviour
     }
     public void Return()
     {
+        Leaderboard.ResetInfo();
         SceneManager.LoadScene("Main Menu");
     }
 }

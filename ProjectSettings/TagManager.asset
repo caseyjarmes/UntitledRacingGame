@@ -10,6 +10,7 @@ TagManager:
   - Camera
   - SinglePlayer
   - Multiplayer
+  - Countdown
   layers:
   - Default
   - TransparentFX
