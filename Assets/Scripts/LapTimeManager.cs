@@ -21,6 +21,8 @@ public class LapTimeManager : MonoBehaviour
     private int interncounter;
     public bool completedgame;
     public static bool Completedgame;
+    public int carRego;
+    public string PositionInfo;
     void Awake()
     {
         //trackCheckpointSystem = GameObject.Find("Track").GetComponent<TrackCheckpointSystem>();
@@ -30,6 +32,7 @@ public class LapTimeManager : MonoBehaviour
     void Start()
     {
         StartLap();
+        carRego = Leaderboard.RegisterCar(gameObject.name);
     }
     void EndLap()
     {
@@ -67,6 +70,7 @@ public class LapTimeManager : MonoBehaviour
     }
     void Update()
     {
+
         if (UiInGameTimeController.StartedData)
         {
             if (CurrentLap == 1)
@@ -96,5 +100,10 @@ public class LapTimeManager : MonoBehaviour
                 }
             }
         }
+    }
+    void LateUpdate()
+    {
+        Leaderboard.SetPosition(carRego, CPManager.lap, CPManager.checkPoint, CPManager.TimeEntered);
+        PositionInfo = Leaderboard.GetPosition(carRego);
     }
 }
