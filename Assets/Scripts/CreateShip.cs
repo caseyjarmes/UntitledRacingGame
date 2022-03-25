@@ -6,7 +6,13 @@ public class CreateShip : MonoBehaviour
 {
     public List<GameObject> ships = new List<GameObject>();
     public GameObject CameraHandler;
+
+    //takes in a ShipStatsUI
     public GameObject UIHandler;
+
+    //takes in a ___UIController
+    public GameObject ShipUIController;
+
     //This is for setting the individual level for their specific lap count set in the unity editor freely
     public int TotalLapCount = 3;
 
@@ -45,7 +51,11 @@ public class CreateShip : MonoBehaviour
 
     public void SetUpUI(GameObject ship_reference)
     {
+        //for speed and coins 
         UIHandler.GetComponent<ShipStatsUI>().CarControl = ship_reference.GetComponent<CarControl>();
+
+        //for lap time/count
+        ShipUIController.GetComponent<UiInGameTimeController>().LapTimeManager = ship_reference.GetComponent<LapTimeManager>();
     }
 
 }

@@ -6,7 +6,7 @@ public enum GameState { Menu = 0, SinglePlayerTimeTrial,Multiplayer}
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
-    public static GameState State = GameState.SinglePlayerTimeTrial;
+    public static GameState State;// = GameState.SinglePlayerTimeTrial;
 
     public PlayerInputHandler[] players;
 

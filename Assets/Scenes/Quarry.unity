@@ -8388,7 +8388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &879067684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19268,7 +19268,7 @@ PrefabInstance:
       objectReference: {fileID: 158990843}
     - target: {fileID: 845669712101135516, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: TotalLaps
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4865526163230538890, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: m_Enabled
@@ -22735,7 +22735,7 @@ PrefabInstance:
       objectReference: {fileID: 158990843}
     - target: {fileID: 845669712101135516, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: TotalLaps
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 845669712101135516, guid: 60415b06497228e49942947c5d4875c0, type: 3}
       propertyPath: completedgame
@@ -23359,6 +23359,10 @@ PrefabInstance:
       propertyPath: CameraHandler
       value: 
       objectReference: {fileID: 1636206658}
+    - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
+      propertyPath: ShipUIController
+      value: 
+      objectReference: {fileID: 1319208260}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
 --- !u!4 &2073449635 stripped

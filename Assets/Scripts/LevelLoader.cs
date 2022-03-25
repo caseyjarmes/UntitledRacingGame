@@ -24,7 +24,7 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadAsync(value));
 
         //set mode
-        //GameManager.State = (GameState)mode_dropdown.value;
+        GameManager.State = (GameState)mode_dropdown.value + 1; //maybe +1
     }
     IEnumerator LoadAsync(int sceneIndex)
     {

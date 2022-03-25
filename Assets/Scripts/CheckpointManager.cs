@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//This script assumes that all checkpoints in the game have the tag "Checkpoint" 
-//on them as well as numbers for each checkpoint starting with 0 and ending it 
-//on the finish line with the biggest value in the gameobject name in the inspector
+
+/// <summary>
+/// This script assumes that all checkpoints in the game have the tag "Checkpoint" 
+///on them as well as numbers for each checkpoint starting with 0 and ending it 
+///on the finish line with the biggest value in the gameobject name in the inspector
+/// </summary>
 public class CheckpointManager : MonoBehaviour
 {
     //Lap count to be seen in the inspector
@@ -14,6 +17,7 @@ public class CheckpointManager : MonoBehaviour
     public int checkPointCount = 0;
     //The next checkpoint that the ship has to contact with in order to progress in the level
     int nextCheckPoint = 0;
+    public float TimeEntered = 0;
     void Start()
     {
         //Each level would have a special count of checkpoints and this will cover all of them
@@ -28,7 +32,9 @@ public class CheckpointManager : MonoBehaviour
             //The collider will touch a gameobject whose name will only be a number value
             int thisCheckpointNumber = int.Parse(other.gameObject.name);
             if (thisCheckpointNumber == nextCheckPoint)
-            {
+            {           
+                //a variable used for the sorting in the dictonary
+                TimeEntered = Time.time;
                 checkPoint = thisCheckpointNumber;
                 if (checkPoint == checkPointCount)
                 {
@@ -39,4 +45,5 @@ public class CheckpointManager : MonoBehaviour
             }
         }
     }
+
 }
