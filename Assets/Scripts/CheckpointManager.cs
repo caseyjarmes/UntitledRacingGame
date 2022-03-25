@@ -32,12 +32,13 @@ public class CheckpointManager : MonoBehaviour
             //The collider will touch a gameobject whose name will only be a number value
             int thisCheckpointNumber = int.Parse(other.gameObject.name);
             if (thisCheckpointNumber == nextCheckPoint)
-            {
+            {           
+                //a variable used for the sorting in the dictonary
+                TimeEntered = Time.time;
                 checkPoint = thisCheckpointNumber;
                 if (checkPoint == checkPointCount)
                 {
                     //makes it become a new lap
-                    TimeEntered = Time.time;
                     nextCheckPoint = 0;
                 }
                     nextCheckPoint++;                

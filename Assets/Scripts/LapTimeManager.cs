@@ -22,6 +22,8 @@ public class LapTimeManager : MonoBehaviour
     public bool completedgame;
     public static bool Completedgame;
     public int carRego;
+    // this will be the string that will be shown up to the ui about their relative
+    // position in regards to their competitors 
     public string PositionInfo;
     void Awake()
     {
