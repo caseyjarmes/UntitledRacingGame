@@ -2333,6 +2333,7 @@ MonoBehaviour:
   UITextfinalLapTime: {fileID: 692817562}
   UITotalCoinsCollected: {fileID: 692817576}
   UITotalCoinsCollected2: {fileID: 692817563}
+  PositionStat: {fileID: 0}
   CompletedPanel: {fileID: 692817564}
   LapTimeManager: {fileID: 0}
   shipStatsUI: {fileID: 753436772}
@@ -8382,6 +8383,7 @@ MonoBehaviour:
   UITextfinalLapTime: {fileID: 1757502735}
   UITotalCoinsCollected: {fileID: 1515649700}
   UITotalCoinsCollected2: {fileID: 1566737000}
+  PositionStat: {fileID: 0}
   CompletedPanel: {fileID: 1809490994}
   LapTimeManager: {fileID: 0}
   shipStatsUI: {fileID: 1631354828}
@@ -24345,7 +24347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1789816838319584895, guid: f3cb7adf9f754554ba7c6759bdd60c3c, type: 3}
       propertyPath: m_Name
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -4876150466110919316, guid: f3cb7adf9f754554ba7c6759bdd60c3c, type: 3}
@@ -27369,6 +27371,7 @@ MonoBehaviour:
   UITextfinalLapTime: {fileID: 692817562}
   UITotalCoinsCollected: {fileID: 692817567}
   UITotalCoinsCollected2: {fileID: 692817563}
+  PositionStat: {fileID: 0}
   CompletedPanel: {fileID: 692817564}
   LapTimeManager: {fileID: 0}
   shipStatsUI: {fileID: 1135517559}
@@ -32281,6 +32284,8 @@ MonoBehaviour:
   CPManager: {fileID: 0}
   TotalLaps: 4
   completedgame: 0
+  carRego: 0
+  PositionInfo: 
 --- !u!4 &2095772693
 Transform:
   m_ObjectHideFlags: 0

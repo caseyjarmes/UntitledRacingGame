@@ -44,13 +44,13 @@ public class LapTimeManager : MonoBehaviour
         CurrentLapTime = 0;
         //END LAP SOUND TRIGGER
         if(CurrentLap != TotalLaps)
-        VoManager.voMan.PlayVoLap();
-        lap.Play();
+        //VoManager.voMan.PlayVoLap();
+        //lap.Play();
         //FINISH GAME SOUND
         if (CurrentLap == TotalLaps)
         {
             //play finish vo 
-            voFinish.Play();
+            //voFinish.Play();
         }
     }
     void StartLap()
