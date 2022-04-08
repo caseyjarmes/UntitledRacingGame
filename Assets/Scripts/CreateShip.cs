@@ -20,7 +20,7 @@ public class CreateShip : MonoBehaviour
     public float speed_mult = 1f;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         InstantiateShip(ShipChoice.ShipIndex);
     }
