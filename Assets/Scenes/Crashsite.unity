@@ -2292,7 +2292,7 @@ GameObject:
   - component: {fileID: 111529989}
   m_Layer: 0
   m_Name: Player1UIController
-  m_TagString: Multiplayer
+  m_TagString: LocalUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2304,12 +2304,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111529987}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 282831635}
-  m_RootOrder: 3
+  m_Father: {fileID: 690967162}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &111529989
 MonoBehaviour:
@@ -4730,6 +4730,7 @@ GameObject:
   - component: {fileID: 282831635}
   - component: {fileID: 282831637}
   - component: {fileID: 282831636}
+  - component: {fileID: 282831638}
   m_Layer: 0
   m_Name: RaceManager
   m_TagString: Untagged
@@ -4751,10 +4752,7 @@ Transform:
   - {fileID: 528123841}
   - {fileID: 1631354829}
   - {fileID: 577424201}
-  - {fileID: 111529988}
-  - {fileID: 753436771}
-  - {fileID: 1712534374}
-  - {fileID: 1135517558}
+  - {fileID: 690967162}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4794,6 +4792,21 @@ MonoBehaviour:
   Player2SpawnLocation: {fileID: 0}
   Player1SelectedShipNumber: 0
   Player2SelectedShipNumber: 0
+--- !u!114 &282831638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282831634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f347c04c91d91db479003968b7c4a238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllers: []
+  playerStats: []
+  manipulators: []
 --- !u!1001 &291537945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10998,6 +11011,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a66b4d595441d244387e1e12f82d7e7e, type: 3}
   m_PrefabInstance: {fileID: 1960344106}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &690967161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 690967162}
+  m_Layer: 0
+  m_Name: Multiplayer
+  m_TagString: Multiplayer
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &690967162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690967161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 111529988}
+  - {fileID: 753436771}
+  - {fileID: 1712534374}
+  - {fileID: 1135517558}
+  m_Father: {fileID: 282831635}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &692817559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12497,7 +12544,7 @@ GameObject:
   - component: {fileID: 753436772}
   m_Layer: 0
   m_Name: Player1ShipStatsUI
-  m_TagString: Multiplayer
+  m_TagString: LocalStatsUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12509,12 +12556,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753436770}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 282831635}
-  m_RootOrder: 4
+  m_Father: {fileID: 690967162}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &753436772
 MonoBehaviour:
@@ -14270,6 +14317,14 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1909689188}
+    - target: {fileID: 4316150574309538129, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+      propertyPath: m_TagString
+      value: MultiplayerCam
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168403811539595385, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+      propertyPath: m_TagString
+      value: MultiplayerCam
+      objectReference: {fileID: 0}
     - target: {fileID: 8969774793275816119, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
       propertyPath: m_Follow
       value: 
@@ -14285,6 +14340,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 96823302110389007, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
   m_PrefabInstance: {fileID: 867204234}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &867204236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2611961011848117070, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+  m_PrefabInstance: {fileID: 867204234}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &867204237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4316150574309538129, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+  m_PrefabInstance: {fileID: 867204234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &867204238 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8969774793275816119, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+  m_PrefabInstance: {fileID: 867204234}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &867204239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6168403811539595385, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+  m_PrefabInstance: {fileID: 867204234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &867204240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867204237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c102749ea2d2c0e47b9a92bb011f0032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShipCam: {fileID: 867204236}
+  CarControl: {fileID: 0}
+--- !u!114 &867204241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867204239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c102749ea2d2c0e47b9a92bb011f0032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShipCam: {fileID: 867204238}
+  CarControl: {fileID: 0}
 --- !u!4 &867438015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a66b4d595441d244387e1e12f82d7e7e, type: 3}
@@ -17708,7 +17823,7 @@ GameObject:
   - component: {fileID: 1135517559}
   m_Layer: 0
   m_Name: Player2ShipStatsUI
-  m_TagString: Multiplayer
+  m_TagString: LocalStatsUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17720,12 +17835,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135517557}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 282831635}
-  m_RootOrder: 6
+  m_Father: {fileID: 690967162}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1135517559
 MonoBehaviour:
@@ -27341,7 +27456,7 @@ GameObject:
   - component: {fileID: 1712534375}
   m_Layer: 0
   m_Name: Player2UIController
-  m_TagString: Multiplayer
+  m_TagString: LocalUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27353,12 +27468,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712534373}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 282831635}
-  m_RootOrder: 5
+  m_Father: {fileID: 690967162}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1712534375
 MonoBehaviour:

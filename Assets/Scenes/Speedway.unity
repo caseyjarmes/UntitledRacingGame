@@ -3361,7 +3361,7 @@ GameObject:
   - component: {fileID: 98526195}
   m_Layer: 0
   m_Name: Player2UIController
-  m_TagString: Multiplayer
+  m_TagString: LocalUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24741,7 +24741,7 @@ GameObject:
   - component: {fileID: 767897038}
   m_Layer: 0
   m_Name: Player2ShipStatsUI
-  m_TagString: Multiplayer
+  m_TagString: LocalStatsUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47180,6 +47180,7 @@ GameObject:
   - component: {fileID: 1464211165}
   - component: {fileID: 1464211164}
   - component: {fileID: 1464211167}
+  - component: {fileID: 1464211166}
   m_Layer: 0
   m_Name: RaceManager
   m_TagString: Untagged
@@ -47230,6 +47231,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1464211166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464211163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f347c04c91d91db479003968b7c4a238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllers: []
+  playerStats: []
+  manipulators: []
 --- !u!114 &1464211167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56574,7 +56590,7 @@ GameObject:
   - component: {fileID: 1720694358}
   m_Layer: 0
   m_Name: Player1UIController
-  m_TagString: Multiplayer
+  m_TagString: LocalUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58834,7 +58850,7 @@ GameObject:
   - component: {fileID: 1787302362}
   m_Layer: 0
   m_Name: Player1ShipStatsUI
-  m_TagString: Multiplayer
+  m_TagString: LocalStatsUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70898,6 +70914,10 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 942157045}
+    - target: {fileID: 4316150574309538129, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+      propertyPath: m_TagString
+      value: MultiplayerCam
+      objectReference: {fileID: 0}
     - target: {fileID: 8969774793275816119, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
       propertyPath: m_Follow
       value: 
@@ -70913,6 +70933,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 96823302110389007, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
   m_PrefabInstance: {fileID: 2742362990654979836}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2742362990654979838 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2611961011848117070, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+  m_PrefabInstance: {fileID: 2742362990654979836}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2742362990654979839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4316150574309538129, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+  m_PrefabInstance: {fileID: 2742362990654979836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2742362990654979840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8969774793275816119, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+  m_PrefabInstance: {fileID: 2742362990654979836}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2742362990654979841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6168403811539595385, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+  m_PrefabInstance: {fileID: 2742362990654979836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2742362990654979842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2742362990654979839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c102749ea2d2c0e47b9a92bb011f0032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShipCam: {fileID: 2742362990654979838}
+  CarControl: {fileID: 0}
+--- !u!114 &2742362990654979843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2742362990654979841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c102749ea2d2c0e47b9a92bb011f0032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShipCam: {fileID: 2742362990654979840}
+  CarControl: {fileID: 0}
 --- !u!1001 &5861536871878953447
 PrefabInstance:
   m_ObjectHideFlags: 0
