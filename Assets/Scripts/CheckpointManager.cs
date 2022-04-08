@@ -18,10 +18,44 @@ public class CheckpointManager : MonoBehaviour
     //The next checkpoint that the ship has to contact with in order to progress in the level
     int nextCheckPoint = 0;
     public float TimeEntered = 0;
+
+    //List of checkpoints
+    GameObject[] Checkpoints;
+
+    //previous checkpoint distance
+    //distance from next checkpoint last frame
+    public float prev_CP_dist;
+
     void Start()
     {
+        Checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
+
         //Each level would have a special count of checkpoints and this will cover all of them
-        checkPointCount = GameObject.FindGameObjectsWithTag("Checkpoint").Length - 1;
+        checkPointCount = Checkpoints.Length - 1;
+    }
+
+    void Update()
+    {
+        CheckWrongWay();
+    }
+
+    //check if the player is going the wrong way based on the distance to the next checkpoint
+    //if they are, show UI element
+    private void CheckWrongWay()
+    {
+        if (Vector3.Distance(gameObject.transform.position, Checkpoints[nextCheckPoint].transform.position) > prev_CP_dist)
+        {
+            //show UI element
+            Debug.Log("Wrong way");
+        }
+
+        else
+        {
+            //hide UI element
+            Debug.Log("Right way");
+        }
+
+        prev_CP_dist = Vector3.Distance(gameObject.transform.position, Checkpoints[nextCheckPoint].transform.position);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -41,7 +75,8 @@ public class CheckpointManager : MonoBehaviour
                     //makes it become a new lap
                     nextCheckPoint = 0;
                 }
-                    nextCheckPoint++;                
+                
+                nextCheckPoint++;                
             }
         }
     }
