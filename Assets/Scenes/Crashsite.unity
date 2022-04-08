@@ -2335,7 +2335,7 @@ MonoBehaviour:
   UITotalCoinsCollected2: {fileID: 692817563}
   PositionStat: {fileID: 0}
   CompletedPanel: {fileID: 692817564}
-  LapTimeManager: {fileID: 0}
+  LapTimeManager: {fileID: 291537951}
   shipStatsUI: {fileID: 753436772}
   start: {fileID: 686556811}
   Started: 0
@@ -5053,6 +5053,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ee1d6bb9bdb9344b7e676c3e2e614b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &291537951 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 845669712101135516, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+  m_PrefabInstance: {fileID: 291537945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291537947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97849d4b7df0d84596c85fd18714adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &291958848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6891,7 +6902,7 @@ GameObject:
   - component: {fileID: 421586171}
   m_Layer: 5
   m_Name: UI Startup
-  m_TagString: Untagged
+  m_TagString: SinglePlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9657,7 +9668,7 @@ GameObject:
   - component: {fileID: 619756315}
   m_Layer: 5
   m_Name: RaceDataPanel
-  m_TagString: Untagged
+  m_TagString: SinglePlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27373,7 +27384,7 @@ MonoBehaviour:
   UITotalCoinsCollected2: {fileID: 692817563}
   PositionStat: {fileID: 0}
   CompletedPanel: {fileID: 692817564}
-  LapTimeManager: {fileID: 0}
+  LapTimeManager: {fileID: 1909689193}
   shipStatsUI: {fileID: 1135517559}
   start: {fileID: 686556811}
   Started: 0
@@ -30150,6 +30161,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36ee1d6bb9bdb9344b7e676c3e2e614b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1909689193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 845669712101135516, guid: 60415b06497228e49942947c5d4875c0, type: 3}
+  m_PrefabInstance: {fileID: 1909689187}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909689189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97849d4b7df0d84596c85fd18714adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1910877610

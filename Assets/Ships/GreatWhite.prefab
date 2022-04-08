@@ -19628,7 +19628,7 @@ MeshCollider:
   m_GameObject: {fileID: 3453011016168291241}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -34354,6 +34354,8 @@ MonoBehaviour:
   CPManager: {fileID: 0}
   TotalLaps: 0
   completedgame: 0
+  carRego: 0
+  PositionInfo: 
 --- !u!114 &4865526163230538890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34381,6 +34383,8 @@ MonoBehaviour:
   lap: 0
   checkPoint: -1
   checkPointCount: 0
+  TimeEntered: 0
+  prev_CP_dist: 0
 --- !u!65 &9085264070237910701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34390,7 +34394,7 @@ BoxCollider:
   m_GameObject: {fileID: 6309140029979353179}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 4.106288, y: 0.84510124, z: 1.7646589}
   m_Center: {x: 1.6886154, y: 0.13092817, z: -0.00000007450579}
