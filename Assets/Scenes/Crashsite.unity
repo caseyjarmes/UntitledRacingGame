@@ -6891,7 +6891,7 @@ GameObject:
   - component: {fileID: 421586171}
   m_Layer: 5
   m_Name: UI Startup
-  m_TagString: Untagged
+  m_TagString: SinglePlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9657,7 +9657,7 @@ GameObject:
   - component: {fileID: 619756315}
   m_Layer: 5
   m_Name: RaceDataPanel
-  m_TagString: Untagged
+  m_TagString: SinglePlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

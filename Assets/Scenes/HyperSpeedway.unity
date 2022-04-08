@@ -22785,6 +22785,7 @@ MonoBehaviour:
   UITextfinalLapTime: {fileID: 164104385}
   UITotalCoinsCollected: {fileID: 164104396}
   UITotalCoinsCollected2: {fileID: 164104386}
+  PositionStat: {fileID: 0}
   CompletedPanel: {fileID: 164104387}
   LapTimeManager: {fileID: 0}
   shipStatsUI: {fileID: 971561545}
@@ -24252,6 +24253,7 @@ MonoBehaviour:
   UITextfinalLapTime: {fileID: 164104385}
   UITotalCoinsCollected: {fileID: 164104404}
   UITotalCoinsCollected2: {fileID: 164104386}
+  PositionStat: {fileID: 0}
   CompletedPanel: {fileID: 164104387}
   LapTimeManager: {fileID: 0}
   shipStatsUI: {fileID: 961099391}
@@ -44498,6 +44500,8 @@ MonoBehaviour:
   CPManager: {fileID: 0}
   TotalLaps: 6
   completedgame: 0
+  carRego: 0
+  PositionInfo: 
 --- !u!4 &1374744319
 Transform:
   m_ObjectHideFlags: 0
@@ -46296,7 +46300,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 622dda6df1e51bf43bd9d484e33cb7fb, type: 2}
     - target: {fileID: 1789816838319584891, guid: f3cb7adf9f754554ba7c6759bdd60c3c, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1789816838319584891, guid: f3cb7adf9f754554ba7c6759bdd60c3c, type: 3}
       propertyPath: m_LocalScale.x
@@ -53843,6 +53847,7 @@ MonoBehaviour:
   UITextfinalLapTime: {fileID: 1500784899}
   UITotalCoinsCollected: {fileID: 2090769839}
   UITotalCoinsCollected2: {fileID: 2137753253}
+  PositionStat: {fileID: 0}
   CompletedPanel: {fileID: 978265768}
   LapTimeManager: {fileID: 0}
   shipStatsUI: {fileID: 880554439}
@@ -55521,13 +55526,13 @@ Transform:
   - {fileID: 777770073}
   - {fileID: 1094564621}
   - {fileID: 1818375438}
+  - {fileID: 1445787219}
   - {fileID: 346112570}
   - {fileID: 719127111}
   - {fileID: 1149302173}
   - {fileID: 1899072355}
   - {fileID: 1532244174}
   - {fileID: 233572412}
-  - {fileID: 1445787219}
   - {fileID: 239925201}
   - {fileID: 1479836748}
   - {fileID: 2061849277}
@@ -57256,7 +57261,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 622dda6df1e51bf43bd9d484e33cb7fb, type: 2}
     - target: {fileID: 1789816838319584891, guid: f3cb7adf9f754554ba7c6759bdd60c3c, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1789816838319584891, guid: f3cb7adf9f754554ba7c6759bdd60c3c, type: 3}
       propertyPath: m_LocalScale.x
@@ -64083,7 +64088,7 @@ GameObject:
   - component: {fileID: 2017746454}
   m_Layer: 5
   m_Name: RaceDataPanel
-  m_TagString: Untagged
+  m_TagString: SinglePlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
