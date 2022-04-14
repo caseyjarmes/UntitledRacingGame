@@ -11,6 +11,9 @@ TagManager:
   - SinglePlayer
   - Multiplayer
   - Countdown
+  - LocalUI
+  - LocalStatsUI
+  - MultiplayerCam
   layers:
   - Default
   - TransparentFX
