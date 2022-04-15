@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public Button Selected;
     
     public GameObject StartButton;
+    public Button BackButton;
 
     public GameObject ModePanel;
     public GameObject ShipPanel;
@@ -79,6 +80,7 @@ public class MainMenu : MonoBehaviour
         TrackPanel.SetActive(false);
 
         StartButton.SetActive(false);
+        BackButton.Select();
     }
 
     public void NavigateToMPShip()
@@ -88,6 +90,7 @@ public class MainMenu : MonoBehaviour
         TrackPanel.SetActive(false);
 
         StartButton.SetActive(false);
+        BackButton.Select();
     }
 
     public void NavigateToTrack()
@@ -98,6 +101,7 @@ public class MainMenu : MonoBehaviour
 
         StartButton.SetActive(true);
         MPShipPanel.SetActive(false);
+        BackButton.Select();
     }
 
     public void ExitGame()

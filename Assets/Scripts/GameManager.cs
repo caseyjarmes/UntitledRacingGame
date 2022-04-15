@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public enum GameState { Menu = 0, SinglePlayerTimeTrial,Multiplayer}
+
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
-    public static GameState State;// = GameState.SinglePlayerTimeTrial;
+    public static GameState State;
 
     public PlayerInputHandler[] players;
 

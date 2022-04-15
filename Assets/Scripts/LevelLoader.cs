@@ -23,13 +23,14 @@ public class LevelLoader : MonoBehaviour
         ShipChoice.P2ShipIndex = p2_ship_dropdown.value;
 
         //set track
-        value = track_dropdown.value+1;
+        value = track_dropdown.value + 1;
         StartCoroutine(LoadAsync(value));
 
         //set mode
         //This is now done in MainMenu.cs
         //GameManager.State = (GameState)mode_dropdown.value + 1; Dropdown version
     }
+
     IEnumerator LoadAsync(int sceneIndex)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
