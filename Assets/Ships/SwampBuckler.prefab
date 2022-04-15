@@ -756,6 +756,8 @@ MonoBehaviour:
   CPManager: {fileID: 0}
   TotalLaps: 0
   completedgame: 0
+  carRego: 0
+  PositionInfo: 
 --- !u!114 &4865526163230538890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,6 +785,8 @@ MonoBehaviour:
   lap: 0
   checkPoint: -1
   checkPointCount: 0
+  TimeEntered: 0
+  prev_CP_dist: 0
 --- !u!1 &6266341641202581514
 GameObject:
   m_ObjectHideFlags: 0
