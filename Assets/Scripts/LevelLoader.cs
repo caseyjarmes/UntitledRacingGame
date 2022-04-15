@@ -7,30 +7,33 @@ using TMPro;
 public class LevelLoader : MonoBehaviour
 {
     private float progress;
-    //public GameObject LoadingScreen;
     public Slider slider;
     public int value;
     public TMP_Dropdown track_dropdown;
     public TMP_Dropdown ship_dropdown;
+    public TMP_Dropdown p1_ship_dropdown;
+    public TMP_Dropdown p2_ship_dropdown;
     public TMP_Dropdown mode_dropdown;
 
     public void LoadLevel()
     {
         //set ship
         ShipChoice.ShipIndex = ship_dropdown.value;
+        ShipChoice.P1ShipIndex = p1_ship_dropdown.value;
+        ShipChoice.P2ShipIndex = p2_ship_dropdown.value;
 
         //set track
         value = track_dropdown.value+1;
         StartCoroutine(LoadAsync(value));
 
         //set mode
-        GameManager.State = (GameState)mode_dropdown.value + 1; //maybe +1
+        //This is now done in MainMenu.cs
+        //GameManager.State = (GameState)mode_dropdown.value + 1; Dropdown version
     }
     IEnumerator LoadAsync(int sceneIndex)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
-        //LoadingScreen.SetActive(true);
         while (!operation.isDone)
         {
             progress = Mathf.Clamp01(operation.progress/.9f);
@@ -39,16 +42,5 @@ public class LevelLoader : MonoBehaviour
 
             yield return null;
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-            
     }
 }
