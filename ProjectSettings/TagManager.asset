@@ -14,6 +14,8 @@ TagManager:
   - LocalUI
   - LocalStatsUI
   - MultiplayerCam
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX

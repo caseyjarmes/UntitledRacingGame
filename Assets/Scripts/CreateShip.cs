@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//FOR MULTIPLAYER, THE PLAYER 2 SPAWNER HAS TO BE FIRST IN THE HIERARCHY
+//maybe not, I have no idea what determines the playerIndex in the PlayerInput
+//and its readonly so I can't change it
+
 public class CreateShip : MonoBehaviour
 {
     public List<GameObject> ships = new List<GameObject>();
+
+    //takes in p1cam/p2cam for multiplayer
     public GameObject CameraHandler;
 
     //takes in a ShipStatsUI
@@ -23,7 +29,21 @@ public class CreateShip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InstantiateShip(ShipChoice.ShipIndex);
+        if (GameManager.State == GameState.SinglePlayerTimeTrial)
+        {
+            InstantiateShip(ShipChoice.ShipIndex);
+        }
+        else if (GameManager.State == GameState.Multiplayer)
+        {
+            if (gameObject.tag == "Player2")
+            {
+                InstantiateShip(ShipChoice.P2ShipIndex);
+            }
+            else if (gameObject.tag == "Player1")
+            {
+                InstantiateShip(ShipChoice.P1ShipIndex);
+            }
+        }
     }
 
     public void InstantiateShip(int chosen_ship)
@@ -36,8 +56,6 @@ public class CreateShip : MonoBehaviour
         ship_reference.GetComponent<CarControl>().speed *= speed_mult;
         ship_reference.GetComponent<LapTimeManager>().TotalLaps = TotalLapCount;
 
-        //ship_reference.AddComponent<PlayerInput>();
-
         SetUpCamera(ship_reference);
         SetUpUI(ship_reference);
     }
@@ -48,8 +66,17 @@ public class CreateShip : MonoBehaviour
         CameraHandler.GetComponent<CinemachineManipulator>().CarControl = ship_reference.GetComponent<CarControl>();
 
         //camera follows ship
-        CameraHandler.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().Follow = ship_reference.transform;
-        CameraHandler.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().LookAt = ship_reference.transform.GetChild(1);
+        CameraHandler.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().LookAt = ship_reference.transform.Find("followpoint");
+
+        //for some reason this has to be different for the different modes
+        if (GameManager.State == GameState.Multiplayer)
+        {
+            CameraHandler.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().Follow = ship_reference.transform.Find("followpoint");
+        }
+        else
+        {
+            CameraHandler.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().Follow = ship_reference.transform;
+        }
     }
 
     public void SetUpUI(GameObject ship_reference)
