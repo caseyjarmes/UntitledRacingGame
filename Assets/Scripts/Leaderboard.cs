@@ -10,11 +10,13 @@ public struct PlayerStats
     //public float BestTime;
     //public float TotalTime;
     public float TimeEntered;
+    //public int Collected;
     public PlayerStats(string name,int pos,float time)
     {
         this.name = name;
         this.position = pos;
         TimeEntered = time;
+
     }
 }
 public class Leaderboard
@@ -61,9 +63,19 @@ public class Leaderboard
 
         foreach (KeyValuePair<int, PlayerStats> pos in lb.OrderByDescending(key => key.Value.position).ThenBy(key => key.Value.TimeEntered))
         {
-            places.Add(pos.Value.name);
+            places.Add(pos.Value.position.ToString());
         }
             return places;
+    }
+    public static List<string> GetNames()
+    {
+        List<string> places = new List<string>();
+
+        foreach (KeyValuePair<int, PlayerStats> pos in lb.OrderByDescending(key => key.Value.position).ThenBy(key => key.Value.TimeEntered))
+        {
+            places.Add(pos.Value.name);
+        }
+        return places;
     }
     public static void ResetInfo()
     {
