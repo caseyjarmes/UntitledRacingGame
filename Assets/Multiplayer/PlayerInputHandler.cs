@@ -23,9 +23,24 @@ public class PlayerInputHandler : MonoBehaviour
     {        
         playerInput = GetComponent<PlayerInput>();
         var cars = FindObjectsOfType<CarControl>();
+
+        Debug.Log("cars: " + cars);
+
+        foreach (var c in cars)
+        {
+
+            Debug.Log("This is one of the car conrols" + c);
+        }
+
         var index = playerInput.playerIndex;
-        if(playerInput.playerIndex>-1)
-        car = cars.FirstOrDefault(m => m.GetPlayerIndex() == index);
+        if (playerInput.playerIndex > -1)
+        {            
+            car = cars.FirstOrDefault(m => m.GetPlayerIndex() == index);
+        }
+
+        
+        
+
         switch (GameManager.State)
         {
             case GameState.Menu:

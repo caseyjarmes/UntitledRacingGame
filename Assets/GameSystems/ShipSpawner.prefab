@@ -51,6 +51,7 @@ MonoBehaviour:
   - {fileID: 6251913710674590359, guid: c6cbc7229018a5d409c166b77b810676, type: 3}
   - {fileID: 6251913710674590359, guid: 3631798079356a84d9634734b80d15f1, type: 3}
   - {fileID: 6251913710674590359, guid: 79c555df2797b8a4da4e92ef2b3750bd, type: 3}
+  - {fileID: 6251913710674590359, guid: 1a8a371e853d3f1449c9dca845f06695, type: 3}
   CameraHandler: {fileID: 0}
   UIHandler: {fileID: 0}
   ShipUIController: {fileID: 0}

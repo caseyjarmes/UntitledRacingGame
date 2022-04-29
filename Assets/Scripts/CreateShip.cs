@@ -55,6 +55,8 @@ public class CreateShip : MonoBehaviour
         ship_reference.GetComponent<CarControl>().speed *= speed_mult;
         ship_reference.GetComponent<LapTimeManager>().TotalLaps = TotalLapCount;
 
+        ship_reference.GetComponent<CarControl>().PlayerIndex = ship_reference.GetComponent<PlayerInput>().playerIndex;
+
         SetUpCamera(ship_reference);
         SetUpUI(ship_reference);
     }
