@@ -266,7 +266,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 596dd998d4ac0fd439c3d787ab658ebf, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 596dd998d4ac0fd439c3d787ab658ebf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -585,6 +585,10 @@ MonoBehaviour:
     - m_Text: Suburban Voyager
       m_Image: {fileID: 0}
     - m_Text: Swamp Buckler
+      m_Image: {fileID: 0}
+    - m_Text: Quantum Coupler
+      m_Image: {fileID: 0}
+    - m_Text: Comet Crusher
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4208,6 +4212,10 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Swamp Buckler
       m_Image: {fileID: 0}
+    - m_Text: Quantum Coupler
+      m_Image: {fileID: 0}
+    - m_Text: Comet Crusher
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6267,7 +6275,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 22eb3f57fb7599542be8682a3fb9509b, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22eb3f57fb7599542be8682a3fb9509b, type: 3}
       propertyPath: m_LocalScale.x
@@ -11019,6 +11027,10 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Swamp Buckler
       m_Image: {fileID: 0}
+    - m_Text: Quantum Coupler
+      m_Image: {fileID: 0}
+    - m_Text: Comet Crusher
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -13399,7 +13411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 368218938}
   m_Horizontal: 0
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
