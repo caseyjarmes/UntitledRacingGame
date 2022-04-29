@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 7475323947613903313}
   - component: {fileID: 4651863494681102530}
   - component: {fileID: 2510831393268643714}
+  - component: {fileID: 2413018853725513409}
   m_Layer: 11
   m_Name: p2cam
   m_TagString: Untagged
@@ -152,7 +153,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4316150574309538129}
-  m_LocalRotation: {x: 0.048070494, y: 0.000000045246743, z: -0.000000002177551, w: 0.99884397}
+  m_LocalRotation: {x: 0.048070494, y: 0.0000006485351, z: -0.000000031211492, w: 0.99884397}
   m_LocalPosition: {x: -575.5587, y: -11.020941, z: 693.1625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -269,6 +270,20 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2413018853725513409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4316150574309538129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c102749ea2d2c0e47b9a92bb011f0032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShipCam: {fileID: 2611961011848117070}
+  CarControl: {fileID: 0}
 --- !u!1 &5285804630912023501
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +436,7 @@ GameObject:
   - component: {fileID: 1678705802680984800}
   - component: {fileID: 8280073187549469611}
   - component: {fileID: 732976606159627031}
+  - component: {fileID: 5837077409975617838}
   m_Layer: 10
   m_Name: p1cam
   m_TagString: Untagged
@@ -435,7 +451,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6168403811539595385}
-  m_LocalRotation: {x: 0.048070487, y: 0.000000017365284, z: -8.3572366e-10, w: 0.99884397}
+  m_LocalRotation: {x: 0.04807056, y: 0.000000018501868, z: -8.904221e-10, w: 0.99884397}
   m_LocalPosition: {x: -590.5287, y: -11.020941, z: 693.1625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -552,6 +568,20 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5837077409975617838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6168403811539595385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c102749ea2d2c0e47b9a92bb011f0032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShipCam: {fileID: 8969774793275816119}
+  CarControl: {fileID: 0}
 --- !u!1 &8521509854856538414
 GameObject:
   m_ObjectHideFlags: 0

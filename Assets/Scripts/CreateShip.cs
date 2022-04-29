@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-//FOR MULTIPLAYER, THE PLAYER 2 SPAWNER HAS TO BE FIRST IN THE HIERARCHY
-//maybe not, I have no idea what determines the playerIndex in the PlayerInput
-//and its readonly so I can't change it
+//The playerIndex in the PlayerInput determines which player is on top/bottom.
+//I have no idea how it is determined and its readonly so I can't change it manually
 
 public class CreateShip : MonoBehaviour
 {
