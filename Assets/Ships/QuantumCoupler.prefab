@@ -776,6 +776,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FC_Rigged
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65366be749793054cbae3ed92c283ade, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8151195023094494017, guid: 65366be749793054cbae3ed92c283ade, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.5303613
