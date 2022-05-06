@@ -95,8 +95,8 @@ public class LapTimeManager : MonoBehaviour
                 else
                 {
                     completedgame = true;
-                    Completedgame = true;
-                    transform.gameObject.SetActive(false);
+                    //Completedgame = true;
+                    //transform.gameObject.SetActive(false);
                     //SceneManager.LoadScene("Main Menu");
                     //End the race here
                 }
