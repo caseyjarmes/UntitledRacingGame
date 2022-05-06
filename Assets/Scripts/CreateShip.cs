@@ -19,6 +19,9 @@ public class CreateShip : MonoBehaviour
     //takes in a ___UIController
     public GameObject ShipUIController;
 
+    //takes in the Audio folder
+    public GameObject Audio;
+
     //This is for setting the individual level for their specific lap count set in the unity editor freely
     public int TotalLapCount = 3;
 
@@ -59,6 +62,7 @@ public class CreateShip : MonoBehaviour
 
         SetUpCamera(ship_reference);
         SetUpUI(ship_reference);
+        SetUpAudio(ship_reference);
     }
 
     public void SetUpCamera(GameObject ship_reference)
@@ -89,4 +93,9 @@ public class CreateShip : MonoBehaviour
         ShipUIController.GetComponent<UiInGameTimeController>().LapTimeManager = ship_reference.GetComponent<LapTimeManager>();
     }
 
+    public void SetUpAudio(GameObject ship_reference)
+    {
+        ship_reference.GetComponent<CarControl>().boost = Audio.transform.Find("BoostAudio").GetComponent<AudioSource>();
+        ship_reference.GetComponent<CarControl>().crystal = Audio.transform.Find("CrystalAudio").GetComponent<AudioSource>();
+    }
 }
