@@ -14423,6 +14423,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 1369317035368366933, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369317035368366933, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 31eff603b19b48c47b16cf2fc628720a, type: 3}
+    - target: {fileID: 1369317035368366933, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 9075902682860974539, guid: 38dc2d85d3d304347ad855d1203813ed, type: 2}
     - target: {fileID: 1987447606215001391, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -19192,6 +19204,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
+      propertyPath: Audio
+      value: 
+      objectReference: {fileID: 1118123905}
     - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
       propertyPath: UIHandler
       value: 
@@ -28389,6 +28405,10 @@ PrefabInstance:
       value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
+      propertyPath: Audio
+      value: 
+      objectReference: {fileID: 1118123905}
+    - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
       propertyPath: UIHandler
       value: 
       objectReference: {fileID: 1135517557}
@@ -33277,6 +33297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
+      propertyPath: Audio
+      value: 
+      objectReference: {fileID: 1118123905}
     - target: {fileID: 5518106092751699463, guid: 746c1350cd8e0f54d8c1dbce13007ac5, type: 3}
       propertyPath: UIHandler
       value: 

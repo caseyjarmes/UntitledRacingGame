@@ -16,7 +16,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         //refactor to be used with action map for cleaner controller support
-        if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.wasPressedThisFrame)
+        if (Input.GetKeyDown(KeyCode.Escape) || (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame))
         {
             if (game_paused)
             {

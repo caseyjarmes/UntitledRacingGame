@@ -101,7 +101,7 @@ public class CarControl : MonoBehaviour
         isOnGround = Physics.Raycast(ray, out hitinfo, 2f, ground);
         //LimitRotations();
 
-        Debug.Log(ReturnVehicleVelocity(rb.velocity.magnitude));
+        //Debug.Log(ReturnVehicleVelocity(rb.velocity.magnitude));
         SpeedInformation = ReturnVehicleVelocity(rb.velocity.magnitude);
         Speed();
         TurningAndTilt();
