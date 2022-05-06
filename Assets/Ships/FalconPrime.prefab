@@ -15027,6 +15027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerIndex: 0
+  ShipName: Falcon Prime
   rb: {fileID: 0}
   speed: 2600
   TorqueSpeed: 400
@@ -15085,6 +15086,8 @@ MonoBehaviour:
   CPManager: {fileID: 0}
   TotalLaps: 0
   completedgame: 0
+  carRego: 0
+  PositionInfo: 
 --- !u!114 &4865526163230538890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15112,6 +15115,9 @@ MonoBehaviour:
   lap: 0
   checkPoint: -1
   checkPointCount: 0
+  TimeEntered: 0
+  TotalCheckpointsPassed: 0
+  prev_CP_dist: 0
 --- !u!1 &6433723634432281005
 GameObject:
   m_ObjectHideFlags: 0

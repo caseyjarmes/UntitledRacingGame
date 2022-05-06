@@ -345,6 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerIndex: 0
+  ShipName: Suburban Voyager
   rb: {fileID: 0}
   speed: 2400
   TorqueSpeed: 800
@@ -433,6 +434,7 @@ MonoBehaviour:
   checkPoint: -1
   checkPointCount: 0
   TimeEntered: 0
+  TotalCheckpointsPassed: 0
   prev_CP_dist: 0
 --- !u!1 &7337452829862267499
 GameObject:

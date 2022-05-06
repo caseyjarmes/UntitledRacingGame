@@ -48513,6 +48513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerIndex: 0
+  ShipName: Tachyon Diffuser
   rb: {fileID: 0}
   speed: 2600
   TorqueSpeed: 300
@@ -48573,6 +48574,7 @@ MonoBehaviour:
   completedgame: 0
   carRego: 0
   PositionInfo: 
+  Car: {fileID: 0}
 --- !u!114 &4865526163230538890
 MonoBehaviour:
   m_ObjectHideFlags: 0

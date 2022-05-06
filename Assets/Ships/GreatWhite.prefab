@@ -34296,6 +34296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerIndex: 0
+  ShipName: Great White
   rb: {fileID: 0}
   speed: 2500
   TorqueSpeed: 500
@@ -34384,6 +34385,7 @@ MonoBehaviour:
   checkPoint: -1
   checkPointCount: 0
   TimeEntered: 0
+  TotalCheckpointsPassed: 0
   prev_CP_dist: 0
 --- !u!65 &9085264070237910701
 BoxCollider:

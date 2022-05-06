@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class CarControl : MonoBehaviour
 {
     public int PlayerIndex;
-
+    public string ShipName;
 
     private MainControl inputs;
     public Rigidbody rb;
@@ -203,7 +203,7 @@ public class CarControl : MonoBehaviour
                 if (CoinsCollected < 10)
                 {
 
-                    rb.mass += .20f;
+                    speed += 20f;
                 }                    
                 CoinsCollected++;
                     other.gameObject.SetActive(false);

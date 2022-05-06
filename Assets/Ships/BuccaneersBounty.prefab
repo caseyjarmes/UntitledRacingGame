@@ -53818,6 +53818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerIndex: 0
+  ShipName: Buccaneer's Bounty
   rb: {fileID: 0}
   speed: 2600
   TorqueSpeed: 500

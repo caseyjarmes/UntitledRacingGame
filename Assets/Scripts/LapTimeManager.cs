@@ -25,6 +25,7 @@ public class LapTimeManager : MonoBehaviour
     // this will be the string that will be shown up to the ui about their relative
     // position in regards to their competitors 
     public string PositionInfo;
+    public CarControl Car;
     void Awake()
     {
         //trackCheckpointSystem = GameObject.Find("Track").GetComponent<TrackCheckpointSystem>();
@@ -33,8 +34,9 @@ public class LapTimeManager : MonoBehaviour
     }
     void Start()
     {
+        Car = GetComponent<CarControl>();
         StartLap();
-        carRego = Leaderboard.RegisterCar(gameObject.name);
+        carRego = Leaderboard.RegisterCar(Car.ShipName);
     }
     void EndLap()
     {
@@ -105,6 +107,6 @@ public class LapTimeManager : MonoBehaviour
     }
     void LateUpdate()
     {
-        Leaderboard.SetPosition(carRego, CPManager.lap, CPManager.TotalCheckpointsPassed, CPManager.TimeEntered, this.gameObject.GetComponent<CarControl>().CoinsCollected, BestLapTime);
+        Leaderboard.SetPosition(carRego, CPManager.TotalCheckpointsPassed, CPManager.TimeEntered, Car.CoinsCollected, BestLapTime);
     }
 }

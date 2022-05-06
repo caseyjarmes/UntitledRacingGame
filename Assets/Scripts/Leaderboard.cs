@@ -33,7 +33,7 @@ public class Leaderboard
         return carsRegistered;
     }
 
-    public static void SetPosition(int rego,int lap, int checkpoint,float time,int coincount,float besttime)
+    public static void SetPosition(int rego, int checkpoint,float time,int coincount,float besttime)
     {
         //int position = lap * 1000;
         lb[rego] = new PlayerStats(lb[rego].name, GetPosition(rego),time,coincount,besttime,checkpoint);
@@ -84,5 +84,6 @@ public class Leaderboard
     {
         lb.Clear();
         carsRegistered = -1;
+        lb = new Dictionary<int, PlayerStats>();
     }
 }

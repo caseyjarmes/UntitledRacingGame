@@ -34,9 +34,16 @@ public class LeaderboardUIHandler : MonoBehaviour
         //}
         foreach (KeyValuePair<int, PlayerStats> pos in Leaderboard.lb.OrderByDescending(key => key.Value.position).ThenByDescending(key => key.Value.TimeEntered))
         {
-            leaderboardUIElements[pos.Value.position-1].SetName(pos.Value.name);
-            leaderboardUIElements[pos.Value.position-1].SetCrystalCollected(pos.Value.Collected.ToString());
-            leaderboardUIElements[pos.Value.position-1].SetBestTime(pos.Value.BestTime);
+            leaderboardUIElements[pos.Value.position - 1].SetName(pos.Value.name);
+            leaderboardUIElements[pos.Value.position - 1].SetCrystalCollected(pos.Value.Collected.ToString());
+            if (pos.Value.BestTime == Mathf.Infinity)
+            {
+                leaderboardUIElements[pos.Value.position - 1].BestTimeText.text = "N/a";
+            }
+            else
+            {
+                leaderboardUIElements[pos.Value.position - 1].SetBestTime(pos.Value.BestTime);
+            }
         }
     }
     void FixedUpdate()
