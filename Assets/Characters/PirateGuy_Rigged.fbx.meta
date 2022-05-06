@@ -3,7 +3,17 @@ guid: c5ddb1951eab11246aca6b16faffdcd3
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main
+    second: {fileID: 2100000, guid: 4e3598255685db5a09b201020811351e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PirateHat
+    second: {fileID: 2100000, guid: ffa8d9cf49ac48d76a4b5a72b98ee79f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
