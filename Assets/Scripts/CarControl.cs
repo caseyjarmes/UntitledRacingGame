@@ -165,14 +165,13 @@ public class CarControl : MonoBehaviour
         
         //For the Turning of the ship model separately from the rest of the gameobject without also affecting the levitation points
         float rollEluerValue = RollingAngle * -valueturn;
-        Quaternion modelRotation = shipModel.transform.rotation * Quaternion.Euler(0f, 0f, rollEluerValue);
+        Quaternion modelRotation = shipModel.transform.rotation * Quaternion.Euler(0f, 0, rollEluerValue);
         shipModel.transform.rotation = Quaternion.Lerp(shipModel.transform.rotation, modelRotation, Time.deltaTime * 2.5f);
         
         //To deal with physics issues caused by the levitation points reverts the parent to normal orientation
         Vector3 projection = Vector3.ProjectOnPlane(transform.forward, groundNormal);
-        Quaternion rotations = Quaternion.LookRotation(projection, groundNormal);
+        Quaternion rotations = Quaternion.LookRotation(projection, groundNormal);        
         shipModel.transform.rotation = (Quaternion.Lerp(shipModel.transform.rotation, rotations, Time.deltaTime * 5f));
-
     }
     private void Weapon()
     {

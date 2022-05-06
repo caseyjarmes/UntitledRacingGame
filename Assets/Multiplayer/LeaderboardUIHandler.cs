@@ -23,16 +23,20 @@ public class LeaderboardUIHandler : MonoBehaviour
             leaderboardUIElements[i].SetPositionText($"{i+1}.");
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
     public void UpdateList(Dictionary<int,PlayerStats> players)
     {
-        foreach (KeyValuePair<int, PlayerStats> pos in Leaderboard.lb.OrderByDescending(key => key.Value.position).ThenBy(key => key.Value.TimeEntered))
+        //for(int i= -1; i < players.Count; i++)
+        //{
+        //    leaderboardUIElements[i + 1].SetName(players[i+1].name);
+        //    leaderboardUIElements[i + 1].SetCrystalCollected(players[i + 1].Collected.ToString());
+        //    leaderboardUIElements[i + 1].SetBestTime(players[i + 1].BestTime);
+        //}
+        foreach (KeyValuePair<int, PlayerStats> pos in Leaderboard.lb.OrderByDescending(key => key.Value.position).ThenByDescending(key => key.Value.TimeEntered))
         {
-            leaderboardUIElements[pos.Value.position].SetName(pos.Value.name);
+            leaderboardUIElements[pos.Value.position-1].SetName(pos.Value.name);
+            leaderboardUIElements[pos.Value.position-1].SetCrystalCollected(pos.Value.Collected.ToString());
+            leaderboardUIElements[pos.Value.position-1].SetBestTime(pos.Value.BestTime);
         }
     }
     void FixedUpdate()

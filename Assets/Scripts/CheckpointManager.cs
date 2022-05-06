@@ -18,7 +18,7 @@ public class CheckpointManager : MonoBehaviour
     //The next checkpoint that the ship has to contact with in order to progress in the level
     int nextCheckPoint = 0;
     public float TimeEntered = 0;
-
+    public int TotalCheckpointsPassed;
     //List of checkpoints
     GameObject[] Checkpoints;
 
@@ -66,8 +66,9 @@ public class CheckpointManager : MonoBehaviour
             //The collider will touch a gameobject whose name will only be a number value
             int thisCheckpointNumber = int.Parse(other.gameObject.name);
             if (thisCheckpointNumber == nextCheckPoint)
-            {           
+            {
                 //a variable used for the sorting in the dictonary
+                TotalCheckpointsPassed++;
                 TimeEntered = Time.time;
                 checkPoint = thisCheckpointNumber;
                 if (checkPoint == checkPointCount)

@@ -105,7 +105,6 @@ public class LapTimeManager : MonoBehaviour
     }
     void LateUpdate()
     {
-        Leaderboard.SetPosition(carRego, CPManager.lap, CPManager.checkPoint, CPManager.TimeEntered);
-        PositionInfo = Leaderboard.GetPosition(carRego);
+        Leaderboard.SetPosition(carRego, CPManager.lap, CPManager.TotalCheckpointsPassed, CPManager.TimeEntered, this.gameObject.GetComponent<CarControl>().CoinsCollected, BestLapTime);
     }
 }

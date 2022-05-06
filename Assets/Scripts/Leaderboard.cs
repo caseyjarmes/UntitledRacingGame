@@ -7,16 +7,19 @@ public struct PlayerStats
 {
     public string name;
     public int position;
-    //public float BestTime;
+    public float BestTime;
     //public float TotalTime;
     public float TimeEntered;
-    //public int Collected;
-    public PlayerStats(string name,int pos,float time)
+    public int Collected;
+    public int CheckpointCleared; 
+    public PlayerStats(string name,int pos,float time,int Collected,float besttime,int Checkpoints)
     {
         this.name = name;
         this.position = pos;
         TimeEntered = time;
-
+        this.Collected = Collected;
+        BestTime = besttime;
+        CheckpointCleared = Checkpoints;
     }
 }
 public class Leaderboard
@@ -26,19 +29,19 @@ public class Leaderboard
     public static int RegisterCar(string name)
     {
         carsRegistered++;
-        lb.Add(carsRegistered, new PlayerStats(name, 0,0));
+        lb.Add(carsRegistered, new PlayerStats(name, 0,0,0,float.MaxValue,0));
         return carsRegistered;
     }
 
-    public static void SetPosition(int rego,int lap, int checkpoint,float time)
+    public static void SetPosition(int rego,int lap, int checkpoint,float time,int coincount,float besttime)
     {
-        int position = lap * 1000;
-        lb[rego] = new PlayerStats(lb[rego].name, position,time);
+        //int position = lap * 1000;
+        lb[rego] = new PlayerStats(lb[rego].name, GetPosition(rego),time,coincount,besttime,checkpoint);
     }
-    public static string GetPosition(int rego)
+    public static int GetPosition(int rego)
     {
         int index = 0;
-        foreach (KeyValuePair<int, PlayerStats> pos in lb.OrderByDescending(key => key.Value.position).ThenBy(key => key.Value.TimeEntered))
+        foreach (KeyValuePair<int, PlayerStats> pos in lb.OrderByDescending(key => key.Value.CheckpointCleared)/*.ThenBy(key => key.Value.CheckpointCleared)*/)
         {
             index++;
             if(pos.Key == rego)
@@ -46,16 +49,16 @@ public class Leaderboard
                 //Preparing for the future
                 switch(index)
                 {
-                    case 1: return "1st";
-                    case 2: return "2nd";
-                    case 3: return "3rd";
-                    case 4: return "4th";
+                    case 1: return 1;
+                    case 2: return 2;
+                    case 3: return 3;
+                    case 4: return 4;
 
 
                 }
             }
         }
-        return "Unknown Position";
+        return 99;
     }
     public static List<string> GetPlaces()
     {
