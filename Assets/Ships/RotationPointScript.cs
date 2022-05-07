@@ -10,9 +10,5 @@ public class RotationPointScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        transform.eulerAngles = new Vector3(transform.rotation.x + 1, transform.rotation.y, transform.rotation.z);
-    }
+   
 }

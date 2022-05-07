@@ -361,8 +361,8 @@ RectTransform:
   m_Children:
   - {fileID: 2505016}
   - {fileID: 1803258546}
+  - {fileID: 379172854}
   - {fileID: 406927278}
-  - {fileID: 398189184}
   m_Father: {fileID: 1250330076}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -950,6 +950,79 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &229202486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 229202487}
+  - component: {fileID: 229202489}
+  - component: {fileID: 229202488}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &229202487
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229202486}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1854629556}
+  m_Father: {fileID: 1012836525}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 196.49585, y: -27.410583}
+  m_SizeDelta: {x: -923.8168, y: -624.8207}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &229202488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229202486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6117647}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &229202489
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229202486}
+  m_CullTransparentMesh: 1
 --- !u!1001 &257930386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1741,6 +1814,79 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &379172853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379172854}
+  - component: {fileID: 379172856}
+  - component: {fileID: 379172855}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &379172854
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379172853}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 398189184}
+  m_Father: {fileID: 27176556}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 196.49588, y: -65.00992}
+  m_SizeDelta: {x: -923.8168, y: -549.622}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &379172855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379172853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6117647}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &379172856
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379172853}
+  m_CullTransparentMesh: 1
 --- !u!1 &398189181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,7 +1919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1809,17 +1955,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398189181}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 27176556}
-  m_RootOrder: 3
+  m_Father: {fileID: 379172854}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 877.46106, y: -60.20981}
-  m_SizeDelta: {x: 438.1136, y: 163.7777}
+  m_AnchoredPosition: {x: 199.36, y: -0.000015259}
+  m_SizeDelta: {x: 398.71, y: 173.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &406927277
 GameObject:
@@ -1853,7 +1999,7 @@ RectTransform:
   m_Children:
   - {fileID: 1902723662}
   m_Father: {fileID: 27176556}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -4144,11 +4290,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The winner is decided both by the person who collects the most crystals
-    and by who finishes first, forcing players to decide between taking the fastest
-    path or going out of their way to grab crystals. Steer with A/D or the Control
-    Stick, Accelerate with W or the Right Trigger, Brake/Drift with S or the Left
-    Trigger, Pause with Escape.
+  m_text: Collect crystals to boost your speed. Steer with A/D or the Control Stick,
+    Accelerate with W or the Right Trigger, Brake/Drift with S or the Left Trigger,
+    Pause with Escape or Start.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32c6aece28b5fa24db7aa80df53ca341, type: 2}
   m_sharedMaterial: {fileID: -1367014188198735043, guid: 32c6aece28b5fa24db7aa80df53ca341, type: 2}
@@ -5032,9 +5176,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 229202487}
   - {fileID: 1884397714}
   - {fileID: 1993963876}
-  - {fileID: 1854629556}
   m_Father: {fileID: 1250330076}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6786,10 +6930,10 @@ RectTransform:
   m_Father: {fileID: 1559725339}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.2709, y: -32.46872}
-  m_SizeDelta: {x: 920.7872, y: 344.4662}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.0005187988, y: -13.269012}
+  m_SizeDelta: {x: -0.001, y: -261.932}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1441471935
 MonoBehaviour:
@@ -6812,7 +6956,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: TURBO CITY, a human colony on the moon TITAN, is famed for the SPEEDWAY
-    RACES, high-velocity competitions driven in state or the art HOVERSHIPS. The
+    RACES, high-velocity competitions driven in state-of-the-art HOVERSHIPS. The
     reigning CHAMPION of these races is F.C. SKAWAX, an arrogant driver who has only
     ever lost once in her illustrious career, to her MYSTERIOUSLY DISAPPEARED SISTER.
     The KARKARIANS, a race of alien sharks who travel the galaxy in search of EXCITING
@@ -6848,7 +6992,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 17.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7867,7 +8011,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
+  m_fontSize: 25.4
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10072,13 +10216,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1012836525}
-  m_RootOrder: 2
+  m_Father: {fileID: 229202487}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 877.46106, y: -25.2231}
-  m_SizeDelta: {x: 438.1136, y: 93.8042}
+  m_AnchoredPosition: {x: 199.36, y: 0.00017166}
+  m_SizeDelta: {x: 398.71, y: 98.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854629557
 MonoBehaviour:
@@ -10365,7 +10509,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1012836525}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -11156,7 +11300,7 @@ RectTransform:
   - {fileID: 663639717}
   - {fileID: 1919580714}
   m_Father: {fileID: 1012836525}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
