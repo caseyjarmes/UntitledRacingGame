@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 845669712101135516}
   - component: {fileID: 4865526163230538890}
   - component: {fileID: -8564135144029025645}
+  - component: {fileID: 349641061072084576}
   m_Layer: 0
   m_Name: CometCrusher
   m_TagString: Player
@@ -360,6 +361,11 @@ MonoBehaviour:
   boost: {fileID: 0}
   crystal: {fileID: 0}
   HasWeapon: 0
+  coin1: {fileID: 8300000, guid: a2c0ec3cbf8d05b42a0319e4d9c35f25, type: 3}
+  coin2: {fileID: 8300000, guid: 1b3a3c2ec77bdfb40b3d24bcbb6c428d, type: 3}
+  coin3: {fileID: 8300000, guid: 215bf03b01b1a1945909cd041a04c9a5, type: 3}
+  coin4: {fileID: 8300000, guid: fa94fc09ca2878248ac5cd87baa8e797, type: 3}
+  volume: 4
 --- !u!65 &6251913710674590348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -399,6 +405,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97849d4b7df0d84596c85fd18714adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 4
+  lapA: {fileID: 8300000, guid: 3ce298e127638ce419824193adacdd1d, type: 3}
+  lapB: {fileID: 8300000, guid: 2dd41692c0ac273458fafecf12ecb026, type: 3}
+  Win: {fileID: 8300000, guid: 702858ec6bdc34e408bce44ea958173c, type: 3}
   lap: {fileID: 0}
   voFinish: {fileID: 0}
   CPManager: {fileID: 0}
@@ -406,6 +416,7 @@ MonoBehaviour:
   completedgame: 0
   carRego: 0
   PositionInfo: 
+  Car: {fileID: 0}
 --- !u!114 &4865526163230538890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +447,102 @@ MonoBehaviour:
   TimeEntered: 0
   TotalCheckpointsPassed: 0
   prev_CP_dist: 0
+--- !u!82 &349641061072084576
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6251913710674590359}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7337452829862267499
 GameObject:
   m_ObjectHideFlags: 0

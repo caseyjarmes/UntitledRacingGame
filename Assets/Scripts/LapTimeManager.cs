@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 //The main handler of the lap timer procedure
 public class LapTimeManager : MonoBehaviour
 {
+    //audio shit
+    public float volume;
+    public AudioClip lapA;
+    public AudioClip lapB;
+    public AudioClip Win;
+    AudioSource audioSource;
+    int r;
+
     public float BestLapTime { get; private set; } = Mathf.Infinity;
     public float LastLapTime { get; private set; }
     public float CurrentLapTime { get; private set; }
@@ -34,6 +42,8 @@ public class LapTimeManager : MonoBehaviour
     }
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         Car = GetComponent<CarControl>();
         StartLap();
         carRego = Leaderboard.RegisterCar(Car.ShipName);
@@ -46,11 +56,24 @@ public class LapTimeManager : MonoBehaviour
         CurrentLapTime = 0;
         //END LAP SOUND TRIGGER
         if(CurrentLap != TotalLaps)
+        {
+            r = UnityEngine.Random.Range(0, 2);
+            if (r == 0)
+            {
+                audioSource.PlayOneShot(lapA, volume);
+            }
+            else
+            {
+                audioSource.PlayOneShot(lapB, volume);
+            }
+            
+        }
         //VoManager.voMan.PlayVoLap();
         //lap.Play();
         //FINISH GAME SOUND
         if (CurrentLap == TotalLaps)
         {
+            audioSource.PlayOneShot(Win, volume);
             //play finish vo 
             //voFinish.Play();
         }

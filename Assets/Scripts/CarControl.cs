@@ -47,7 +47,16 @@ public class CarControl : MonoBehaviour
     public bool HasWeapon;
 
     //Transform checkpointRotation;
-    
+
+    //casey sound shit
+    private AudioSource audioSource;
+    public AudioClip coin1;
+    public AudioClip coin2;
+    public AudioClip coin3;
+    public AudioClip coin4;
+    int r;
+    public float volume;
+
     private void Awake()
     {
         //inputs = new MainControl();
@@ -65,7 +74,9 @@ public class CarControl : MonoBehaviour
     //    inputs.Disable();
     //}
     void Start()
-    {        
+    {
+        audioSource = GetComponent<AudioSource>();
+
         rb = GetComponentInChildren<Rigidbody>();
         BaseMass = rb.mass;
         CoinsCollected = 0;
@@ -202,15 +213,46 @@ public class CarControl : MonoBehaviour
             case "Coin":
                 if (CoinsCollected < 10)
                 {
-
+                    
+                    
                     speed += 20f;
                 }                    
                 CoinsCollected++;
-                    other.gameObject.SetActive(false);
-               
+
+                
+                
+
+                other.gameObject.SetActive(false);
+
                 crystal.Play();
-                VoManager.voMan.PlayVoPickup();
+                //VoManager.voMan.PlayVoPickup();
                 //INSERT COIN SOUND THING
+
+                r = UnityEngine.Random.Range(0, 4);
+                switch (r)
+                {
+                    case 0:
+                        {
+                            audioSource.PlayOneShot(coin1, volume);
+                        }
+                        break;
+                    case 1:
+                        {
+                            audioSource.PlayOneShot(coin2, volume);
+                        }
+                        break;
+                    case 2:
+                        {
+                            audioSource.PlayOneShot(coin3, volume);
+                        }
+                        break;
+                    case 3:
+                        {
+                            audioSource.PlayOneShot(coin4, volume);
+                        }
+                        break;
+                }
+
                 break;
             case "Boost":
                 boostStatus = true;

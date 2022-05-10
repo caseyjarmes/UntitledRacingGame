@@ -6,13 +6,13 @@ public enum Pickup { Coins, Weapons }
 public class PickupSystem : MonoBehaviour
 {
     public Pickup Pickup;
-    private AudioClip Audio;
-    private AudioSource AudioPlayer;
+    //private AudioClip Audio;
+    //private AudioSource AudioPlayer;
     private GameObject ParticleEffect;
     // Start is called before the first frame update
     void Start()
     {
-        AudioPlayer = GetComponent<AudioSource>();
+        //AudioPlayer = GetComponent<AudioSource>();
         switch (Pickup)
         {
             case Pickup.Coins:
