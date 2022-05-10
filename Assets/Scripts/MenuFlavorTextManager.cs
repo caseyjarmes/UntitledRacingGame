@@ -74,7 +74,7 @@ public class MenuFlavorTextManager : MonoBehaviour
         }
         else if (trackDD.value == 3)
         {
-            trackText.text = "A mysterious track seen only in dreams. 6 laps. 0 Crystals.";
+            trackText.text = "A mysterious track seen only in dreams. 8 laps. 0 Crystals.";
         }
         else if (trackDD.value == 4)
         {

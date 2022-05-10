@@ -10118,7 +10118,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -15283,7 +15283,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -32162,6 +32162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97849d4b7df0d84596c85fd18714adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 0
+  lapA: {fileID: 0}
+  lapB: {fileID: 0}
+  Win: {fileID: 0}
   lap: {fileID: 634143078}
   voFinish: {fileID: 823306774}
   CPManager: {fileID: 0}
