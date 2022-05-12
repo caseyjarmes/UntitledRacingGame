@@ -9720,7 +9720,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2028680171964495240, guid: 10be13d8a4989924cb15addbd9a718e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6536309888632128664, guid: 10be13d8a4989924cb15addbd9a718e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759277086873684360, guid: 10be13d8a4989924cb15addbd9a718e3, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -9927,6 +9935,11 @@ MonoBehaviour:
 --- !u!1 &788258126 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 745018496359104909, guid: 10be13d8a4989924cb15addbd9a718e3, type: 3}
+  m_PrefabInstance: {fileID: 788258107}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &788258127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6536309888632128664, guid: 10be13d8a4989924cb15addbd9a718e3, type: 3}
   m_PrefabInstance: {fileID: 788258107}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &789388516
@@ -10764,6 +10777,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97849d4b7df0d84596c85fd18714adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 0
+  lapA: {fileID: 0}
+  lapB: {fileID: 0}
+  Win: {fileID: 0}
   lap: {fileID: 922195765}
   voFinish: {fileID: 158990843}
   CPManager: {fileID: 0}
@@ -10771,6 +10788,7 @@ MonoBehaviour:
   completedgame: 0
   carRego: 0
   PositionInfo: 
+  Car: {fileID: 0}
 --- !u!4 &879067685
 Transform:
   m_ObjectHideFlags: 0
@@ -11064,7 +11082,7 @@ MonoBehaviour:
   UITotalCoinsCollected: {fileID: 788258110}
   UITotalCoinsCollected2: {fileID: 1066330932}
   PositionStat: {fileID: 0}
-  CompletedPanel: {fileID: 1440458515}
+  CompletedPanel: {fileID: 788258127}
   LapTimeManager: {fileID: 0}
   shipStatsUI: {fileID: 1677098447}
   start: {fileID: 624179171}
@@ -15580,7 +15598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3542614103446034616, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.048068997
+      value: 0.04806888
       objectReference: {fileID: 0}
     - target: {fileID: 3542614103446034616, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
       propertyPath: m_LocalRotation.y
@@ -15588,7 +15606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3542614103446034616, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000029802326
+      value: 0.00000003445894
       objectReference: {fileID: 0}
     - target: {fileID: 8969774793275816119, guid: 05eced139f591c4428c2804c7f1c0801, type: 3}
       propertyPath: m_Follow
@@ -29010,7 +29028,7 @@ MonoBehaviour:
   UITotalCoinsCollected: {fileID: 788258119}
   UITotalCoinsCollected2: {fileID: 1066330932}
   PositionStat: {fileID: 0}
-  CompletedPanel: {fileID: 1440458515}
+  CompletedPanel: {fileID: 788258127}
   LapTimeManager: {fileID: 0}
   shipStatsUI: {fileID: 355769983}
   start: {fileID: 624179171}

@@ -10890,10 +10890,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2028680171964495240, guid: 10be13d8a4989924cb15addbd9a718e3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3334719525333114323, guid: 10be13d8a4989924cb15addbd9a718e3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10906,7 +10902,7 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -71.1
       objectReference: {fileID: 0}
-    - target: {fileID: 6759277086873684360, guid: 10be13d8a4989924cb15addbd9a718e3, type: 3}
+    - target: {fileID: 6536309888632128664, guid: 10be13d8a4989924cb15addbd9a718e3, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -10914,10 +10910,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: c90ff16dac4c3f04c90a2fa60f4ae645, type: 3}
-    - target: {fileID: 7801609668890782707, guid: 10be13d8a4989924cb15addbd9a718e3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -100
-      objectReference: {fileID: 0}
     - target: {fileID: 8741464962355539133, guid: 10be13d8a4989924cb15addbd9a718e3, type: 3}
       propertyPath: m_Name
       value: MultiplayerUI
