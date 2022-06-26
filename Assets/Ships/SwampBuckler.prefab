@@ -3186,7 +3186,7 @@ MonoBehaviour:
   coin2: {fileID: 8300000, guid: 59acee2a63469d74f8626ed08c091cdb, type: 3}
   coin3: {fileID: 8300000, guid: 4d060e100f6fc7c4a975735ac918b87a, type: 3}
   coin4: {fileID: 8300000, guid: fef49df11f3aaf64c8506a2590c1d6ba, type: 3}
-  volume: 1
+  volume: 4
 --- !u!65 &6251913710674590348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3226,6 +3226,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97849d4b7df0d84596c85fd18714adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 4
+  lapA: {fileID: 8300000, guid: da5459c98f6ec844794dd1e6ce42d8b6, type: 3}
+  lapB: {fileID: 8300000, guid: 05f8ee3b3eaffd8499861b04adef3cda, type: 3}
+  Win: {fileID: 8300000, guid: 233eab2ec2b406d4f982ddfffb7e8c68, type: 3}
   lap: {fileID: 0}
   voFinish: {fileID: 0}
   CPManager: {fileID: 0}
